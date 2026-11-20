@@ -9,7 +9,7 @@
     id="Definitions_Recrutement"
     targetNamespace="https://example.com/recrutement">
 
-  <bpmn2:itemDefinition id="BooleanType" structureRef="xsd:boolean"/>
+  <bpmn2:itemDefinition id="BooleanType" structureRef="java.lang.Boolean" />
 
   <bpmn2:collaboration id="Collaboration_Recrutement">
     <bpmn2:participant
