@@ -1,0 +1,1 @@
+{"id":"c64a7bc4-d8f7-4444-a194-8d70623e6b27","name":"ExaminerDemande-taskform.frm","model":{"taskName":"ExaminerDemande","processId":"Process_Recrutement","properties":[],"formModelType":"org.kie.workbench.common.forms.jbpm.model.authoring.task.TaskFormModel"},"fields":[],"layoutTemplate":{"version":3,"style":"FLUID","layoutProperties":{},"rows":[]}}

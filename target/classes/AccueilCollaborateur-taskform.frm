@@ -1,0 +1,1 @@
+{"id":"e8022b69-c12d-4662-a2f5-2150ca076e2c","name":"AccueilCollaborateur-taskform.frm","model":{"taskName":"AccueilCollaborateur","processId":"Process_Recrutement","properties":[],"formModelType":"org.kie.workbench.common.forms.jbpm.model.authoring.task.TaskFormModel"},"fields":[],"layoutTemplate":{"version":3,"style":"FLUID","layoutProperties":{},"rows":[]}}

@@ -1,0 +1,1 @@
+{"id":"ec7e9e9a-4358-4022-afa3-fba9190ff76d","name":"SoumettreDemande-taskform.frm","model":{"taskName":"SoumettreDemande","processId":"Process_Recrutement","properties":[],"formModelType":"org.kie.workbench.common.forms.jbpm.model.authoring.task.TaskFormModel"},"fields":[],"layoutTemplate":{"version":3,"style":"FLUID","layoutProperties":{},"rows":[]}}

@@ -1,0 +1,1 @@
+{"id":"a22e1def-2b56-4f84-b832-38516c78290b","name":"ValiderCandidat-taskform.frm","model":{"taskName":"ValiderCandidat","processId":"Process_Recrutement","properties":[],"formModelType":"org.kie.workbench.common.forms.jbpm.model.authoring.task.TaskFormModel"},"fields":[],"layoutTemplate":{"version":3,"style":"FLUID","layoutProperties":{},"rows":[]}}

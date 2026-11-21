@@ -1,0 +1,1 @@
+{"id":"667764ea-db5f-471b-ae3a-958029f35544","name":"FormalitesEmbauche-taskform.frm","model":{"taskName":"FormalitesEmbauche","processId":"Process_Recrutement","properties":[],"formModelType":"org.kie.workbench.common.forms.jbpm.model.authoring.task.TaskFormModel"},"fields":[],"layoutTemplate":{"version":3,"style":"FLUID","layoutProperties":{},"rows":[]}}
