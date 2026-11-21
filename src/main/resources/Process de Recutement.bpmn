@@ -355,6 +355,7 @@
           <drools:metaValue><![CDATA[Non]]></drools:metaValue>
         </drools:metaData>
       </bpmn2:extensionElements>
+      <bpmn2:conditionExpression xsi:type="bpmn2:tFormalExpression" language="http://www.mvel.org/2.0"><![CDATA[candidatValide == false]]></bpmn2:conditionExpression>
     </bpmn2:sequenceFlow>
     <bpmn2:sequenceFlow id="Flow_16" sourceRef="ValiderCandidat" targetRef="GatewayValidation"/>
     <bpmn2:sequenceFlow id="Flow_16_OUI" name="Oui" sourceRef="GatewayValidation" targetRef="EnvoyerProposition">
@@ -383,6 +384,7 @@
           <drools:metaValue><![CDATA[Non]]></drools:metaValue>
         </drools:metaData>
       </bpmn2:extensionElements>
+      <bpmn2:conditionExpression xsi:type="bpmn2:tFormalExpression" language="http://www.mvel.org/2.0"><![CDATA[besoinAccepte == false]]></bpmn2:conditionExpression>
     </bpmn2:sequenceFlow>
     <bpmn2:sequenceFlow id="Flow_04" sourceRef="ExaminerDemande" targetRef="GatewayBesoin"/>
     <bpmn2:sequenceFlow id="Flow_10_NON" name="Non" sourceRef="GatewayCV" targetRef="EndEvent_CV">
@@ -391,14 +393,16 @@
           <drools:metaValue><![CDATA[Non]]></drools:metaValue>
         </drools:metaData>
       </bpmn2:extensionElements>
+      <bpmn2:conditionExpression xsi:type="bpmn2:tFormalExpression" language="http://www.mvel.org/2.0"><![CDATA[cvRetenu == false]]></bpmn2:conditionExpression>
     </bpmn2:sequenceFlow>
     <bpmn2:sequenceFlow id="Flow_09" sourceRef="SoumettreCandidature" targetRef="ExaminerCV"/>
-    <bpmn2:sequenceFlow id="Flow_14_NON" name="Non validé" sourceRef="GatewayTechnique" targetRef="EndEvent_Technique">
+    <bpmn2:sequenceFlow id="Flow_14_NON" name="Non" sourceRef="GatewayTechnique" targetRef="EndEvent_Technique">
       <bpmn2:extensionElements>
         <drools:metaData name="elementname">
-          <drools:metaValue><![CDATA[Non validé]]></drools:metaValue>
+          <drools:metaValue><![CDATA[Non]]></drools:metaValue>
         </drools:metaData>
       </bpmn2:extensionElements>
+      <bpmn2:conditionExpression xsi:type="bpmn2:tFormalExpression" language="http://www.mvel.org/2.0"><![CDATA[entretienTechniqueValide == false]]></bpmn2:conditionExpression>
     </bpmn2:sequenceFlow>
     <bpmn2:sequenceFlow id="Flow_14_OUI" name="Validé" sourceRef="GatewayTechnique" targetRef="ConsoliderEvaluations">
       <bpmn2:extensionElements>
@@ -413,12 +417,13 @@
     <bpmn2:sequenceFlow id="Flow_17" sourceRef="EnvoyerProposition" targetRef="FormalitesEmbauche"/>
     <bpmn2:sequenceFlow id="Flow_20" sourceRef="DemanderAccesIT" targetRef="CreerAccesIT"/>
     <bpmn2:sequenceFlow id="Flow_19" sourceRef="PreparerArrivee" targetRef="DemanderAccesIT"/>
-    <bpmn2:sequenceFlow id="Flow_12_NON" name="Défavorable" sourceRef="GatewayEntretienRH" targetRef="EndEvent_EntretienRH">
+    <bpmn2:sequenceFlow id="Flow_12_NON" name="Non" sourceRef="GatewayEntretienRH" targetRef="EndEvent_EntretienRH">
       <bpmn2:extensionElements>
         <drools:metaData name="elementname">
-          <drools:metaValue><![CDATA[Défavorable]]></drools:metaValue>
+          <drools:metaValue><![CDATA[Non]]></drools:metaValue>
         </drools:metaData>
       </bpmn2:extensionElements>
+      <bpmn2:conditionExpression xsi:type="bpmn2:tFormalExpression" language="http://www.mvel.org/2.0"><![CDATA[entretienRHValide == false]]></bpmn2:conditionExpression>
     </bpmn2:sequenceFlow>
     <bpmn2:sequenceFlow id="Flow_12_OUI" name="Favorable" sourceRef="GatewayEntretienRH" targetRef="PlanifierEntretienManager">
       <bpmn2:extensionElements>
