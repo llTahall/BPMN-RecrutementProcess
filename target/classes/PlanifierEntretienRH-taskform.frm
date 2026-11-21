@@ -1,1 +1,0 @@
-{"id":"b2c82469-451b-4dcf-9544-e60a508f3475","name":"PlanifierEntretienRH-taskform.frm","model":{"taskName":"PlanifierEntretienRH","processId":"Process_Recrutement","properties":[],"formModelType":"org.kie.workbench.common.forms.jbpm.model.authoring.task.TaskFormModel"},"fields":[],"layoutTemplate":{"version":3,"style":"FLUID","layoutProperties":{},"rows":[]}}

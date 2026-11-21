@@ -1,1 +1,0 @@
-{"id":"6aff92cd-ba87-438c-9d13-ccd55be8a810","name":"CreerAccesIT-taskform.frm","model":{"taskName":"CreerAccesIT","processId":"Process_Recrutement","properties":[],"formModelType":"org.kie.workbench.common.forms.jbpm.model.authoring.task.TaskFormModel"},"fields":[],"layoutTemplate":{"version":3,"style":"FLUID","layoutProperties":{},"rows":[]}}

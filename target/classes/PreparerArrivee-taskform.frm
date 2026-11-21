@@ -1,1 +1,0 @@
-{"id":"cb4ea11e-1b04-4287-b3a8-11dee8b23c29","name":"PreparerArrivee-taskform.frm","model":{"taskName":"PreparerArrivee","processId":"Process_Recrutement","properties":[],"formModelType":"org.kie.workbench.common.forms.jbpm.model.authoring.task.TaskFormModel"},"fields":[],"layoutTemplate":{"version":3,"style":"FLUID","layoutProperties":{},"rows":[]}}

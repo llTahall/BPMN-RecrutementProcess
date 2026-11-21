@@ -1,1 +1,0 @@
-{"id":"7a3c583e-3c2c-40d5-8b4d-078b58e32cdd","name":"ConsoliderEvaluations-taskform.frm","model":{"taskName":"ConsoliderEvaluations","processId":"Process_Recrutement","properties":[],"formModelType":"org.kie.workbench.common.forms.jbpm.model.authoring.task.TaskFormModel"},"fields":[],"layoutTemplate":{"version":3,"style":"FLUID","layoutProperties":{},"rows":[]}}

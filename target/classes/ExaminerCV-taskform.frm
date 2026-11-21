@@ -1,1 +1,0 @@
-{"id":"43ebb859-5c60-4156-afe4-9b6b176dc1b8","name":"ExaminerCV-taskform.frm","model":{"taskName":"ExaminerCV","processId":"Process_Recrutement","properties":[],"formModelType":"org.kie.workbench.common.forms.jbpm.model.authoring.task.TaskFormModel"},"fields":[],"layoutTemplate":{"version":3,"style":"FLUID","layoutProperties":{},"rows":[]}}

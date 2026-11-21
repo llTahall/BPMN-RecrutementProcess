@@ -1,1 +1,0 @@
-{"id":"7c3bbefc-86b5-4dd5-9fa8-111f0e97bc1e","name":"PublierOffre-taskform.frm","model":{"taskName":"PublierOffre","processId":"Process_Recrutement","properties":[],"formModelType":"org.kie.workbench.common.forms.jbpm.model.authoring.task.TaskFormModel"},"fields":[],"layoutTemplate":{"version":3,"style":"FLUID","layoutProperties":{},"rows":[]}}

@@ -1,1 +1,0 @@
-{"id":"a4d800d3-f1f5-4bb1-9c59-08f517f46df9","name":"DemanderAccesIT-taskform.frm","model":{"taskName":"DemanderAccesIT","processId":"Process_Recrutement","properties":[],"formModelType":"org.kie.workbench.common.forms.jbpm.model.authoring.task.TaskFormModel"},"fields":[],"layoutTemplate":{"version":3,"style":"FLUID","layoutProperties":{},"rows":[]}}

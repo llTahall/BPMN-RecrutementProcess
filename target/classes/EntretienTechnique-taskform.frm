@@ -1,1 +1,0 @@
-{"id":"d3dcf8ef-388d-476b-b322-6fedbf16dc7a","name":"EntretienTechnique-taskform.frm","model":{"taskName":"EntretienTechnique","processId":"Process_Recrutement","properties":[],"formModelType":"org.kie.workbench.common.forms.jbpm.model.authoring.task.TaskFormModel"},"fields":[],"layoutTemplate":{"version":3,"style":"FLUID","layoutProperties":{},"rows":[]}}
