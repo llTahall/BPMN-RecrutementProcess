@@ -474,9 +474,6 @@
         <dc:Bounds x="4420" y="95" width="40" height="40"/>
       </bpmndi:BPMNShape>
 
-      <bpmndi:BPMNShape id="Annotation_DefinirPoste_di" bpmnElement="Annotation_DefinirPoste">
-        <dc:Bounds x="1320" y="80" width="220" height="55"/>
-      </bpmndi:BPMNShape>
 
       <bpmndi:BPMNEdge id="Flow_01_di" bpmnElement="Flow_01">
         <di:waypoint x="186" y="115"/>
