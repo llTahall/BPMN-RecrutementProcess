@@ -308,14 +308,6 @@
     <bpmn2:sequenceFlow id="Flow_22" sourceRef="AccueilCollaborateur" targetRef="SuiviUnMois"/>
     <bpmn2:sequenceFlow id="Flow_23" sourceRef="SuiviUnMois" targetRef="EndEvent"/>
 
-    <bpmn2:association id="Association_DefinirPoste"
-                       sourceRef="DefinirPoste"
-                       targetRef="Annotation_DefinirPoste"
-                       associationDirection="Both"/>
-
-    <bpmn2:textAnnotation id="Annotation_DefinirPoste">
-      <bpmn2:text>Définir les missions, les compétences et l&apos;expérience</bpmn2:text>
-    </bpmn2:textAnnotation>
 
   </bpmn2:process>
 
@@ -681,10 +673,7 @@
         <di:waypoint x="6320" y="265"/>
       </bpmndi:BPMNEdge>
 
-      <bpmndi:BPMNEdge id="Association_DefinirPoste_di" bpmnElement="Association_DefinirPoste">
-        <di:waypoint x="1300" y="115"/>
-        <di:waypoint x="1320" y="107"/>
-      </bpmndi:BPMNEdge>
+      
 
     </bpmndi:BPMNPlane>
   </bpmndi:BPMNDiagram>
