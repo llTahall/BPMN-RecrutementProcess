@@ -1,0 +1,1 @@
+{"id":"9d802fd8-d3d9-4cb7-bbe8-e03f45b484ad","name":"SuiviUnMois-taskform.frm","model":{"taskName":"SuiviUnMois","processId":"Process_Recrutement","properties":[],"formModelType":"org.kie.workbench.common.forms.jbpm.model.authoring.task.TaskFormModel"},"fields":[],"layoutTemplate":{"version":3,"style":"FLUID","layoutProperties":{},"rows":[]}}

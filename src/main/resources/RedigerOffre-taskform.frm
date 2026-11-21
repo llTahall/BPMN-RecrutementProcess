@@ -1,0 +1,1 @@
+{"id":"2a78d7e8-5eca-4c1a-ad06-e3e3ddb49bc5","name":"RedigerOffre-taskform.frm","model":{"taskName":"RedigerOffre","processId":"Process_Recrutement","properties":[],"formModelType":"org.kie.workbench.common.forms.jbpm.model.authoring.task.TaskFormModel"},"fields":[],"layoutTemplate":{"version":3,"style":"FLUID","layoutProperties":{},"rows":[]}}

@@ -1,0 +1,1 @@
+{"id":"93a40b1e-8b09-4e3d-9dd5-d5f4edfb5dcd","name":"DefinirPoste-taskform.frm","model":{"taskName":"DefinirPoste","processId":"Process_Recrutement","properties":[],"formModelType":"org.kie.workbench.common.forms.jbpm.model.authoring.task.TaskFormModel"},"fields":[],"layoutTemplate":{"version":3,"style":"FLUID","layoutProperties":{},"rows":[]}}

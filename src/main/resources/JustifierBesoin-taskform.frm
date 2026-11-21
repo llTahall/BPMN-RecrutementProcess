@@ -1,0 +1,1 @@
+{"id":"c366671b-15ce-4931-92c7-2954e265cb7f","name":"JustifierBesoin-taskform.frm","model":{"taskName":"JustifierBesoin","processId":"Process_Recrutement","properties":[],"formModelType":"org.kie.workbench.common.forms.jbpm.model.authoring.task.TaskFormModel"},"fields":[],"layoutTemplate":{"version":3,"style":"FLUID","layoutProperties":{},"rows":[]}}

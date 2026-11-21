@@ -1,0 +1,1 @@
+{"id":"21c36f4d-7be3-45ca-9c37-ca6712fa65e6","name":"PlanifierEntretienManager-taskform.frm","model":{"taskName":"PlanifierEntretienManager","processId":"Process_Recrutement","properties":[],"formModelType":"org.kie.workbench.common.forms.jbpm.model.authoring.task.TaskFormModel"},"fields":[],"layoutTemplate":{"version":3,"style":"FLUID","layoutProperties":{},"rows":[]}}
