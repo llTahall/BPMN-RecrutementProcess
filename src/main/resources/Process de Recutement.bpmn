@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<bpmn2:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.omg.org/bpmn20" xmlns:bpmn2="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:bpsim="http://www.bpsim.org/schemas/1.0" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:drools="http://www.jboss.org/drools" id="_IiJqcOdlEfGXPafMuWGBpw" xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd http://www.jboss.org/drools drools.xsd http://www.bpsim.org/schemas/1.0 bpsim.xsd http://www.omg.org/spec/DD/20100524/DC DC.xsd http://www.omg.org/spec/DD/20100524/DI DI.xsd " exporter="jBPM Process Modeler" exporterVersion="2.0" targetNamespace="http://www.omg.org/bpmn20">
+<bpmn2:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.omg.org/bpmn20" xmlns:bpmn2="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:bpsim="http://www.bpsim.org/schemas/1.0" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:drools="http://www.jboss.org/drools" id="_Osd3oOdlEfGXPafMuWGBpw" xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd http://www.jboss.org/drools drools.xsd http://www.bpsim.org/schemas/1.0 bpsim.xsd http://www.omg.org/spec/DD/20100524/DC DC.xsd http://www.omg.org/spec/DD/20100524/DI DI.xsd " exporter="jBPM Process Modeler" exporterVersion="2.0" targetNamespace="http://www.omg.org/bpmn20">
   <bpmn2:itemDefinition id="_besoinAccepteItem" structureRef="Boolean"/>
   <bpmn2:itemDefinition id="_cvRetenuItem" structureRef="Boolean"/>
   <bpmn2:itemDefinition id="_entretienRHValideItem" structureRef="Boolean"/>
@@ -155,9 +155,9 @@
   <bpmn2:itemDefinition id="_PublierOffre_descriptionOffreInputXItem" structureRef="String"/>
   <bpmn2:itemDefinition id="_PublierOffre_profilRechercheInputXItem" structureRef="String"/>
   <bpmn2:itemDefinition id="_PublierOffre_avantagesPosteInputXItem" structureRef="String"/>
-  <bpmn2:itemDefinition id="_PublierOffre_plateformesPublicationInputXItem" structureRef="String"/>
-  <bpmn2:itemDefinition id="_PublierOffre_lienPublicationInputXItem" structureRef="String"/>
-  <bpmn2:itemDefinition id="_PublierOffre_commentairePublicationInputXItem" structureRef="String"/>
+  <bpmn2:itemDefinition id="_PublierOffre_plateformesPublicationOutputXItem" structureRef="String"/>
+  <bpmn2:itemDefinition id="_PublierOffre_lienPublicationOutputXItem" structureRef="String"/>
+  <bpmn2:itemDefinition id="_PublierOffre_commentairePublicationOutputXItem" structureRef="String"/>
   <bpmn2:itemDefinition id="_RedigerOffre_SkippableInputXItem" structureRef="Object"/>
   <bpmn2:itemDefinition id="_RedigerOffre_PriorityInputXItem" structureRef="Object"/>
   <bpmn2:itemDefinition id="_RedigerOffre_CommentInputXItem" structureRef="Object"/>
@@ -322,7 +322,7 @@
     <bpmn2:property id="plateformesPublication" itemSubjectRef="_plateformesPublicationItem" name="plateformesPublication"/>
     <bpmn2:property id="lienPublication" itemSubjectRef="_lienPublicationItem" name="lienPublication"/>
     <bpmn2:property id="commentairePublication" itemSubjectRef="_commentairePublicationItem" name="commentairePublication"/>
-    <bpmn2:laneSet id="_IiJqcedlEfGXPafMuWGBpw">
+    <bpmn2:laneSet id="_Osd3oedlEfGXPafMuWGBpw">
       <bpmn2:lane id="Lane_RH" name="RH Talent Acquisition">
         <bpmn2:extensionElements>
           <drools:metaData name="elementname">
@@ -401,7 +401,7 @@
           <drools:metaValue><![CDATA[Non]]></drools:metaValue>
         </drools:metaData>
       </bpmn2:extensionElements>
-      <bpmn2:conditionExpression xsi:type="bpmn2:tFormalExpression" id="_IiJqcudlEfGXPafMuWGBpw" language="http://www.mvel.org/2.0"><![CDATA[candidatValide == false]]></bpmn2:conditionExpression>
+      <bpmn2:conditionExpression xsi:type="bpmn2:tFormalExpression" id="_Osd3oudlEfGXPafMuWGBpw" language="http://www.mvel.org/2.0"><![CDATA[candidatValide == false]]></bpmn2:conditionExpression>
     </bpmn2:sequenceFlow>
     <bpmn2:sequenceFlow id="Flow_16" sourceRef="ValiderCandidat" targetRef="GatewayValidation"/>
     <bpmn2:sequenceFlow id="Flow_16_OUI" name="Oui" sourceRef="GatewayValidation" targetRef="EnvoyerProposition">
@@ -410,7 +410,7 @@
           <drools:metaValue><![CDATA[Oui]]></drools:metaValue>
         </drools:metaData>
       </bpmn2:extensionElements>
-      <bpmn2:conditionExpression xsi:type="bpmn2:tFormalExpression" id="_IiJqc-dlEfGXPafMuWGBpw" language="http://www.mvel.org/2.0"><![CDATA[candidatValide == true]]></bpmn2:conditionExpression>
+      <bpmn2:conditionExpression xsi:type="bpmn2:tFormalExpression" id="_Osd3o-dlEfGXPafMuWGBpw" language="http://www.mvel.org/2.0"><![CDATA[candidatValide == true]]></bpmn2:conditionExpression>
     </bpmn2:sequenceFlow>
     <bpmn2:sequenceFlow id="Flow_10" sourceRef="ExaminerCV" targetRef="GatewayCV"/>
     <bpmn2:sequenceFlow id="Flow_06" sourceRef="RedigerOffre" targetRef="PublierOffre"/>
@@ -423,7 +423,7 @@
           <drools:metaValue><![CDATA[Oui]]></drools:metaValue>
         </drools:metaData>
       </bpmn2:extensionElements>
-      <bpmn2:conditionExpression xsi:type="bpmn2:tFormalExpression" id="_IiJqdOdlEfGXPafMuWGBpw" language="http://www.mvel.org/2.0"><![CDATA[cvRetenu == true]]></bpmn2:conditionExpression>
+      <bpmn2:conditionExpression xsi:type="bpmn2:tFormalExpression" id="_Osd3pOdlEfGXPafMuWGBpw" language="http://www.mvel.org/2.0"><![CDATA[cvRetenu == true]]></bpmn2:conditionExpression>
     </bpmn2:sequenceFlow>
     <bpmn2:sequenceFlow id="Flow_04_NON" name="Non" sourceRef="GatewayBesoin" targetRef="EndEvent_Besoin">
       <bpmn2:extensionElements>
@@ -431,7 +431,7 @@
           <drools:metaValue><![CDATA[Non]]></drools:metaValue>
         </drools:metaData>
       </bpmn2:extensionElements>
-      <bpmn2:conditionExpression xsi:type="bpmn2:tFormalExpression" id="_IiJqdedlEfGXPafMuWGBpw" language="http://www.mvel.org/2.0"><![CDATA[besoinAccepte == false]]></bpmn2:conditionExpression>
+      <bpmn2:conditionExpression xsi:type="bpmn2:tFormalExpression" id="_Osd3pedlEfGXPafMuWGBpw" language="http://www.mvel.org/2.0"><![CDATA[besoinAccepte == false]]></bpmn2:conditionExpression>
     </bpmn2:sequenceFlow>
     <bpmn2:sequenceFlow id="Flow_04" sourceRef="ExaminerDemande" targetRef="GatewayBesoin"/>
     <bpmn2:sequenceFlow id="Flow_10_NON" name="Non" sourceRef="GatewayCV" targetRef="EndEvent_CV">
@@ -440,7 +440,7 @@
           <drools:metaValue><![CDATA[Non]]></drools:metaValue>
         </drools:metaData>
       </bpmn2:extensionElements>
-      <bpmn2:conditionExpression xsi:type="bpmn2:tFormalExpression" id="_IiJqdudlEfGXPafMuWGBpw" language="http://www.mvel.org/2.0"><![CDATA[cvRetenu == false]]></bpmn2:conditionExpression>
+      <bpmn2:conditionExpression xsi:type="bpmn2:tFormalExpression" id="_Osd3pudlEfGXPafMuWGBpw" language="http://www.mvel.org/2.0"><![CDATA[cvRetenu == false]]></bpmn2:conditionExpression>
     </bpmn2:sequenceFlow>
     <bpmn2:sequenceFlow id="Flow_09" sourceRef="SoumettreCandidature" targetRef="ExaminerCV"/>
     <bpmn2:sequenceFlow id="Flow_14_NON" name="Non" sourceRef="GatewayTechnique" targetRef="EndEvent_Technique">
@@ -449,7 +449,7 @@
           <drools:metaValue><![CDATA[Non]]></drools:metaValue>
         </drools:metaData>
       </bpmn2:extensionElements>
-      <bpmn2:conditionExpression xsi:type="bpmn2:tFormalExpression" id="_IiJqd-dlEfGXPafMuWGBpw" language="http://www.mvel.org/2.0"><![CDATA[entretienTechniqueValide == false]]></bpmn2:conditionExpression>
+      <bpmn2:conditionExpression xsi:type="bpmn2:tFormalExpression" id="_Osd3p-dlEfGXPafMuWGBpw" language="http://www.mvel.org/2.0"><![CDATA[entretienTechniqueValide == false]]></bpmn2:conditionExpression>
     </bpmn2:sequenceFlow>
     <bpmn2:sequenceFlow id="Flow_14_OUI" name="Validé" sourceRef="GatewayTechnique" targetRef="ConsoliderEvaluations">
       <bpmn2:extensionElements>
@@ -457,7 +457,7 @@
           <drools:metaValue><![CDATA[Validé]]></drools:metaValue>
         </drools:metaData>
       </bpmn2:extensionElements>
-      <bpmn2:conditionExpression xsi:type="bpmn2:tFormalExpression" id="_IiJqeOdlEfGXPafMuWGBpw" language="http://www.mvel.org/2.0"><![CDATA[entretienTechniqueValide == true]]></bpmn2:conditionExpression>
+      <bpmn2:conditionExpression xsi:type="bpmn2:tFormalExpression" id="_Osd3qOdlEfGXPafMuWGBpw" language="http://www.mvel.org/2.0"><![CDATA[entretienTechniqueValide == true]]></bpmn2:conditionExpression>
     </bpmn2:sequenceFlow>
     <bpmn2:sequenceFlow id="Flow_14" sourceRef="EntretienTechnique" targetRef="GatewayTechnique"/>
     <bpmn2:sequenceFlow id="Flow_18" sourceRef="FormalitesEmbauche" targetRef="PreparerArrivee"/>
@@ -470,7 +470,7 @@
           <drools:metaValue><![CDATA[Non]]></drools:metaValue>
         </drools:metaData>
       </bpmn2:extensionElements>
-      <bpmn2:conditionExpression xsi:type="bpmn2:tFormalExpression" id="_IiJqeedlEfGXPafMuWGBpw" language="http://www.mvel.org/2.0"><![CDATA[entretienRHValide == false]]></bpmn2:conditionExpression>
+      <bpmn2:conditionExpression xsi:type="bpmn2:tFormalExpression" id="_Osd3qedlEfGXPafMuWGBpw" language="http://www.mvel.org/2.0"><![CDATA[entretienRHValide == false]]></bpmn2:conditionExpression>
     </bpmn2:sequenceFlow>
     <bpmn2:sequenceFlow id="Flow_12_OUI" name="Favorable" sourceRef="GatewayEntretienRH" targetRef="PlanifierEntretienManager">
       <bpmn2:extensionElements>
@@ -478,7 +478,7 @@
           <drools:metaValue><![CDATA[Favorable]]></drools:metaValue>
         </drools:metaData>
       </bpmn2:extensionElements>
-      <bpmn2:conditionExpression xsi:type="bpmn2:tFormalExpression" id="_IiJqeudlEfGXPafMuWGBpw" language="http://www.mvel.org/2.0"><![CDATA[entretienRHValide == true]]></bpmn2:conditionExpression>
+      <bpmn2:conditionExpression xsi:type="bpmn2:tFormalExpression" id="_Osd3qudlEfGXPafMuWGBpw" language="http://www.mvel.org/2.0"><![CDATA[entretienRHValide == true]]></bpmn2:conditionExpression>
     </bpmn2:sequenceFlow>
     <bpmn2:sequenceFlow id="Flow_12" sourceRef="EntretienRH" targetRef="GatewayEntretienRH"/>
     <bpmn2:sequenceFlow id="Flow_08" sourceRef="ConsulterOffres" targetRef="SoumettreCandidature"/>
@@ -492,7 +492,7 @@
           <drools:metaValue><![CDATA[Oui]]></drools:metaValue>
         </drools:metaData>
       </bpmn2:extensionElements>
-      <bpmn2:conditionExpression xsi:type="bpmn2:tFormalExpression" id="_IiJqe-dlEfGXPafMuWGBpw" language="http://www.mvel.org/2.0"><![CDATA[besoinAccepte == true]]></bpmn2:conditionExpression>
+      <bpmn2:conditionExpression xsi:type="bpmn2:tFormalExpression" id="_Osd3q-dlEfGXPafMuWGBpw" language="http://www.mvel.org/2.0"><![CDATA[besoinAccepte == true]]></bpmn2:conditionExpression>
     </bpmn2:sequenceFlow>
     <bpmn2:userTask id="AccueilCollaborateur" name="Accueillir le collaborateur et remettre les documents et accès">
       <bpmn2:extensionElements>
@@ -502,54 +502,54 @@
       </bpmn2:extensionElements>
       <bpmn2:incoming>Flow_21</bpmn2:incoming>
       <bpmn2:outgoing>Flow_22</bpmn2:outgoing>
-      <bpmn2:ioSpecification id="_IiKRgOdlEfGXPafMuWGBpw">
+      <bpmn2:ioSpecification id="_Osd3rOdlEfGXPafMuWGBpw">
         <bpmn2:dataInput id="AccueilCollaborateur_TaskNameInputX" drools:dtype="Object" itemSubjectRef="_AccueilCollaborateur_TaskNameInputXItem" name="TaskName"/>
         <bpmn2:dataInput id="AccueilCollaborateur_SkippableInputX" drools:dtype="Object" itemSubjectRef="_AccueilCollaborateur_SkippableInputXItem" name="Skippable"/>
         <bpmn2:dataInput id="AccueilCollaborateur_GroupIdInputX" drools:dtype="Object" itemSubjectRef="_AccueilCollaborateur_GroupIdInputXItem" name="GroupId"/>
         <bpmn2:dataInput id="AccueilCollaborateur_CommentInputX" drools:dtype="Object" itemSubjectRef="_AccueilCollaborateur_CommentInputXItem" name="Comment"/>
         <bpmn2:dataInput id="AccueilCollaborateur_DescriptionInputX" drools:dtype="Object" itemSubjectRef="_AccueilCollaborateur_DescriptionInputXItem" name="Description"/>
-        <bpmn2:inputSet id="_IiKRgedlEfGXPafMuWGBpw">
+        <bpmn2:inputSet id="_Osd3redlEfGXPafMuWGBpw">
           <bpmn2:dataInputRefs>AccueilCollaborateur_TaskNameInputX</bpmn2:dataInputRefs>
           <bpmn2:dataInputRefs>AccueilCollaborateur_SkippableInputX</bpmn2:dataInputRefs>
           <bpmn2:dataInputRefs>AccueilCollaborateur_GroupIdInputX</bpmn2:dataInputRefs>
           <bpmn2:dataInputRefs>AccueilCollaborateur_CommentInputX</bpmn2:dataInputRefs>
           <bpmn2:dataInputRefs>AccueilCollaborateur_DescriptionInputX</bpmn2:dataInputRefs>
         </bpmn2:inputSet>
-        <bpmn2:outputSet id="_IiKRgudlEfGXPafMuWGBpw"/>
+        <bpmn2:outputSet id="_Osd3rudlEfGXPafMuWGBpw"/>
       </bpmn2:ioSpecification>
-      <bpmn2:dataInputAssociation id="_IiKRg-dlEfGXPafMuWGBpw">
+      <bpmn2:dataInputAssociation id="_Osd3r-dlEfGXPafMuWGBpw">
         <bpmn2:targetRef>AccueilCollaborateur_TaskNameInputX</bpmn2:targetRef>
-        <bpmn2:assignment id="_IiKRhOdlEfGXPafMuWGBpw">
-          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_IiKRhedlEfGXPafMuWGBpw"><![CDATA[AccueilCollaborateur]]></bpmn2:from>
-          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_IiKRhudlEfGXPafMuWGBpw">AccueilCollaborateur_TaskNameInputX</bpmn2:to>
+        <bpmn2:assignment id="_Osd3sOdlEfGXPafMuWGBpw">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_Osd3sedlEfGXPafMuWGBpw"><![CDATA[AccueilCollaborateur]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_Osd3sudlEfGXPafMuWGBpw">AccueilCollaborateur_TaskNameInputX</bpmn2:to>
         </bpmn2:assignment>
       </bpmn2:dataInputAssociation>
-      <bpmn2:dataInputAssociation id="_IiKRh-dlEfGXPafMuWGBpw">
+      <bpmn2:dataInputAssociation id="_Osd3s-dlEfGXPafMuWGBpw">
         <bpmn2:targetRef>AccueilCollaborateur_SkippableInputX</bpmn2:targetRef>
-        <bpmn2:assignment id="_IiKRiOdlEfGXPafMuWGBpw">
-          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_IiKRiedlEfGXPafMuWGBpw"><![CDATA[false]]></bpmn2:from>
-          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_IiKRiudlEfGXPafMuWGBpw">AccueilCollaborateur_SkippableInputX</bpmn2:to>
+        <bpmn2:assignment id="_Osd3tOdlEfGXPafMuWGBpw">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_Osd3tedlEfGXPafMuWGBpw"><![CDATA[false]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_Osd3tudlEfGXPafMuWGBpw">AccueilCollaborateur_SkippableInputX</bpmn2:to>
         </bpmn2:assignment>
       </bpmn2:dataInputAssociation>
-      <bpmn2:dataInputAssociation id="_IiKRi-dlEfGXPafMuWGBpw">
+      <bpmn2:dataInputAssociation id="_Osd3t-dlEfGXPafMuWGBpw">
         <bpmn2:targetRef>AccueilCollaborateur_GroupIdInputX</bpmn2:targetRef>
-        <bpmn2:assignment id="_IiKRjOdlEfGXPafMuWGBpw">
-          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_IiKRjedlEfGXPafMuWGBpw"><![CDATA[RH]]></bpmn2:from>
-          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_IiKRjudlEfGXPafMuWGBpw">AccueilCollaborateur_GroupIdInputX</bpmn2:to>
+        <bpmn2:assignment id="_Osd3uOdlEfGXPafMuWGBpw">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_Osd3uedlEfGXPafMuWGBpw"><![CDATA[RH]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_Osd3uudlEfGXPafMuWGBpw">AccueilCollaborateur_GroupIdInputX</bpmn2:to>
         </bpmn2:assignment>
       </bpmn2:dataInputAssociation>
-      <bpmn2:dataInputAssociation id="_IiKRj-dlEfGXPafMuWGBpw">
+      <bpmn2:dataInputAssociation id="_Osd3u-dlEfGXPafMuWGBpw">
         <bpmn2:targetRef>AccueilCollaborateur_CommentInputX</bpmn2:targetRef>
-        <bpmn2:assignment id="_IiKRkOdlEfGXPafMuWGBpw">
-          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_IiKRkedlEfGXPafMuWGBpw"><![CDATA[Accueillir le collaborateur et remettre les documents et accès]]></bpmn2:from>
-          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_IiKRkudlEfGXPafMuWGBpw">AccueilCollaborateur_CommentInputX</bpmn2:to>
+        <bpmn2:assignment id="_Osd3vOdlEfGXPafMuWGBpw">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_Osd3vedlEfGXPafMuWGBpw"><![CDATA[Accueillir le collaborateur et remettre les documents et accès]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_Osd3vudlEfGXPafMuWGBpw">AccueilCollaborateur_CommentInputX</bpmn2:to>
         </bpmn2:assignment>
       </bpmn2:dataInputAssociation>
-      <bpmn2:dataInputAssociation id="_IiKRk-dlEfGXPafMuWGBpw">
+      <bpmn2:dataInputAssociation id="_Osd3v-dlEfGXPafMuWGBpw">
         <bpmn2:targetRef>AccueilCollaborateur_DescriptionInputX</bpmn2:targetRef>
-        <bpmn2:assignment id="_IiKRlOdlEfGXPafMuWGBpw">
-          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_IiKRledlEfGXPafMuWGBpw"><![CDATA[Le service RH accueille le collaborateur et lui remet les documents et accès nécessaires.]]></bpmn2:from>
-          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_IiKRludlEfGXPafMuWGBpw">AccueilCollaborateur_DescriptionInputX</bpmn2:to>
+        <bpmn2:assignment id="_Osd3wOdlEfGXPafMuWGBpw">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_Osd3wedlEfGXPafMuWGBpw"><![CDATA[Le service RH accueille le collaborateur et lui remet les documents et accès nécessaires.]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_Osd3wudlEfGXPafMuWGBpw">AccueilCollaborateur_DescriptionInputX</bpmn2:to>
         </bpmn2:assignment>
       </bpmn2:dataInputAssociation>
     </bpmn2:userTask>
@@ -561,54 +561,54 @@
       </bpmn2:extensionElements>
       <bpmn2:incoming>Flow_13</bpmn2:incoming>
       <bpmn2:outgoing>Flow_14</bpmn2:outgoing>
-      <bpmn2:ioSpecification id="_IiKRl-dlEfGXPafMuWGBpw">
+      <bpmn2:ioSpecification id="_Osd3w-dlEfGXPafMuWGBpw">
         <bpmn2:dataInput id="EntretienTechnique_TaskNameInputX" drools:dtype="Object" itemSubjectRef="_EntretienTechnique_TaskNameInputXItem" name="TaskName"/>
         <bpmn2:dataInput id="EntretienTechnique_SkippableInputX" drools:dtype="Object" itemSubjectRef="_EntretienTechnique_SkippableInputXItem" name="Skippable"/>
         <bpmn2:dataInput id="EntretienTechnique_GroupIdInputX" drools:dtype="Object" itemSubjectRef="_EntretienTechnique_GroupIdInputXItem" name="GroupId"/>
         <bpmn2:dataInput id="EntretienTechnique_CommentInputX" drools:dtype="Object" itemSubjectRef="_EntretienTechnique_CommentInputXItem" name="Comment"/>
         <bpmn2:dataInput id="EntretienTechnique_DescriptionInputX" drools:dtype="Object" itemSubjectRef="_EntretienTechnique_DescriptionInputXItem" name="Description"/>
-        <bpmn2:inputSet id="_IiKRmOdlEfGXPafMuWGBpw">
+        <bpmn2:inputSet id="_Osd3xOdlEfGXPafMuWGBpw">
           <bpmn2:dataInputRefs>EntretienTechnique_TaskNameInputX</bpmn2:dataInputRefs>
           <bpmn2:dataInputRefs>EntretienTechnique_SkippableInputX</bpmn2:dataInputRefs>
           <bpmn2:dataInputRefs>EntretienTechnique_GroupIdInputX</bpmn2:dataInputRefs>
           <bpmn2:dataInputRefs>EntretienTechnique_CommentInputX</bpmn2:dataInputRefs>
           <bpmn2:dataInputRefs>EntretienTechnique_DescriptionInputX</bpmn2:dataInputRefs>
         </bpmn2:inputSet>
-        <bpmn2:outputSet id="_IiKRmedlEfGXPafMuWGBpw"/>
+        <bpmn2:outputSet id="_Osd3xedlEfGXPafMuWGBpw"/>
       </bpmn2:ioSpecification>
-      <bpmn2:dataInputAssociation id="_IiKRmudlEfGXPafMuWGBpw">
+      <bpmn2:dataInputAssociation id="_Osd3xudlEfGXPafMuWGBpw">
         <bpmn2:targetRef>EntretienTechnique_TaskNameInputX</bpmn2:targetRef>
-        <bpmn2:assignment id="_IiKRm-dlEfGXPafMuWGBpw">
-          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_IiKRnOdlEfGXPafMuWGBpw"><![CDATA[EntretienTechnique]]></bpmn2:from>
-          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_IiKRnedlEfGXPafMuWGBpw">EntretienTechnique_TaskNameInputX</bpmn2:to>
+        <bpmn2:assignment id="_Osd3x-dlEfGXPafMuWGBpw">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_Osd3yOdlEfGXPafMuWGBpw"><![CDATA[EntretienTechnique]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_Osd3yedlEfGXPafMuWGBpw">EntretienTechnique_TaskNameInputX</bpmn2:to>
         </bpmn2:assignment>
       </bpmn2:dataInputAssociation>
-      <bpmn2:dataInputAssociation id="_IiKRnudlEfGXPafMuWGBpw">
+      <bpmn2:dataInputAssociation id="_Osd3yudlEfGXPafMuWGBpw">
         <bpmn2:targetRef>EntretienTechnique_SkippableInputX</bpmn2:targetRef>
-        <bpmn2:assignment id="_IiKRn-dlEfGXPafMuWGBpw">
-          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_IiKRoOdlEfGXPafMuWGBpw"><![CDATA[false]]></bpmn2:from>
-          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_IiKRoedlEfGXPafMuWGBpw">EntretienTechnique_SkippableInputX</bpmn2:to>
+        <bpmn2:assignment id="_Osd3y-dlEfGXPafMuWGBpw">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_Osd3zOdlEfGXPafMuWGBpw"><![CDATA[false]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_Osd3zedlEfGXPafMuWGBpw">EntretienTechnique_SkippableInputX</bpmn2:to>
         </bpmn2:assignment>
       </bpmn2:dataInputAssociation>
-      <bpmn2:dataInputAssociation id="_IiKRoudlEfGXPafMuWGBpw">
+      <bpmn2:dataInputAssociation id="_Osd3zudlEfGXPafMuWGBpw">
         <bpmn2:targetRef>EntretienTechnique_GroupIdInputX</bpmn2:targetRef>
-        <bpmn2:assignment id="_IiKRo-dlEfGXPafMuWGBpw">
-          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_IiKRpOdlEfGXPafMuWGBpw"><![CDATA[Manager]]></bpmn2:from>
-          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_IiKRpedlEfGXPafMuWGBpw">EntretienTechnique_GroupIdInputX</bpmn2:to>
+        <bpmn2:assignment id="_Osd3z-dlEfGXPafMuWGBpw">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_Osd30OdlEfGXPafMuWGBpw"><![CDATA[Manager]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_Osd30edlEfGXPafMuWGBpw">EntretienTechnique_GroupIdInputX</bpmn2:to>
         </bpmn2:assignment>
       </bpmn2:dataInputAssociation>
-      <bpmn2:dataInputAssociation id="_IiKRpudlEfGXPafMuWGBpw">
+      <bpmn2:dataInputAssociation id="_Osd30udlEfGXPafMuWGBpw">
         <bpmn2:targetRef>EntretienTechnique_CommentInputX</bpmn2:targetRef>
-        <bpmn2:assignment id="_IiKRp-dlEfGXPafMuWGBpw">
-          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_IiKRqOdlEfGXPafMuWGBpw"><![CDATA[Évaluer les compétences techniques et métier]]></bpmn2:from>
-          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_IiKRqedlEfGXPafMuWGBpw">EntretienTechnique_CommentInputX</bpmn2:to>
+        <bpmn2:assignment id="_Osd30-dlEfGXPafMuWGBpw">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_Osd31OdlEfGXPafMuWGBpw"><![CDATA[Évaluer les compétences techniques et métier]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_Osd31edlEfGXPafMuWGBpw">EntretienTechnique_CommentInputX</bpmn2:to>
         </bpmn2:assignment>
       </bpmn2:dataInputAssociation>
-      <bpmn2:dataInputAssociation id="_IiKRqudlEfGXPafMuWGBpw">
+      <bpmn2:dataInputAssociation id="_Osd31udlEfGXPafMuWGBpw">
         <bpmn2:targetRef>EntretienTechnique_DescriptionInputX</bpmn2:targetRef>
-        <bpmn2:assignment id="_IiKRq-dlEfGXPafMuWGBpw">
-          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_IiKRrOdlEfGXPafMuWGBpw"><![CDATA[Le Manager évalue les compétences techniques et métier du candidat.]]></bpmn2:from>
-          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_IiKRredlEfGXPafMuWGBpw">EntretienTechnique_DescriptionInputX</bpmn2:to>
+        <bpmn2:assignment id="_Osd31-dlEfGXPafMuWGBpw">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_Osd32OdlEfGXPafMuWGBpw"><![CDATA[Le Manager évalue les compétences techniques et métier du candidat.]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_Osd32edlEfGXPafMuWGBpw">EntretienTechnique_DescriptionInputX</bpmn2:to>
         </bpmn2:assignment>
       </bpmn2:dataInputAssociation>
     </bpmn2:userTask>
@@ -620,54 +620,54 @@
       </bpmn2:extensionElements>
       <bpmn2:incoming>Flow_12_OUI</bpmn2:incoming>
       <bpmn2:outgoing>Flow_13</bpmn2:outgoing>
-      <bpmn2:ioSpecification id="_IiKRrudlEfGXPafMuWGBpw">
+      <bpmn2:ioSpecification id="_Osd32udlEfGXPafMuWGBpw">
         <bpmn2:dataInput id="PlanifierEntretienManager_TaskNameInputX" drools:dtype="Object" itemSubjectRef="_PlanifierEntretienManager_TaskNameInputXItem" name="TaskName"/>
         <bpmn2:dataInput id="PlanifierEntretienManager_SkippableInputX" drools:dtype="Object" itemSubjectRef="_PlanifierEntretienManager_SkippableInputXItem" name="Skippable"/>
         <bpmn2:dataInput id="PlanifierEntretienManager_GroupIdInputX" drools:dtype="Object" itemSubjectRef="_PlanifierEntretienManager_GroupIdInputXItem" name="GroupId"/>
         <bpmn2:dataInput id="PlanifierEntretienManager_CommentInputX" drools:dtype="Object" itemSubjectRef="_PlanifierEntretienManager_CommentInputXItem" name="Comment"/>
         <bpmn2:dataInput id="PlanifierEntretienManager_DescriptionInputX" drools:dtype="Object" itemSubjectRef="_PlanifierEntretienManager_DescriptionInputXItem" name="Description"/>
-        <bpmn2:inputSet id="_IiKRr-dlEfGXPafMuWGBpw">
+        <bpmn2:inputSet id="_Osd32-dlEfGXPafMuWGBpw">
           <bpmn2:dataInputRefs>PlanifierEntretienManager_TaskNameInputX</bpmn2:dataInputRefs>
           <bpmn2:dataInputRefs>PlanifierEntretienManager_SkippableInputX</bpmn2:dataInputRefs>
           <bpmn2:dataInputRefs>PlanifierEntretienManager_GroupIdInputX</bpmn2:dataInputRefs>
           <bpmn2:dataInputRefs>PlanifierEntretienManager_CommentInputX</bpmn2:dataInputRefs>
           <bpmn2:dataInputRefs>PlanifierEntretienManager_DescriptionInputX</bpmn2:dataInputRefs>
         </bpmn2:inputSet>
-        <bpmn2:outputSet id="_IiKRsOdlEfGXPafMuWGBpw"/>
+        <bpmn2:outputSet id="_Osd33OdlEfGXPafMuWGBpw"/>
       </bpmn2:ioSpecification>
-      <bpmn2:dataInputAssociation id="_IiKRsedlEfGXPafMuWGBpw">
+      <bpmn2:dataInputAssociation id="_Osd33edlEfGXPafMuWGBpw">
         <bpmn2:targetRef>PlanifierEntretienManager_TaskNameInputX</bpmn2:targetRef>
-        <bpmn2:assignment id="_IiKRsudlEfGXPafMuWGBpw">
-          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_IiKRs-dlEfGXPafMuWGBpw"><![CDATA[PlanifierEntretienManager]]></bpmn2:from>
-          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_IiKRtOdlEfGXPafMuWGBpw">PlanifierEntretienManager_TaskNameInputX</bpmn2:to>
+        <bpmn2:assignment id="_Osd33udlEfGXPafMuWGBpw">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_Osd33-dlEfGXPafMuWGBpw"><![CDATA[PlanifierEntretienManager]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_Osd34OdlEfGXPafMuWGBpw">PlanifierEntretienManager_TaskNameInputX</bpmn2:to>
         </bpmn2:assignment>
       </bpmn2:dataInputAssociation>
-      <bpmn2:dataInputAssociation id="_IiKRtedlEfGXPafMuWGBpw">
+      <bpmn2:dataInputAssociation id="_Osd34edlEfGXPafMuWGBpw">
         <bpmn2:targetRef>PlanifierEntretienManager_SkippableInputX</bpmn2:targetRef>
-        <bpmn2:assignment id="_IiKRtudlEfGXPafMuWGBpw">
-          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_IiKRt-dlEfGXPafMuWGBpw"><![CDATA[false]]></bpmn2:from>
-          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_IiKRuOdlEfGXPafMuWGBpw">PlanifierEntretienManager_SkippableInputX</bpmn2:to>
+        <bpmn2:assignment id="_Osd34udlEfGXPafMuWGBpw">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_Osd34-dlEfGXPafMuWGBpw"><![CDATA[false]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_Osd35OdlEfGXPafMuWGBpw">PlanifierEntretienManager_SkippableInputX</bpmn2:to>
         </bpmn2:assignment>
       </bpmn2:dataInputAssociation>
-      <bpmn2:dataInputAssociation id="_IiKRuedlEfGXPafMuWGBpw">
+      <bpmn2:dataInputAssociation id="_Osd35edlEfGXPafMuWGBpw">
         <bpmn2:targetRef>PlanifierEntretienManager_GroupIdInputX</bpmn2:targetRef>
-        <bpmn2:assignment id="_IiKRuudlEfGXPafMuWGBpw">
-          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_IiKRu-dlEfGXPafMuWGBpw"><![CDATA[RH]]></bpmn2:from>
-          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_IiKRvOdlEfGXPafMuWGBpw">PlanifierEntretienManager_GroupIdInputX</bpmn2:to>
+        <bpmn2:assignment id="_Osd35udlEfGXPafMuWGBpw">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_Osd35-dlEfGXPafMuWGBpw"><![CDATA[RH]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_Osd36OdlEfGXPafMuWGBpw">PlanifierEntretienManager_GroupIdInputX</bpmn2:to>
         </bpmn2:assignment>
       </bpmn2:dataInputAssociation>
-      <bpmn2:dataInputAssociation id="_IiKRvedlEfGXPafMuWGBpw">
+      <bpmn2:dataInputAssociation id="_Osd36edlEfGXPafMuWGBpw">
         <bpmn2:targetRef>PlanifierEntretienManager_CommentInputX</bpmn2:targetRef>
-        <bpmn2:assignment id="_IiKRvudlEfGXPafMuWGBpw">
-          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_IiKRv-dlEfGXPafMuWGBpw"><![CDATA[Planifier l'entretien avec le Manager]]></bpmn2:from>
-          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_IiKRwOdlEfGXPafMuWGBpw">PlanifierEntretienManager_CommentInputX</bpmn2:to>
+        <bpmn2:assignment id="_Osd36udlEfGXPafMuWGBpw">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_Osd36-dlEfGXPafMuWGBpw"><![CDATA[Planifier l'entretien avec le Manager]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_Osd37OdlEfGXPafMuWGBpw">PlanifierEntretienManager_CommentInputX</bpmn2:to>
         </bpmn2:assignment>
       </bpmn2:dataInputAssociation>
-      <bpmn2:dataInputAssociation id="_IiKRwedlEfGXPafMuWGBpw">
+      <bpmn2:dataInputAssociation id="_Osd37edlEfGXPafMuWGBpw">
         <bpmn2:targetRef>PlanifierEntretienManager_DescriptionInputX</bpmn2:targetRef>
-        <bpmn2:assignment id="_IiKRwudlEfGXPafMuWGBpw">
-          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_IiKRw-dlEfGXPafMuWGBpw"><![CDATA[Le service RH planifie l’entretien entre le candidat et le Manager.]]></bpmn2:from>
-          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_IiKRxOdlEfGXPafMuWGBpw">PlanifierEntretienManager_DescriptionInputX</bpmn2:to>
+        <bpmn2:assignment id="_Osd37udlEfGXPafMuWGBpw">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_Osd37-dlEfGXPafMuWGBpw"><![CDATA[Le service RH planifie l’entretien entre le candidat et le Manager.]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_Osd38OdlEfGXPafMuWGBpw">PlanifierEntretienManager_DescriptionInputX</bpmn2:to>
         </bpmn2:assignment>
       </bpmn2:dataInputAssociation>
     </bpmn2:userTask>
@@ -679,7 +679,7 @@
       </bpmn2:extensionElements>
       <bpmn2:incoming>Flow_01</bpmn2:incoming>
       <bpmn2:outgoing>Flow_02</bpmn2:outgoing>
-      <bpmn2:ioSpecification id="_IiKRxedlEfGXPafMuWGBpw">
+      <bpmn2:ioSpecification id="_Osd38edlEfGXPafMuWGBpw">
         <bpmn2:dataInput id="JustifierBesoin_TaskNameInputX" drools:dtype="Object" itemSubjectRef="_JustifierBesoin_TaskNameInputXItem" name="TaskName"/>
         <bpmn2:dataInput id="JustifierBesoin_SkippableInputX" drools:dtype="Object" itemSubjectRef="_JustifierBesoin_SkippableInputXItem" name="Skippable"/>
         <bpmn2:dataInput id="JustifierBesoin_GroupIdInputX" drools:dtype="Object" itemSubjectRef="_JustifierBesoin_GroupIdInputXItem" name="GroupId"/>
@@ -687,58 +687,58 @@
         <bpmn2:dataInput id="JustifierBesoin_DescriptionInputX" drools:dtype="Object" itemSubjectRef="_JustifierBesoin_DescriptionInputXItem" name="Description"/>
         <bpmn2:dataOutput id="JustifierBesoin_motifRecrutementOutputX" drools:dtype="String" itemSubjectRef="_JustifierBesoin_motifRecrutementOutputXItem" name="motifRecrutement"/>
         <bpmn2:dataOutput id="JustifierBesoin_justificationBesoinOutputX" drools:dtype="String" itemSubjectRef="_JustifierBesoin_justificationBesoinOutputXItem" name="justificationBesoin"/>
-        <bpmn2:inputSet id="_IiKRxudlEfGXPafMuWGBpw">
+        <bpmn2:inputSet id="_Osd38udlEfGXPafMuWGBpw">
           <bpmn2:dataInputRefs>JustifierBesoin_TaskNameInputX</bpmn2:dataInputRefs>
           <bpmn2:dataInputRefs>JustifierBesoin_SkippableInputX</bpmn2:dataInputRefs>
           <bpmn2:dataInputRefs>JustifierBesoin_GroupIdInputX</bpmn2:dataInputRefs>
           <bpmn2:dataInputRefs>JustifierBesoin_CommentInputX</bpmn2:dataInputRefs>
           <bpmn2:dataInputRefs>JustifierBesoin_DescriptionInputX</bpmn2:dataInputRefs>
         </bpmn2:inputSet>
-        <bpmn2:outputSet id="_IiKRx-dlEfGXPafMuWGBpw">
+        <bpmn2:outputSet id="_Osd38-dlEfGXPafMuWGBpw">
           <bpmn2:dataOutputRefs>JustifierBesoin_motifRecrutementOutputX</bpmn2:dataOutputRefs>
           <bpmn2:dataOutputRefs>JustifierBesoin_justificationBesoinOutputX</bpmn2:dataOutputRefs>
         </bpmn2:outputSet>
       </bpmn2:ioSpecification>
-      <bpmn2:dataInputAssociation id="_IiKRyOdlEfGXPafMuWGBpw">
+      <bpmn2:dataInputAssociation id="_Osd39OdlEfGXPafMuWGBpw">
         <bpmn2:targetRef>JustifierBesoin_TaskNameInputX</bpmn2:targetRef>
-        <bpmn2:assignment id="_IiKRyedlEfGXPafMuWGBpw">
-          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_IiKRyudlEfGXPafMuWGBpw"><![CDATA[JustifierBesoin]]></bpmn2:from>
-          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_IiKRy-dlEfGXPafMuWGBpw">JustifierBesoin_TaskNameInputX</bpmn2:to>
+        <bpmn2:assignment id="_Osd39edlEfGXPafMuWGBpw">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_Osd39udlEfGXPafMuWGBpw"><![CDATA[JustifierBesoin]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_Osd39-dlEfGXPafMuWGBpw">JustifierBesoin_TaskNameInputX</bpmn2:to>
         </bpmn2:assignment>
       </bpmn2:dataInputAssociation>
-      <bpmn2:dataInputAssociation id="_IiKRzOdlEfGXPafMuWGBpw">
+      <bpmn2:dataInputAssociation id="_Osd3-OdlEfGXPafMuWGBpw">
         <bpmn2:targetRef>JustifierBesoin_SkippableInputX</bpmn2:targetRef>
-        <bpmn2:assignment id="_IiKRzedlEfGXPafMuWGBpw">
-          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_IiKRzudlEfGXPafMuWGBpw"><![CDATA[false]]></bpmn2:from>
-          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_IiKRz-dlEfGXPafMuWGBpw">JustifierBesoin_SkippableInputX</bpmn2:to>
+        <bpmn2:assignment id="_Osd3-edlEfGXPafMuWGBpw">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_Osd3-udlEfGXPafMuWGBpw"><![CDATA[false]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_Osd3--dlEfGXPafMuWGBpw">JustifierBesoin_SkippableInputX</bpmn2:to>
         </bpmn2:assignment>
       </bpmn2:dataInputAssociation>
-      <bpmn2:dataInputAssociation id="_IiKR0OdlEfGXPafMuWGBpw">
+      <bpmn2:dataInputAssociation id="_Osd3_OdlEfGXPafMuWGBpw">
         <bpmn2:targetRef>JustifierBesoin_GroupIdInputX</bpmn2:targetRef>
-        <bpmn2:assignment id="_IiKR0edlEfGXPafMuWGBpw">
-          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_IiKR0udlEfGXPafMuWGBpw"><![CDATA[Manager]]></bpmn2:from>
-          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_IiKR0-dlEfGXPafMuWGBpw">JustifierBesoin_GroupIdInputX</bpmn2:to>
+        <bpmn2:assignment id="_Osd3_edlEfGXPafMuWGBpw">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_Osd3_udlEfGXPafMuWGBpw"><![CDATA[Manager]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_Osd3_-dlEfGXPafMuWGBpw">JustifierBesoin_GroupIdInputX</bpmn2:to>
         </bpmn2:assignment>
       </bpmn2:dataInputAssociation>
-      <bpmn2:dataInputAssociation id="_IiKR1OdlEfGXPafMuWGBpw">
+      <bpmn2:dataInputAssociation id="_Osd4AOdlEfGXPafMuWGBpw">
         <bpmn2:targetRef>JustifierBesoin_CommentInputX</bpmn2:targetRef>
-        <bpmn2:assignment id="_IiKR1edlEfGXPafMuWGBpw">
-          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_IiKR1udlEfGXPafMuWGBpw"><![CDATA[Identifier et justifier le besoin de recrutement]]></bpmn2:from>
-          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_IiKR1-dlEfGXPafMuWGBpw">JustifierBesoin_CommentInputX</bpmn2:to>
+        <bpmn2:assignment id="_Osd4AedlEfGXPafMuWGBpw">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_Osd4AudlEfGXPafMuWGBpw"><![CDATA[Identifier et justifier le besoin de recrutement]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_Osd4A-dlEfGXPafMuWGBpw">JustifierBesoin_CommentInputX</bpmn2:to>
         </bpmn2:assignment>
       </bpmn2:dataInputAssociation>
-      <bpmn2:dataInputAssociation id="_IiKR2OdlEfGXPafMuWGBpw">
+      <bpmn2:dataInputAssociation id="_Osd4BOdlEfGXPafMuWGBpw">
         <bpmn2:targetRef>JustifierBesoin_DescriptionInputX</bpmn2:targetRef>
-        <bpmn2:assignment id="_IiKR2edlEfGXPafMuWGBpw">
-          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_IiKR2udlEfGXPafMuWGBpw"><![CDATA[Le Manager identifie le besoin et justifie le lancement du recrutement.]]></bpmn2:from>
-          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_IiKR2-dlEfGXPafMuWGBpw">JustifierBesoin_DescriptionInputX</bpmn2:to>
+        <bpmn2:assignment id="_Osd4BedlEfGXPafMuWGBpw">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_Osd4BudlEfGXPafMuWGBpw"><![CDATA[Le Manager identifie le besoin et justifie le lancement du recrutement.]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_Osd4B-dlEfGXPafMuWGBpw">JustifierBesoin_DescriptionInputX</bpmn2:to>
         </bpmn2:assignment>
       </bpmn2:dataInputAssociation>
-      <bpmn2:dataOutputAssociation id="_IiKR3OdlEfGXPafMuWGBpw">
+      <bpmn2:dataOutputAssociation id="_Osd4COdlEfGXPafMuWGBpw">
         <bpmn2:sourceRef>JustifierBesoin_motifRecrutementOutputX</bpmn2:sourceRef>
         <bpmn2:targetRef>motifRecrutement</bpmn2:targetRef>
       </bpmn2:dataOutputAssociation>
-      <bpmn2:dataOutputAssociation id="_IiKR3edlEfGXPafMuWGBpw">
+      <bpmn2:dataOutputAssociation id="_Osd4CedlEfGXPafMuWGBpw">
         <bpmn2:sourceRef>JustifierBesoin_justificationBesoinOutputX</bpmn2:sourceRef>
         <bpmn2:targetRef>justificationBesoin</bpmn2:targetRef>
       </bpmn2:dataOutputAssociation>
@@ -751,54 +751,54 @@
       </bpmn2:extensionElements>
       <bpmn2:incoming>Flow_15</bpmn2:incoming>
       <bpmn2:outgoing>Flow_16</bpmn2:outgoing>
-      <bpmn2:ioSpecification id="_IiKR3udlEfGXPafMuWGBpw">
+      <bpmn2:ioSpecification id="_Osd4CudlEfGXPafMuWGBpw">
         <bpmn2:dataInput id="ValiderCandidat_TaskNameInputX" drools:dtype="Object" itemSubjectRef="_ValiderCandidat_TaskNameInputXItem" name="TaskName"/>
         <bpmn2:dataInput id="ValiderCandidat_SkippableInputX" drools:dtype="Object" itemSubjectRef="_ValiderCandidat_SkippableInputXItem" name="Skippable"/>
         <bpmn2:dataInput id="ValiderCandidat_GroupIdInputX" drools:dtype="Object" itemSubjectRef="_ValiderCandidat_GroupIdInputXItem" name="GroupId"/>
         <bpmn2:dataInput id="ValiderCandidat_CommentInputX" drools:dtype="Object" itemSubjectRef="_ValiderCandidat_CommentInputXItem" name="Comment"/>
         <bpmn2:dataInput id="ValiderCandidat_DescriptionInputX" drools:dtype="Object" itemSubjectRef="_ValiderCandidat_DescriptionInputXItem" name="Description"/>
-        <bpmn2:inputSet id="_IiKR3-dlEfGXPafMuWGBpw">
+        <bpmn2:inputSet id="_Osd4C-dlEfGXPafMuWGBpw">
           <bpmn2:dataInputRefs>ValiderCandidat_TaskNameInputX</bpmn2:dataInputRefs>
           <bpmn2:dataInputRefs>ValiderCandidat_SkippableInputX</bpmn2:dataInputRefs>
           <bpmn2:dataInputRefs>ValiderCandidat_GroupIdInputX</bpmn2:dataInputRefs>
           <bpmn2:dataInputRefs>ValiderCandidat_CommentInputX</bpmn2:dataInputRefs>
           <bpmn2:dataInputRefs>ValiderCandidat_DescriptionInputX</bpmn2:dataInputRefs>
         </bpmn2:inputSet>
-        <bpmn2:outputSet id="_IiKR4OdlEfGXPafMuWGBpw"/>
+        <bpmn2:outputSet id="_Osd4DOdlEfGXPafMuWGBpw"/>
       </bpmn2:ioSpecification>
-      <bpmn2:dataInputAssociation id="_IiKR4edlEfGXPafMuWGBpw">
+      <bpmn2:dataInputAssociation id="_Osd4DedlEfGXPafMuWGBpw">
         <bpmn2:targetRef>ValiderCandidat_TaskNameInputX</bpmn2:targetRef>
-        <bpmn2:assignment id="_IiKR4udlEfGXPafMuWGBpw">
-          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_IiKR4-dlEfGXPafMuWGBpw"><![CDATA[ValiderCandidat]]></bpmn2:from>
-          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_IiKR5OdlEfGXPafMuWGBpw">ValiderCandidat_TaskNameInputX</bpmn2:to>
+        <bpmn2:assignment id="_Osd4DudlEfGXPafMuWGBpw">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_Osd4D-dlEfGXPafMuWGBpw"><![CDATA[ValiderCandidat]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_Osd4EOdlEfGXPafMuWGBpw">ValiderCandidat_TaskNameInputX</bpmn2:to>
         </bpmn2:assignment>
       </bpmn2:dataInputAssociation>
-      <bpmn2:dataInputAssociation id="_IiKR5edlEfGXPafMuWGBpw">
+      <bpmn2:dataInputAssociation id="_Osd4EedlEfGXPafMuWGBpw">
         <bpmn2:targetRef>ValiderCandidat_SkippableInputX</bpmn2:targetRef>
-        <bpmn2:assignment id="_IiKR5udlEfGXPafMuWGBpw">
-          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_IiKR5-dlEfGXPafMuWGBpw"><![CDATA[false]]></bpmn2:from>
-          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_IiKR6OdlEfGXPafMuWGBpw">ValiderCandidat_SkippableInputX</bpmn2:to>
+        <bpmn2:assignment id="_Osd4EudlEfGXPafMuWGBpw">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_Osd4E-dlEfGXPafMuWGBpw"><![CDATA[false]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_Osd4FOdlEfGXPafMuWGBpw">ValiderCandidat_SkippableInputX</bpmn2:to>
         </bpmn2:assignment>
       </bpmn2:dataInputAssociation>
-      <bpmn2:dataInputAssociation id="_IiKR6edlEfGXPafMuWGBpw">
+      <bpmn2:dataInputAssociation id="_Osd4FedlEfGXPafMuWGBpw">
         <bpmn2:targetRef>ValiderCandidat_GroupIdInputX</bpmn2:targetRef>
-        <bpmn2:assignment id="_IiKR6udlEfGXPafMuWGBpw">
-          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_IiKR6-dlEfGXPafMuWGBpw"><![CDATA[Manager]]></bpmn2:from>
-          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_IiKR7OdlEfGXPafMuWGBpw">ValiderCandidat_GroupIdInputX</bpmn2:to>
+        <bpmn2:assignment id="_Osd4FudlEfGXPafMuWGBpw">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_Osd4F-dlEfGXPafMuWGBpw"><![CDATA[Manager]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_Osd4GOdlEfGXPafMuWGBpw">ValiderCandidat_GroupIdInputX</bpmn2:to>
         </bpmn2:assignment>
       </bpmn2:dataInputAssociation>
-      <bpmn2:dataInputAssociation id="_IiKR7edlEfGXPafMuWGBpw">
+      <bpmn2:dataInputAssociation id="_Osd4GedlEfGXPafMuWGBpw">
         <bpmn2:targetRef>ValiderCandidat_CommentInputX</bpmn2:targetRef>
-        <bpmn2:assignment id="_IiKR7udlEfGXPafMuWGBpw">
-          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_IiKR7-dlEfGXPafMuWGBpw"><![CDATA[Valider le candidat retenu]]></bpmn2:from>
-          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_IiKR8OdlEfGXPafMuWGBpw">ValiderCandidat_CommentInputX</bpmn2:to>
+        <bpmn2:assignment id="_Osd4GudlEfGXPafMuWGBpw">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_Osd4G-dlEfGXPafMuWGBpw"><![CDATA[Valider le candidat retenu]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_Osd4HOdlEfGXPafMuWGBpw">ValiderCandidat_CommentInputX</bpmn2:to>
         </bpmn2:assignment>
       </bpmn2:dataInputAssociation>
-      <bpmn2:dataInputAssociation id="_IiKR8edlEfGXPafMuWGBpw">
+      <bpmn2:dataInputAssociation id="_Osd4HedlEfGXPafMuWGBpw">
         <bpmn2:targetRef>ValiderCandidat_DescriptionInputX</bpmn2:targetRef>
-        <bpmn2:assignment id="_IiKR8udlEfGXPafMuWGBpw">
-          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_IiKR8-dlEfGXPafMuWGBpw"><![CDATA[Le Manager confirme le choix du candidat retenu.]]></bpmn2:from>
-          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_IiKR9OdlEfGXPafMuWGBpw">ValiderCandidat_DescriptionInputX</bpmn2:to>
+        <bpmn2:assignment id="_Osd4HudlEfGXPafMuWGBpw">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_Osd4H-dlEfGXPafMuWGBpw"><![CDATA[Le Manager confirme le choix du candidat retenu.]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_Osd4IOdlEfGXPafMuWGBpw">ValiderCandidat_DescriptionInputX</bpmn2:to>
         </bpmn2:assignment>
       </bpmn2:dataInputAssociation>
     </bpmn2:userTask>
@@ -818,54 +818,54 @@
       </bpmn2:extensionElements>
       <bpmn2:incoming>Flow_14_OUI</bpmn2:incoming>
       <bpmn2:outgoing>Flow_15</bpmn2:outgoing>
-      <bpmn2:ioSpecification id="_IiKR9edlEfGXPafMuWGBpw">
+      <bpmn2:ioSpecification id="_Osd4IedlEfGXPafMuWGBpw">
         <bpmn2:dataInput id="ConsoliderEvaluations_TaskNameInputX" drools:dtype="Object" itemSubjectRef="_ConsoliderEvaluations_TaskNameInputXItem" name="TaskName"/>
         <bpmn2:dataInput id="ConsoliderEvaluations_SkippableInputX" drools:dtype="Object" itemSubjectRef="_ConsoliderEvaluations_SkippableInputXItem" name="Skippable"/>
         <bpmn2:dataInput id="ConsoliderEvaluations_GroupIdInputX" drools:dtype="Object" itemSubjectRef="_ConsoliderEvaluations_GroupIdInputXItem" name="GroupId"/>
         <bpmn2:dataInput id="ConsoliderEvaluations_CommentInputX" drools:dtype="Object" itemSubjectRef="_ConsoliderEvaluations_CommentInputXItem" name="Comment"/>
         <bpmn2:dataInput id="ConsoliderEvaluations_DescriptionInputX" drools:dtype="Object" itemSubjectRef="_ConsoliderEvaluations_DescriptionInputXItem" name="Description"/>
-        <bpmn2:inputSet id="_IiKR9udlEfGXPafMuWGBpw">
+        <bpmn2:inputSet id="_Osd4IudlEfGXPafMuWGBpw">
           <bpmn2:dataInputRefs>ConsoliderEvaluations_TaskNameInputX</bpmn2:dataInputRefs>
           <bpmn2:dataInputRefs>ConsoliderEvaluations_SkippableInputX</bpmn2:dataInputRefs>
           <bpmn2:dataInputRefs>ConsoliderEvaluations_GroupIdInputX</bpmn2:dataInputRefs>
           <bpmn2:dataInputRefs>ConsoliderEvaluations_CommentInputX</bpmn2:dataInputRefs>
           <bpmn2:dataInputRefs>ConsoliderEvaluations_DescriptionInputX</bpmn2:dataInputRefs>
         </bpmn2:inputSet>
-        <bpmn2:outputSet id="_IiKR9-dlEfGXPafMuWGBpw"/>
+        <bpmn2:outputSet id="_Osd4I-dlEfGXPafMuWGBpw"/>
       </bpmn2:ioSpecification>
-      <bpmn2:dataInputAssociation id="_IiKR-OdlEfGXPafMuWGBpw">
+      <bpmn2:dataInputAssociation id="_Osd4JOdlEfGXPafMuWGBpw">
         <bpmn2:targetRef>ConsoliderEvaluations_TaskNameInputX</bpmn2:targetRef>
-        <bpmn2:assignment id="_IiKR-edlEfGXPafMuWGBpw">
-          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_IiKR-udlEfGXPafMuWGBpw"><![CDATA[ConsoliderEvaluations]]></bpmn2:from>
-          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_IiKR--dlEfGXPafMuWGBpw">ConsoliderEvaluations_TaskNameInputX</bpmn2:to>
+        <bpmn2:assignment id="_Osd4JedlEfGXPafMuWGBpw">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_Osd4JudlEfGXPafMuWGBpw"><![CDATA[ConsoliderEvaluations]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_Osd4J-dlEfGXPafMuWGBpw">ConsoliderEvaluations_TaskNameInputX</bpmn2:to>
         </bpmn2:assignment>
       </bpmn2:dataInputAssociation>
-      <bpmn2:dataInputAssociation id="_IiKR_OdlEfGXPafMuWGBpw">
+      <bpmn2:dataInputAssociation id="_Osd4KOdlEfGXPafMuWGBpw">
         <bpmn2:targetRef>ConsoliderEvaluations_SkippableInputX</bpmn2:targetRef>
-        <bpmn2:assignment id="_IiKR_edlEfGXPafMuWGBpw">
-          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_IiKR_udlEfGXPafMuWGBpw"><![CDATA[false]]></bpmn2:from>
-          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_IiKR_-dlEfGXPafMuWGBpw">ConsoliderEvaluations_SkippableInputX</bpmn2:to>
+        <bpmn2:assignment id="_Osd4KedlEfGXPafMuWGBpw">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_Osd4KudlEfGXPafMuWGBpw"><![CDATA[false]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_Osd4K-dlEfGXPafMuWGBpw">ConsoliderEvaluations_SkippableInputX</bpmn2:to>
         </bpmn2:assignment>
       </bpmn2:dataInputAssociation>
-      <bpmn2:dataInputAssociation id="_IiKSAOdlEfGXPafMuWGBpw">
+      <bpmn2:dataInputAssociation id="_Osd4LOdlEfGXPafMuWGBpw">
         <bpmn2:targetRef>ConsoliderEvaluations_GroupIdInputX</bpmn2:targetRef>
-        <bpmn2:assignment id="_IiKSAedlEfGXPafMuWGBpw">
-          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_IiKSAudlEfGXPafMuWGBpw"><![CDATA[RH]]></bpmn2:from>
-          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_IiKSA-dlEfGXPafMuWGBpw">ConsoliderEvaluations_GroupIdInputX</bpmn2:to>
+        <bpmn2:assignment id="_Osd4LedlEfGXPafMuWGBpw">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_Osd4LudlEfGXPafMuWGBpw"><![CDATA[RH]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_Osd4L-dlEfGXPafMuWGBpw">ConsoliderEvaluations_GroupIdInputX</bpmn2:to>
         </bpmn2:assignment>
       </bpmn2:dataInputAssociation>
-      <bpmn2:dataInputAssociation id="_IiKSBOdlEfGXPafMuWGBpw">
+      <bpmn2:dataInputAssociation id="_Osd4MOdlEfGXPafMuWGBpw">
         <bpmn2:targetRef>ConsoliderEvaluations_CommentInputX</bpmn2:targetRef>
-        <bpmn2:assignment id="_IiKSBedlEfGXPafMuWGBpw">
-          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_IiKSBudlEfGXPafMuWGBpw"><![CDATA[Consolider les évaluations des candidats]]></bpmn2:from>
-          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_IiKSB-dlEfGXPafMuWGBpw">ConsoliderEvaluations_CommentInputX</bpmn2:to>
+        <bpmn2:assignment id="_Osd4MedlEfGXPafMuWGBpw">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_Osd4MudlEfGXPafMuWGBpw"><![CDATA[Consolider les évaluations des candidats]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_Osd4M-dlEfGXPafMuWGBpw">ConsoliderEvaluations_CommentInputX</bpmn2:to>
         </bpmn2:assignment>
       </bpmn2:dataInputAssociation>
-      <bpmn2:dataInputAssociation id="_IiKSCOdlEfGXPafMuWGBpw">
+      <bpmn2:dataInputAssociation id="_Osd4NOdlEfGXPafMuWGBpw">
         <bpmn2:targetRef>ConsoliderEvaluations_DescriptionInputX</bpmn2:targetRef>
-        <bpmn2:assignment id="_IiKSCedlEfGXPafMuWGBpw">
-          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_IiKSCudlEfGXPafMuWGBpw"><![CDATA[Le service RH rassemble et consolide les évaluations des entretiens.]]></bpmn2:from>
-          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_IiKSC-dlEfGXPafMuWGBpw">ConsoliderEvaluations_DescriptionInputX</bpmn2:to>
+        <bpmn2:assignment id="_Osd4NedlEfGXPafMuWGBpw">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_Osd4NudlEfGXPafMuWGBpw"><![CDATA[Le service RH rassemble et consolide les évaluations des entretiens.]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_Osd4N-dlEfGXPafMuWGBpw">ConsoliderEvaluations_DescriptionInputX</bpmn2:to>
         </bpmn2:assignment>
       </bpmn2:dataInputAssociation>
     </bpmn2:userTask>
@@ -885,54 +885,54 @@
       </bpmn2:extensionElements>
       <bpmn2:incoming>Flow_11</bpmn2:incoming>
       <bpmn2:outgoing>Flow_12</bpmn2:outgoing>
-      <bpmn2:ioSpecification id="_IiKSDOdlEfGXPafMuWGBpw">
+      <bpmn2:ioSpecification id="_Osd4OOdlEfGXPafMuWGBpw">
         <bpmn2:dataInput id="EntretienRH_TaskNameInputX" drools:dtype="Object" itemSubjectRef="_EntretienRH_TaskNameInputXItem" name="TaskName"/>
         <bpmn2:dataInput id="EntretienRH_SkippableInputX" drools:dtype="Object" itemSubjectRef="_EntretienRH_SkippableInputXItem" name="Skippable"/>
         <bpmn2:dataInput id="EntretienRH_GroupIdInputX" drools:dtype="Object" itemSubjectRef="_EntretienRH_GroupIdInputXItem" name="GroupId"/>
         <bpmn2:dataInput id="EntretienRH_CommentInputX" drools:dtype="Object" itemSubjectRef="_EntretienRH_CommentInputXItem" name="Comment"/>
         <bpmn2:dataInput id="EntretienRH_DescriptionInputX" drools:dtype="Object" itemSubjectRef="_EntretienRH_DescriptionInputXItem" name="Description"/>
-        <bpmn2:inputSet id="_IiKSDedlEfGXPafMuWGBpw">
+        <bpmn2:inputSet id="_Osd4OedlEfGXPafMuWGBpw">
           <bpmn2:dataInputRefs>EntretienRH_TaskNameInputX</bpmn2:dataInputRefs>
           <bpmn2:dataInputRefs>EntretienRH_SkippableInputX</bpmn2:dataInputRefs>
           <bpmn2:dataInputRefs>EntretienRH_GroupIdInputX</bpmn2:dataInputRefs>
           <bpmn2:dataInputRefs>EntretienRH_CommentInputX</bpmn2:dataInputRefs>
           <bpmn2:dataInputRefs>EntretienRH_DescriptionInputX</bpmn2:dataInputRefs>
         </bpmn2:inputSet>
-        <bpmn2:outputSet id="_IiKSDudlEfGXPafMuWGBpw"/>
+        <bpmn2:outputSet id="_Osd4OudlEfGXPafMuWGBpw"/>
       </bpmn2:ioSpecification>
-      <bpmn2:dataInputAssociation id="_IiKSD-dlEfGXPafMuWGBpw">
+      <bpmn2:dataInputAssociation id="_Osd4O-dlEfGXPafMuWGBpw">
         <bpmn2:targetRef>EntretienRH_TaskNameInputX</bpmn2:targetRef>
-        <bpmn2:assignment id="_IiKSEOdlEfGXPafMuWGBpw">
-          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_IiKSEedlEfGXPafMuWGBpw"><![CDATA[EntretienRH]]></bpmn2:from>
-          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_IiKSEudlEfGXPafMuWGBpw">EntretienRH_TaskNameInputX</bpmn2:to>
+        <bpmn2:assignment id="_Osd4POdlEfGXPafMuWGBpw">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_Osd4PedlEfGXPafMuWGBpw"><![CDATA[EntretienRH]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_Osd4PudlEfGXPafMuWGBpw">EntretienRH_TaskNameInputX</bpmn2:to>
         </bpmn2:assignment>
       </bpmn2:dataInputAssociation>
-      <bpmn2:dataInputAssociation id="_IiKSE-dlEfGXPafMuWGBpw">
+      <bpmn2:dataInputAssociation id="_Osd4P-dlEfGXPafMuWGBpw">
         <bpmn2:targetRef>EntretienRH_SkippableInputX</bpmn2:targetRef>
-        <bpmn2:assignment id="_IiKSFOdlEfGXPafMuWGBpw">
-          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_IiKSFedlEfGXPafMuWGBpw"><![CDATA[false]]></bpmn2:from>
-          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_IiKSFudlEfGXPafMuWGBpw">EntretienRH_SkippableInputX</bpmn2:to>
+        <bpmn2:assignment id="_Osd4QOdlEfGXPafMuWGBpw">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_Osd4QedlEfGXPafMuWGBpw"><![CDATA[false]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_Osd4QudlEfGXPafMuWGBpw">EntretienRH_SkippableInputX</bpmn2:to>
         </bpmn2:assignment>
       </bpmn2:dataInputAssociation>
-      <bpmn2:dataInputAssociation id="_IiKSF-dlEfGXPafMuWGBpw">
+      <bpmn2:dataInputAssociation id="_Osd4Q-dlEfGXPafMuWGBpw">
         <bpmn2:targetRef>EntretienRH_GroupIdInputX</bpmn2:targetRef>
-        <bpmn2:assignment id="_IiKSGOdlEfGXPafMuWGBpw">
-          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_IiKSGedlEfGXPafMuWGBpw"><![CDATA[RH]]></bpmn2:from>
-          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_IiKSGudlEfGXPafMuWGBpw">EntretienRH_GroupIdInputX</bpmn2:to>
+        <bpmn2:assignment id="_Osd4ROdlEfGXPafMuWGBpw">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_Osd4RedlEfGXPafMuWGBpw"><![CDATA[RH]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_Osd4RudlEfGXPafMuWGBpw">EntretienRH_GroupIdInputX</bpmn2:to>
         </bpmn2:assignment>
       </bpmn2:dataInputAssociation>
-      <bpmn2:dataInputAssociation id="_IiKSG-dlEfGXPafMuWGBpw">
+      <bpmn2:dataInputAssociation id="_Osd4R-dlEfGXPafMuWGBpw">
         <bpmn2:targetRef>EntretienRH_CommentInputX</bpmn2:targetRef>
-        <bpmn2:assignment id="_IiKSHOdlEfGXPafMuWGBpw">
-          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_IiKSHedlEfGXPafMuWGBpw"><![CDATA[Mener l'entretien RH et saisir l'évaluation]]></bpmn2:from>
-          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_IiKSHudlEfGXPafMuWGBpw">EntretienRH_CommentInputX</bpmn2:to>
+        <bpmn2:assignment id="_Osd4SOdlEfGXPafMuWGBpw">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_Osd4SedlEfGXPafMuWGBpw"><![CDATA[Mener l'entretien RH et saisir l'évaluation]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_Osd4SudlEfGXPafMuWGBpw">EntretienRH_CommentInputX</bpmn2:to>
         </bpmn2:assignment>
       </bpmn2:dataInputAssociation>
-      <bpmn2:dataInputAssociation id="_IiKSH-dlEfGXPafMuWGBpw">
+      <bpmn2:dataInputAssociation id="_Osd4S-dlEfGXPafMuWGBpw">
         <bpmn2:targetRef>EntretienRH_DescriptionInputX</bpmn2:targetRef>
-        <bpmn2:assignment id="_IiKSIOdlEfGXPafMuWGBpw">
-          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_IiKSIedlEfGXPafMuWGBpw"><![CDATA[Le service RH mène l’entretien et renseigne son évaluation.]]></bpmn2:from>
-          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_IiKSIudlEfGXPafMuWGBpw">EntretienRH_DescriptionInputX</bpmn2:to>
+        <bpmn2:assignment id="_Osd4TOdlEfGXPafMuWGBpw">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_Osd4TedlEfGXPafMuWGBpw"><![CDATA[Le service RH mène l’entretien et renseigne son évaluation.]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_Osd4TudlEfGXPafMuWGBpw">EntretienRH_DescriptionInputX</bpmn2:to>
         </bpmn2:assignment>
       </bpmn2:dataInputAssociation>
     </bpmn2:userTask>
@@ -944,54 +944,54 @@
       </bpmn2:extensionElements>
       <bpmn2:incoming>Flow_20</bpmn2:incoming>
       <bpmn2:outgoing>Flow_21</bpmn2:outgoing>
-      <bpmn2:ioSpecification id="_IiKSI-dlEfGXPafMuWGBpw">
+      <bpmn2:ioSpecification id="_Osd4T-dlEfGXPafMuWGBpw">
         <bpmn2:dataInput id="CreerAccesIT_TaskNameInputX" drools:dtype="Object" itemSubjectRef="_CreerAccesIT_TaskNameInputXItem" name="TaskName"/>
         <bpmn2:dataInput id="CreerAccesIT_SkippableInputX" drools:dtype="Object" itemSubjectRef="_CreerAccesIT_SkippableInputXItem" name="Skippable"/>
         <bpmn2:dataInput id="CreerAccesIT_GroupIdInputX" drools:dtype="Object" itemSubjectRef="_CreerAccesIT_GroupIdInputXItem" name="GroupId"/>
         <bpmn2:dataInput id="CreerAccesIT_CommentInputX" drools:dtype="Object" itemSubjectRef="_CreerAccesIT_CommentInputXItem" name="Comment"/>
         <bpmn2:dataInput id="CreerAccesIT_DescriptionInputX" drools:dtype="Object" itemSubjectRef="_CreerAccesIT_DescriptionInputXItem" name="Description"/>
-        <bpmn2:inputSet id="_IiKSJOdlEfGXPafMuWGBpw">
+        <bpmn2:inputSet id="_Osd4UOdlEfGXPafMuWGBpw">
           <bpmn2:dataInputRefs>CreerAccesIT_TaskNameInputX</bpmn2:dataInputRefs>
           <bpmn2:dataInputRefs>CreerAccesIT_SkippableInputX</bpmn2:dataInputRefs>
           <bpmn2:dataInputRefs>CreerAccesIT_GroupIdInputX</bpmn2:dataInputRefs>
           <bpmn2:dataInputRefs>CreerAccesIT_CommentInputX</bpmn2:dataInputRefs>
           <bpmn2:dataInputRefs>CreerAccesIT_DescriptionInputX</bpmn2:dataInputRefs>
         </bpmn2:inputSet>
-        <bpmn2:outputSet id="_IiKSJedlEfGXPafMuWGBpw"/>
+        <bpmn2:outputSet id="_Osd4UedlEfGXPafMuWGBpw"/>
       </bpmn2:ioSpecification>
-      <bpmn2:dataInputAssociation id="_IiKSJudlEfGXPafMuWGBpw">
+      <bpmn2:dataInputAssociation id="_Osd4UudlEfGXPafMuWGBpw">
         <bpmn2:targetRef>CreerAccesIT_TaskNameInputX</bpmn2:targetRef>
-        <bpmn2:assignment id="_IiKSJ-dlEfGXPafMuWGBpw">
-          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_IiKSKOdlEfGXPafMuWGBpw"><![CDATA[CreerAccesIT]]></bpmn2:from>
-          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_IiKSKedlEfGXPafMuWGBpw">CreerAccesIT_TaskNameInputX</bpmn2:to>
+        <bpmn2:assignment id="_Osd4U-dlEfGXPafMuWGBpw">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_Osd4VOdlEfGXPafMuWGBpw"><![CDATA[CreerAccesIT]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_Osd4VedlEfGXPafMuWGBpw">CreerAccesIT_TaskNameInputX</bpmn2:to>
         </bpmn2:assignment>
       </bpmn2:dataInputAssociation>
-      <bpmn2:dataInputAssociation id="_IiKSKudlEfGXPafMuWGBpw">
+      <bpmn2:dataInputAssociation id="_Osd4VudlEfGXPafMuWGBpw">
         <bpmn2:targetRef>CreerAccesIT_SkippableInputX</bpmn2:targetRef>
-        <bpmn2:assignment id="_IiKSK-dlEfGXPafMuWGBpw">
-          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_IiKSLOdlEfGXPafMuWGBpw"><![CDATA[false]]></bpmn2:from>
-          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_IiKSLedlEfGXPafMuWGBpw">CreerAccesIT_SkippableInputX</bpmn2:to>
+        <bpmn2:assignment id="_Osd4V-dlEfGXPafMuWGBpw">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_Osd4WOdlEfGXPafMuWGBpw"><![CDATA[false]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_Osd4WedlEfGXPafMuWGBpw">CreerAccesIT_SkippableInputX</bpmn2:to>
         </bpmn2:assignment>
       </bpmn2:dataInputAssociation>
-      <bpmn2:dataInputAssociation id="_IiKSLudlEfGXPafMuWGBpw">
+      <bpmn2:dataInputAssociation id="_Osd4WudlEfGXPafMuWGBpw">
         <bpmn2:targetRef>CreerAccesIT_GroupIdInputX</bpmn2:targetRef>
-        <bpmn2:assignment id="_IiKSL-dlEfGXPafMuWGBpw">
-          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_IiKSMOdlEfGXPafMuWGBpw"><![CDATA[IT]]></bpmn2:from>
-          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_IiKSMedlEfGXPafMuWGBpw">CreerAccesIT_GroupIdInputX</bpmn2:to>
+        <bpmn2:assignment id="_Osd4W-dlEfGXPafMuWGBpw">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_Osd4XOdlEfGXPafMuWGBpw"><![CDATA[IT]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_Osd4XedlEfGXPafMuWGBpw">CreerAccesIT_GroupIdInputX</bpmn2:to>
         </bpmn2:assignment>
       </bpmn2:dataInputAssociation>
-      <bpmn2:dataInputAssociation id="_IiKSMudlEfGXPafMuWGBpw">
+      <bpmn2:dataInputAssociation id="_Osd4XudlEfGXPafMuWGBpw">
         <bpmn2:targetRef>CreerAccesIT_CommentInputX</bpmn2:targetRef>
-        <bpmn2:assignment id="_IiKSM-dlEfGXPafMuWGBpw">
-          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_IiKSNOdlEfGXPafMuWGBpw"><![CDATA[Créer les comptes et préparer le matériel]]></bpmn2:from>
-          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_IiKSNedlEfGXPafMuWGBpw">CreerAccesIT_CommentInputX</bpmn2:to>
+        <bpmn2:assignment id="_Osd4X-dlEfGXPafMuWGBpw">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_Osd4YOdlEfGXPafMuWGBpw"><![CDATA[Créer les comptes et préparer le matériel]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_Osd4YedlEfGXPafMuWGBpw">CreerAccesIT_CommentInputX</bpmn2:to>
         </bpmn2:assignment>
       </bpmn2:dataInputAssociation>
-      <bpmn2:dataInputAssociation id="_IiKSNudlEfGXPafMuWGBpw">
+      <bpmn2:dataInputAssociation id="_Osd4YudlEfGXPafMuWGBpw">
         <bpmn2:targetRef>CreerAccesIT_DescriptionInputX</bpmn2:targetRef>
-        <bpmn2:assignment id="_IiKSN-dlEfGXPafMuWGBpw">
-          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_IiKSOOdlEfGXPafMuWGBpw"><![CDATA[Le service IT crée les comptes et prépare le matériel nécessaire à l’arrivée.]]></bpmn2:from>
-          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_IiKSOedlEfGXPafMuWGBpw">CreerAccesIT_DescriptionInputX</bpmn2:to>
+        <bpmn2:assignment id="_Osd4Y-dlEfGXPafMuWGBpw">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_Osd4ZOdlEfGXPafMuWGBpw"><![CDATA[Le service IT crée les comptes et prépare le matériel nécessaire à l’arrivée.]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_Osd4ZedlEfGXPafMuWGBpw">CreerAccesIT_DescriptionInputX</bpmn2:to>
         </bpmn2:assignment>
       </bpmn2:dataInputAssociation>
     </bpmn2:userTask>
@@ -1013,54 +1013,54 @@
       </bpmn2:extensionElements>
       <bpmn2:incoming>Flow_16_OUI</bpmn2:incoming>
       <bpmn2:outgoing>Flow_17</bpmn2:outgoing>
-      <bpmn2:ioSpecification id="_IiKSOudlEfGXPafMuWGBpw">
+      <bpmn2:ioSpecification id="_Osd4ZudlEfGXPafMuWGBpw">
         <bpmn2:dataInput id="EnvoyerProposition_TaskNameInputX" drools:dtype="Object" itemSubjectRef="_EnvoyerProposition_TaskNameInputXItem" name="TaskName"/>
         <bpmn2:dataInput id="EnvoyerProposition_SkippableInputX" drools:dtype="Object" itemSubjectRef="_EnvoyerProposition_SkippableInputXItem" name="Skippable"/>
         <bpmn2:dataInput id="EnvoyerProposition_GroupIdInputX" drools:dtype="Object" itemSubjectRef="_EnvoyerProposition_GroupIdInputXItem" name="GroupId"/>
         <bpmn2:dataInput id="EnvoyerProposition_CommentInputX" drools:dtype="Object" itemSubjectRef="_EnvoyerProposition_CommentInputXItem" name="Comment"/>
         <bpmn2:dataInput id="EnvoyerProposition_DescriptionInputX" drools:dtype="Object" itemSubjectRef="_EnvoyerProposition_DescriptionInputXItem" name="Description"/>
-        <bpmn2:inputSet id="_IiKSO-dlEfGXPafMuWGBpw">
+        <bpmn2:inputSet id="_Osd4Z-dlEfGXPafMuWGBpw">
           <bpmn2:dataInputRefs>EnvoyerProposition_TaskNameInputX</bpmn2:dataInputRefs>
           <bpmn2:dataInputRefs>EnvoyerProposition_SkippableInputX</bpmn2:dataInputRefs>
           <bpmn2:dataInputRefs>EnvoyerProposition_GroupIdInputX</bpmn2:dataInputRefs>
           <bpmn2:dataInputRefs>EnvoyerProposition_CommentInputX</bpmn2:dataInputRefs>
           <bpmn2:dataInputRefs>EnvoyerProposition_DescriptionInputX</bpmn2:dataInputRefs>
         </bpmn2:inputSet>
-        <bpmn2:outputSet id="_IiKSPOdlEfGXPafMuWGBpw"/>
+        <bpmn2:outputSet id="_Osd4aOdlEfGXPafMuWGBpw"/>
       </bpmn2:ioSpecification>
-      <bpmn2:dataInputAssociation id="_IiKSPedlEfGXPafMuWGBpw">
+      <bpmn2:dataInputAssociation id="_Osd4aedlEfGXPafMuWGBpw">
         <bpmn2:targetRef>EnvoyerProposition_TaskNameInputX</bpmn2:targetRef>
-        <bpmn2:assignment id="_IiKSPudlEfGXPafMuWGBpw">
-          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_IiKSP-dlEfGXPafMuWGBpw"><![CDATA[EnvoyerProposition]]></bpmn2:from>
-          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_IiKSQOdlEfGXPafMuWGBpw">EnvoyerProposition_TaskNameInputX</bpmn2:to>
+        <bpmn2:assignment id="_Osd4audlEfGXPafMuWGBpw">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_Osd4a-dlEfGXPafMuWGBpw"><![CDATA[EnvoyerProposition]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_Osd4bOdlEfGXPafMuWGBpw">EnvoyerProposition_TaskNameInputX</bpmn2:to>
         </bpmn2:assignment>
       </bpmn2:dataInputAssociation>
-      <bpmn2:dataInputAssociation id="_IiKSQedlEfGXPafMuWGBpw">
+      <bpmn2:dataInputAssociation id="_Osd4bedlEfGXPafMuWGBpw">
         <bpmn2:targetRef>EnvoyerProposition_SkippableInputX</bpmn2:targetRef>
-        <bpmn2:assignment id="_IiKSQudlEfGXPafMuWGBpw">
-          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_IiKSQ-dlEfGXPafMuWGBpw"><![CDATA[false]]></bpmn2:from>
-          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_IiKSROdlEfGXPafMuWGBpw">EnvoyerProposition_SkippableInputX</bpmn2:to>
+        <bpmn2:assignment id="_Osd4budlEfGXPafMuWGBpw">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_Osd4b-dlEfGXPafMuWGBpw"><![CDATA[false]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_Osd4cOdlEfGXPafMuWGBpw">EnvoyerProposition_SkippableInputX</bpmn2:to>
         </bpmn2:assignment>
       </bpmn2:dataInputAssociation>
-      <bpmn2:dataInputAssociation id="_IiKSRedlEfGXPafMuWGBpw">
+      <bpmn2:dataInputAssociation id="_Osd4cedlEfGXPafMuWGBpw">
         <bpmn2:targetRef>EnvoyerProposition_GroupIdInputX</bpmn2:targetRef>
-        <bpmn2:assignment id="_IiKSRudlEfGXPafMuWGBpw">
-          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_IiKSR-dlEfGXPafMuWGBpw"><![CDATA[RH]]></bpmn2:from>
-          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_IiKSSOdlEfGXPafMuWGBpw">EnvoyerProposition_GroupIdInputX</bpmn2:to>
+        <bpmn2:assignment id="_Osd4cudlEfGXPafMuWGBpw">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_Osd4c-dlEfGXPafMuWGBpw"><![CDATA[RH]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_Osd4dOdlEfGXPafMuWGBpw">EnvoyerProposition_GroupIdInputX</bpmn2:to>
         </bpmn2:assignment>
       </bpmn2:dataInputAssociation>
-      <bpmn2:dataInputAssociation id="_IiKSSedlEfGXPafMuWGBpw">
+      <bpmn2:dataInputAssociation id="_Osd4dedlEfGXPafMuWGBpw">
         <bpmn2:targetRef>EnvoyerProposition_CommentInputX</bpmn2:targetRef>
-        <bpmn2:assignment id="_IiKSSudlEfGXPafMuWGBpw">
-          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_IiKSS-dlEfGXPafMuWGBpw"><![CDATA[Générer et envoyer la proposition d'embauche]]></bpmn2:from>
-          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_IiKSTOdlEfGXPafMuWGBpw">EnvoyerProposition_CommentInputX</bpmn2:to>
+        <bpmn2:assignment id="_Osd4dudlEfGXPafMuWGBpw">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_Osd4d-dlEfGXPafMuWGBpw"><![CDATA[Générer et envoyer la proposition d'embauche]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_Osd4eOdlEfGXPafMuWGBpw">EnvoyerProposition_CommentInputX</bpmn2:to>
         </bpmn2:assignment>
       </bpmn2:dataInputAssociation>
-      <bpmn2:dataInputAssociation id="_IiKSTedlEfGXPafMuWGBpw">
+      <bpmn2:dataInputAssociation id="_Osd4eedlEfGXPafMuWGBpw">
         <bpmn2:targetRef>EnvoyerProposition_DescriptionInputX</bpmn2:targetRef>
-        <bpmn2:assignment id="_IiKSTudlEfGXPafMuWGBpw">
-          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_IiKST-dlEfGXPafMuWGBpw"><![CDATA[Le service RH prépare et envoie la proposition d’embauche au candidat.]]></bpmn2:from>
-          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_IiKSUOdlEfGXPafMuWGBpw">EnvoyerProposition_DescriptionInputX</bpmn2:to>
+        <bpmn2:assignment id="_Osd4eudlEfGXPafMuWGBpw">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_Osd4e-dlEfGXPafMuWGBpw"><![CDATA[Le service RH prépare et envoie la proposition d’embauche au candidat.]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_Osd4fOdlEfGXPafMuWGBpw">EnvoyerProposition_DescriptionInputX</bpmn2:to>
         </bpmn2:assignment>
       </bpmn2:dataInputAssociation>
     </bpmn2:userTask>
@@ -1072,54 +1072,54 @@
       </bpmn2:extensionElements>
       <bpmn2:incoming>Flow_09</bpmn2:incoming>
       <bpmn2:outgoing>Flow_10</bpmn2:outgoing>
-      <bpmn2:ioSpecification id="_IiKSUedlEfGXPafMuWGBpw">
+      <bpmn2:ioSpecification id="_Osd4fedlEfGXPafMuWGBpw">
         <bpmn2:dataInput id="ExaminerCV_TaskNameInputX" drools:dtype="Object" itemSubjectRef="_ExaminerCV_TaskNameInputXItem" name="TaskName"/>
         <bpmn2:dataInput id="ExaminerCV_SkippableInputX" drools:dtype="Object" itemSubjectRef="_ExaminerCV_SkippableInputXItem" name="Skippable"/>
         <bpmn2:dataInput id="ExaminerCV_GroupIdInputX" drools:dtype="Object" itemSubjectRef="_ExaminerCV_GroupIdInputXItem" name="GroupId"/>
         <bpmn2:dataInput id="ExaminerCV_CommentInputX" drools:dtype="Object" itemSubjectRef="_ExaminerCV_CommentInputXItem" name="Comment"/>
         <bpmn2:dataInput id="ExaminerCV_DescriptionInputX" drools:dtype="Object" itemSubjectRef="_ExaminerCV_DescriptionInputXItem" name="Description"/>
-        <bpmn2:inputSet id="_IiKSUudlEfGXPafMuWGBpw">
+        <bpmn2:inputSet id="_Osd4fudlEfGXPafMuWGBpw">
           <bpmn2:dataInputRefs>ExaminerCV_TaskNameInputX</bpmn2:dataInputRefs>
           <bpmn2:dataInputRefs>ExaminerCV_SkippableInputX</bpmn2:dataInputRefs>
           <bpmn2:dataInputRefs>ExaminerCV_GroupIdInputX</bpmn2:dataInputRefs>
           <bpmn2:dataInputRefs>ExaminerCV_CommentInputX</bpmn2:dataInputRefs>
           <bpmn2:dataInputRefs>ExaminerCV_DescriptionInputX</bpmn2:dataInputRefs>
         </bpmn2:inputSet>
-        <bpmn2:outputSet id="_IiKSU-dlEfGXPafMuWGBpw"/>
+        <bpmn2:outputSet id="_Osd4f-dlEfGXPafMuWGBpw"/>
       </bpmn2:ioSpecification>
-      <bpmn2:dataInputAssociation id="_IiKSVOdlEfGXPafMuWGBpw">
+      <bpmn2:dataInputAssociation id="_Osd4gOdlEfGXPafMuWGBpw">
         <bpmn2:targetRef>ExaminerCV_TaskNameInputX</bpmn2:targetRef>
-        <bpmn2:assignment id="_IiKSVedlEfGXPafMuWGBpw">
-          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_IiKSVudlEfGXPafMuWGBpw"><![CDATA[ExaminerCV]]></bpmn2:from>
-          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_IiKSV-dlEfGXPafMuWGBpw">ExaminerCV_TaskNameInputX</bpmn2:to>
+        <bpmn2:assignment id="_Osd4gedlEfGXPafMuWGBpw">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_Osd4gudlEfGXPafMuWGBpw"><![CDATA[ExaminerCV]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_Osd4g-dlEfGXPafMuWGBpw">ExaminerCV_TaskNameInputX</bpmn2:to>
         </bpmn2:assignment>
       </bpmn2:dataInputAssociation>
-      <bpmn2:dataInputAssociation id="_IiKSWOdlEfGXPafMuWGBpw">
+      <bpmn2:dataInputAssociation id="_Osd4hOdlEfGXPafMuWGBpw">
         <bpmn2:targetRef>ExaminerCV_SkippableInputX</bpmn2:targetRef>
-        <bpmn2:assignment id="_IiKSWedlEfGXPafMuWGBpw">
-          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_IiKSWudlEfGXPafMuWGBpw"><![CDATA[false]]></bpmn2:from>
-          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_IiKSW-dlEfGXPafMuWGBpw">ExaminerCV_SkippableInputX</bpmn2:to>
+        <bpmn2:assignment id="_Osd4hedlEfGXPafMuWGBpw">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_Osd4hudlEfGXPafMuWGBpw"><![CDATA[false]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_Osd4h-dlEfGXPafMuWGBpw">ExaminerCV_SkippableInputX</bpmn2:to>
         </bpmn2:assignment>
       </bpmn2:dataInputAssociation>
-      <bpmn2:dataInputAssociation id="_IiKSXOdlEfGXPafMuWGBpw">
+      <bpmn2:dataInputAssociation id="_Osd4iOdlEfGXPafMuWGBpw">
         <bpmn2:targetRef>ExaminerCV_GroupIdInputX</bpmn2:targetRef>
-        <bpmn2:assignment id="_IiKSXedlEfGXPafMuWGBpw">
-          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_IiKSXudlEfGXPafMuWGBpw"><![CDATA[RH]]></bpmn2:from>
-          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_IiKSX-dlEfGXPafMuWGBpw">ExaminerCV_GroupIdInputX</bpmn2:to>
+        <bpmn2:assignment id="_Osd4iedlEfGXPafMuWGBpw">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_Osd4iudlEfGXPafMuWGBpw"><![CDATA[RH]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_Osd4i-dlEfGXPafMuWGBpw">ExaminerCV_GroupIdInputX</bpmn2:to>
         </bpmn2:assignment>
       </bpmn2:dataInputAssociation>
-      <bpmn2:dataInputAssociation id="_IiKSYOdlEfGXPafMuWGBpw">
+      <bpmn2:dataInputAssociation id="_Osd4jOdlEfGXPafMuWGBpw">
         <bpmn2:targetRef>ExaminerCV_CommentInputX</bpmn2:targetRef>
-        <bpmn2:assignment id="_IiKSYedlEfGXPafMuWGBpw">
-          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_IiKSYudlEfGXPafMuWGBpw"><![CDATA[Examiner les candidatures et les CV]]></bpmn2:from>
-          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_IiKSY-dlEfGXPafMuWGBpw">ExaminerCV_CommentInputX</bpmn2:to>
+        <bpmn2:assignment id="_Osd4jedlEfGXPafMuWGBpw">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_Osd4judlEfGXPafMuWGBpw"><![CDATA[Examiner les candidatures et les CV]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_Osd4j-dlEfGXPafMuWGBpw">ExaminerCV_CommentInputX</bpmn2:to>
         </bpmn2:assignment>
       </bpmn2:dataInputAssociation>
-      <bpmn2:dataInputAssociation id="_IiKSZOdlEfGXPafMuWGBpw">
+      <bpmn2:dataInputAssociation id="_Osd4kOdlEfGXPafMuWGBpw">
         <bpmn2:targetRef>ExaminerCV_DescriptionInputX</bpmn2:targetRef>
-        <bpmn2:assignment id="_IiKSZedlEfGXPafMuWGBpw">
-          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_IiKSZudlEfGXPafMuWGBpw"><![CDATA[Le service RH examine les candidatures reçues et les CV.]]></bpmn2:from>
-          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_IiKSZ-dlEfGXPafMuWGBpw">ExaminerCV_DescriptionInputX</bpmn2:to>
+        <bpmn2:assignment id="_Osd4kedlEfGXPafMuWGBpw">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_Osd4kudlEfGXPafMuWGBpw"><![CDATA[Le service RH examine les candidatures reçues et les CV.]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_Osd4k-dlEfGXPafMuWGBpw">ExaminerCV_DescriptionInputX</bpmn2:to>
         </bpmn2:assignment>
       </bpmn2:dataInputAssociation>
     </bpmn2:userTask>
@@ -1131,7 +1131,7 @@
       </bpmn2:extensionElements>
       <bpmn2:incoming>Flow_05</bpmn2:incoming>
       <bpmn2:outgoing>Flow_06</bpmn2:outgoing>
-      <bpmn2:ioSpecification id="_IiKSaOdlEfGXPafMuWGBpw">
+      <bpmn2:ioSpecification id="_Osd4lOdlEfGXPafMuWGBpw">
         <bpmn2:dataInput id="RedigerOffre_TaskNameInputX" drools:dtype="Object" itemSubjectRef="_RedigerOffre_TaskNameInputXItem" name="TaskName"/>
         <bpmn2:dataInput id="RedigerOffre_intitulePosteInputX" drools:dtype="String" itemSubjectRef="_RedigerOffre_intitulePosteInputXItem" name="intitulePoste"/>
         <bpmn2:dataInput id="RedigerOffre_missionsPosteInputX" drools:dtype="String" itemSubjectRef="_RedigerOffre_missionsPosteInputXItem" name="missionsPoste"/>
@@ -1148,7 +1148,7 @@
         <bpmn2:dataOutput id="RedigerOffre_missionsPosteOutputX" drools:dtype="String" itemSubjectRef="_RedigerOffre_missionsPosteOutputXItem" name="missionsPoste"/>
         <bpmn2:dataOutput id="RedigerOffre_competencesRequisesOutputX" drools:dtype="String" itemSubjectRef="_RedigerOffre_competencesRequisesOutputXItem" name="competencesRequises"/>
         <bpmn2:dataOutput id="RedigerOffre_experienceRequiseOutputX" drools:dtype="String" itemSubjectRef="_RedigerOffre_experienceRequiseOutputXItem" name="experienceRequise"/>
-        <bpmn2:inputSet id="_IiKSaedlEfGXPafMuWGBpw">
+        <bpmn2:inputSet id="_Osd4ledlEfGXPafMuWGBpw">
           <bpmn2:dataInputRefs>RedigerOffre_TaskNameInputX</bpmn2:dataInputRefs>
           <bpmn2:dataInputRefs>RedigerOffre_intitulePosteInputX</bpmn2:dataInputRefs>
           <bpmn2:dataInputRefs>RedigerOffre_missionsPosteInputX</bpmn2:dataInputRefs>
@@ -1159,7 +1159,7 @@
           <bpmn2:dataInputRefs>RedigerOffre_CommentInputX</bpmn2:dataInputRefs>
           <bpmn2:dataInputRefs>RedigerOffre_DescriptionInputX</bpmn2:dataInputRefs>
         </bpmn2:inputSet>
-        <bpmn2:outputSet id="_IiKSaudlEfGXPafMuWGBpw">
+        <bpmn2:outputSet id="_Osd4ludlEfGXPafMuWGBpw">
           <bpmn2:dataOutputRefs>RedigerOffre_descriptionOffreOutputX</bpmn2:dataOutputRefs>
           <bpmn2:dataOutputRefs>RedigerOffre_profilRechercheOutputX</bpmn2:dataOutputRefs>
           <bpmn2:dataOutputRefs>RedigerOffre_avantagesPosteOutputX</bpmn2:dataOutputRefs>
@@ -1169,82 +1169,82 @@
           <bpmn2:dataOutputRefs>RedigerOffre_experienceRequiseOutputX</bpmn2:dataOutputRefs>
         </bpmn2:outputSet>
       </bpmn2:ioSpecification>
-      <bpmn2:dataInputAssociation id="_IiKSa-dlEfGXPafMuWGBpw">
+      <bpmn2:dataInputAssociation id="_Osd4l-dlEfGXPafMuWGBpw">
         <bpmn2:targetRef>RedigerOffre_TaskNameInputX</bpmn2:targetRef>
-        <bpmn2:assignment id="_IiKSbOdlEfGXPafMuWGBpw">
-          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_IiKSbedlEfGXPafMuWGBpw"><![CDATA[RedigerOffre]]></bpmn2:from>
-          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_IiKSbudlEfGXPafMuWGBpw">RedigerOffre_TaskNameInputX</bpmn2:to>
+        <bpmn2:assignment id="_Osd4mOdlEfGXPafMuWGBpw">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_Osd4medlEfGXPafMuWGBpw"><![CDATA[RedigerOffre]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_Osd4mudlEfGXPafMuWGBpw">RedigerOffre_TaskNameInputX</bpmn2:to>
         </bpmn2:assignment>
       </bpmn2:dataInputAssociation>
-      <bpmn2:dataInputAssociation id="_IiKSb-dlEfGXPafMuWGBpw">
+      <bpmn2:dataInputAssociation id="_Osd4m-dlEfGXPafMuWGBpw">
         <bpmn2:sourceRef>intitulePoste</bpmn2:sourceRef>
         <bpmn2:targetRef>RedigerOffre_intitulePosteInputX</bpmn2:targetRef>
       </bpmn2:dataInputAssociation>
-      <bpmn2:dataInputAssociation id="_IiKScOdlEfGXPafMuWGBpw">
+      <bpmn2:dataInputAssociation id="_Osd4nOdlEfGXPafMuWGBpw">
         <bpmn2:sourceRef>missionsPoste</bpmn2:sourceRef>
         <bpmn2:targetRef>RedigerOffre_missionsPosteInputX</bpmn2:targetRef>
       </bpmn2:dataInputAssociation>
-      <bpmn2:dataInputAssociation id="_IiKScedlEfGXPafMuWGBpw">
+      <bpmn2:dataInputAssociation id="_Osd4nedlEfGXPafMuWGBpw">
         <bpmn2:sourceRef>competencesRequises</bpmn2:sourceRef>
         <bpmn2:targetRef>RedigerOffre_competencesRequisesInputX</bpmn2:targetRef>
       </bpmn2:dataInputAssociation>
-      <bpmn2:dataInputAssociation id="_IiKScudlEfGXPafMuWGBpw">
+      <bpmn2:dataInputAssociation id="_Osd4nudlEfGXPafMuWGBpw">
         <bpmn2:sourceRef>experienceRequise</bpmn2:sourceRef>
         <bpmn2:targetRef>RedigerOffre_experienceRequiseInputX</bpmn2:targetRef>
       </bpmn2:dataInputAssociation>
-      <bpmn2:dataInputAssociation id="_IiKSc-dlEfGXPafMuWGBpw">
+      <bpmn2:dataInputAssociation id="_Osd4n-dlEfGXPafMuWGBpw">
         <bpmn2:targetRef>RedigerOffre_SkippableInputX</bpmn2:targetRef>
-        <bpmn2:assignment id="_IiKSdOdlEfGXPafMuWGBpw">
-          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_IiKSdedlEfGXPafMuWGBpw"><![CDATA[false]]></bpmn2:from>
-          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_IiKSdudlEfGXPafMuWGBpw">RedigerOffre_SkippableInputX</bpmn2:to>
+        <bpmn2:assignment id="_Osd4oOdlEfGXPafMuWGBpw">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_Osd4oedlEfGXPafMuWGBpw"><![CDATA[false]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_Osd4oudlEfGXPafMuWGBpw">RedigerOffre_SkippableInputX</bpmn2:to>
         </bpmn2:assignment>
       </bpmn2:dataInputAssociation>
-      <bpmn2:dataInputAssociation id="_IiKSd-dlEfGXPafMuWGBpw">
+      <bpmn2:dataInputAssociation id="_Osd4o-dlEfGXPafMuWGBpw">
         <bpmn2:targetRef>RedigerOffre_GroupIdInputX</bpmn2:targetRef>
-        <bpmn2:assignment id="_IiKSeOdlEfGXPafMuWGBpw">
-          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_IiKSeedlEfGXPafMuWGBpw"><![CDATA[RH]]></bpmn2:from>
-          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_IiKSeudlEfGXPafMuWGBpw">RedigerOffre_GroupIdInputX</bpmn2:to>
+        <bpmn2:assignment id="_Osd4pOdlEfGXPafMuWGBpw">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_Osd4pedlEfGXPafMuWGBpw"><![CDATA[RH]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_Osd4pudlEfGXPafMuWGBpw">RedigerOffre_GroupIdInputX</bpmn2:to>
         </bpmn2:assignment>
       </bpmn2:dataInputAssociation>
-      <bpmn2:dataInputAssociation id="_IiKSe-dlEfGXPafMuWGBpw">
+      <bpmn2:dataInputAssociation id="_Osd4p-dlEfGXPafMuWGBpw">
         <bpmn2:targetRef>RedigerOffre_CommentInputX</bpmn2:targetRef>
-        <bpmn2:assignment id="_IiKSfOdlEfGXPafMuWGBpw">
-          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_IiKSfedlEfGXPafMuWGBpw"><![CDATA[Rédiger l'offre d'emploi]]></bpmn2:from>
-          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_IiKSfudlEfGXPafMuWGBpw">RedigerOffre_CommentInputX</bpmn2:to>
+        <bpmn2:assignment id="_Osd4qOdlEfGXPafMuWGBpw">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_Osd4qedlEfGXPafMuWGBpw"><![CDATA[Rédiger l'offre d'emploi]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_Osd4qudlEfGXPafMuWGBpw">RedigerOffre_CommentInputX</bpmn2:to>
         </bpmn2:assignment>
       </bpmn2:dataInputAssociation>
-      <bpmn2:dataInputAssociation id="_IiKSf-dlEfGXPafMuWGBpw">
+      <bpmn2:dataInputAssociation id="_Osd4q-dlEfGXPafMuWGBpw">
         <bpmn2:targetRef>RedigerOffre_DescriptionInputX</bpmn2:targetRef>
-        <bpmn2:assignment id="_IiKSgOdlEfGXPafMuWGBpw">
-          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_IiKSgedlEfGXPafMuWGBpw"><![CDATA[Le service RH rédige l’offre d’emploi à partir de la fiche de poste validée.]]></bpmn2:from>
-          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_IiKSgudlEfGXPafMuWGBpw">RedigerOffre_DescriptionInputX</bpmn2:to>
+        <bpmn2:assignment id="_Osd4rOdlEfGXPafMuWGBpw">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_Osd4redlEfGXPafMuWGBpw"><![CDATA[Le service RH rédige l’offre d’emploi à partir de la fiche de poste validée.]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_Osd4rudlEfGXPafMuWGBpw">RedigerOffre_DescriptionInputX</bpmn2:to>
         </bpmn2:assignment>
       </bpmn2:dataInputAssociation>
-      <bpmn2:dataOutputAssociation id="_IiKSg-dlEfGXPafMuWGBpw">
+      <bpmn2:dataOutputAssociation id="_Osd4r-dlEfGXPafMuWGBpw">
         <bpmn2:sourceRef>RedigerOffre_descriptionOffreOutputX</bpmn2:sourceRef>
         <bpmn2:targetRef>descriptionOffre</bpmn2:targetRef>
       </bpmn2:dataOutputAssociation>
-      <bpmn2:dataOutputAssociation id="_IiKShOdlEfGXPafMuWGBpw">
+      <bpmn2:dataOutputAssociation id="_Osd4sOdlEfGXPafMuWGBpw">
         <bpmn2:sourceRef>RedigerOffre_profilRechercheOutputX</bpmn2:sourceRef>
         <bpmn2:targetRef>profilRecherche</bpmn2:targetRef>
       </bpmn2:dataOutputAssociation>
-      <bpmn2:dataOutputAssociation id="_IiKShedlEfGXPafMuWGBpw">
+      <bpmn2:dataOutputAssociation id="_Osd4sedlEfGXPafMuWGBpw">
         <bpmn2:sourceRef>RedigerOffre_avantagesPosteOutputX</bpmn2:sourceRef>
         <bpmn2:targetRef>avantagesPoste</bpmn2:targetRef>
       </bpmn2:dataOutputAssociation>
-      <bpmn2:dataOutputAssociation id="_IiKShudlEfGXPafMuWGBpw">
+      <bpmn2:dataOutputAssociation id="_Osd4sudlEfGXPafMuWGBpw">
         <bpmn2:sourceRef>RedigerOffre_intitulePosteOutputX</bpmn2:sourceRef>
         <bpmn2:targetRef>intitulePoste</bpmn2:targetRef>
       </bpmn2:dataOutputAssociation>
-      <bpmn2:dataOutputAssociation id="_IiKSh-dlEfGXPafMuWGBpw">
+      <bpmn2:dataOutputAssociation id="_Osd4s-dlEfGXPafMuWGBpw">
         <bpmn2:sourceRef>RedigerOffre_missionsPosteOutputX</bpmn2:sourceRef>
         <bpmn2:targetRef>missionsPoste</bpmn2:targetRef>
       </bpmn2:dataOutputAssociation>
-      <bpmn2:dataOutputAssociation id="_IiKSiOdlEfGXPafMuWGBpw">
+      <bpmn2:dataOutputAssociation id="_Osd4tOdlEfGXPafMuWGBpw">
         <bpmn2:sourceRef>RedigerOffre_competencesRequisesOutputX</bpmn2:sourceRef>
         <bpmn2:targetRef>competencesRequises</bpmn2:targetRef>
       </bpmn2:dataOutputAssociation>
-      <bpmn2:dataOutputAssociation id="_IiKSiedlEfGXPafMuWGBpw">
+      <bpmn2:dataOutputAssociation id="_Osd4tedlEfGXPafMuWGBpw">
         <bpmn2:sourceRef>RedigerOffre_experienceRequiseOutputX</bpmn2:sourceRef>
         <bpmn2:targetRef>experienceRequise</bpmn2:targetRef>
       </bpmn2:dataOutputAssociation>
@@ -1267,7 +1267,7 @@
       </bpmn2:extensionElements>
       <bpmn2:incoming>Flow_06</bpmn2:incoming>
       <bpmn2:outgoing>Flow_07</bpmn2:outgoing>
-      <bpmn2:ioSpecification id="_IiKSiudlEfGXPafMuWGBpw">
+      <bpmn2:ioSpecification id="_Osd4tudlEfGXPafMuWGBpw">
         <bpmn2:dataInput id="PublierOffre_TaskNameInputX" drools:dtype="Object" itemSubjectRef="_PublierOffre_TaskNameInputXItem" name="TaskName"/>
         <bpmn2:dataInput id="PublierOffre_intitulePosteInputX" drools:dtype="String" itemSubjectRef="_PublierOffre_intitulePosteInputXItem" name="intitulePoste"/>
         <bpmn2:dataInput id="PublierOffre_missionsPosteInputX" drools:dtype="String" itemSubjectRef="_PublierOffre_missionsPosteInputXItem" name="missionsPoste"/>
@@ -1276,14 +1276,14 @@
         <bpmn2:dataInput id="PublierOffre_descriptionOffreInputX" drools:dtype="String" itemSubjectRef="_PublierOffre_descriptionOffreInputXItem" name="descriptionOffre"/>
         <bpmn2:dataInput id="PublierOffre_profilRechercheInputX" drools:dtype="String" itemSubjectRef="_PublierOffre_profilRechercheInputXItem" name="profilRecherche"/>
         <bpmn2:dataInput id="PublierOffre_avantagesPosteInputX" drools:dtype="String" itemSubjectRef="_PublierOffre_avantagesPosteInputXItem" name="avantagesPoste"/>
-        <bpmn2:dataInput id="PublierOffre_plateformesPublicationInputX" drools:dtype="String" itemSubjectRef="_PublierOffre_plateformesPublicationInputXItem" name="plateformesPublication"/>
-        <bpmn2:dataInput id="PublierOffre_lienPublicationInputX" drools:dtype="String" itemSubjectRef="_PublierOffre_lienPublicationInputXItem" name="lienPublication"/>
-        <bpmn2:dataInput id="PublierOffre_commentairePublicationInputX" drools:dtype="String" itemSubjectRef="_PublierOffre_commentairePublicationInputXItem" name="commentairePublication"/>
         <bpmn2:dataInput id="PublierOffre_SkippableInputX" drools:dtype="Object" itemSubjectRef="_PublierOffre_SkippableInputXItem" name="Skippable"/>
         <bpmn2:dataInput id="PublierOffre_GroupIdInputX" drools:dtype="Object" itemSubjectRef="_PublierOffre_GroupIdInputXItem" name="GroupId"/>
         <bpmn2:dataInput id="PublierOffre_CommentInputX" drools:dtype="Object" itemSubjectRef="_PublierOffre_CommentInputXItem" name="Comment"/>
         <bpmn2:dataInput id="PublierOffre_DescriptionInputX" drools:dtype="Object" itemSubjectRef="_PublierOffre_DescriptionInputXItem" name="Description"/>
-        <bpmn2:inputSet id="_IiKSi-dlEfGXPafMuWGBpw">
+        <bpmn2:dataOutput id="PublierOffre_plateformesPublicationOutputX" drools:dtype="String" itemSubjectRef="_PublierOffre_plateformesPublicationOutputXItem" name="plateformesPublication"/>
+        <bpmn2:dataOutput id="PublierOffre_lienPublicationOutputX" drools:dtype="String" itemSubjectRef="_PublierOffre_lienPublicationOutputXItem" name="lienPublication"/>
+        <bpmn2:dataOutput id="PublierOffre_commentairePublicationOutputX" drools:dtype="String" itemSubjectRef="_PublierOffre_commentairePublicationOutputXItem" name="commentairePublication"/>
+        <bpmn2:inputSet id="_Osd4t-dlEfGXPafMuWGBpw">
           <bpmn2:dataInputRefs>PublierOffre_TaskNameInputX</bpmn2:dataInputRefs>
           <bpmn2:dataInputRefs>PublierOffre_intitulePosteInputX</bpmn2:dataInputRefs>
           <bpmn2:dataInputRefs>PublierOffre_missionsPosteInputX</bpmn2:dataInputRefs>
@@ -1292,91 +1292,92 @@
           <bpmn2:dataInputRefs>PublierOffre_descriptionOffreInputX</bpmn2:dataInputRefs>
           <bpmn2:dataInputRefs>PublierOffre_profilRechercheInputX</bpmn2:dataInputRefs>
           <bpmn2:dataInputRefs>PublierOffre_avantagesPosteInputX</bpmn2:dataInputRefs>
-          <bpmn2:dataInputRefs>PublierOffre_plateformesPublicationInputX</bpmn2:dataInputRefs>
-          <bpmn2:dataInputRefs>PublierOffre_lienPublicationInputX</bpmn2:dataInputRefs>
-          <bpmn2:dataInputRefs>PublierOffre_commentairePublicationInputX</bpmn2:dataInputRefs>
           <bpmn2:dataInputRefs>PublierOffre_SkippableInputX</bpmn2:dataInputRefs>
           <bpmn2:dataInputRefs>PublierOffre_GroupIdInputX</bpmn2:dataInputRefs>
           <bpmn2:dataInputRefs>PublierOffre_CommentInputX</bpmn2:dataInputRefs>
           <bpmn2:dataInputRefs>PublierOffre_DescriptionInputX</bpmn2:dataInputRefs>
         </bpmn2:inputSet>
-        <bpmn2:outputSet id="_IiKSjOdlEfGXPafMuWGBpw"/>
+        <bpmn2:outputSet id="_Osd4uOdlEfGXPafMuWGBpw">
+          <bpmn2:dataOutputRefs>PublierOffre_plateformesPublicationOutputX</bpmn2:dataOutputRefs>
+          <bpmn2:dataOutputRefs>PublierOffre_lienPublicationOutputX</bpmn2:dataOutputRefs>
+          <bpmn2:dataOutputRefs>PublierOffre_commentairePublicationOutputX</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
       </bpmn2:ioSpecification>
-      <bpmn2:dataInputAssociation id="_IiKSjedlEfGXPafMuWGBpw">
+      <bpmn2:dataInputAssociation id="_Osd4uedlEfGXPafMuWGBpw">
         <bpmn2:targetRef>PublierOffre_TaskNameInputX</bpmn2:targetRef>
-        <bpmn2:assignment id="_IiKSjudlEfGXPafMuWGBpw">
-          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_IiKSj-dlEfGXPafMuWGBpw"><![CDATA[PublierOffre]]></bpmn2:from>
-          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_IiKSkOdlEfGXPafMuWGBpw">PublierOffre_TaskNameInputX</bpmn2:to>
+        <bpmn2:assignment id="_Osd4uudlEfGXPafMuWGBpw">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_Osd4u-dlEfGXPafMuWGBpw"><![CDATA[PublierOffre]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_Osd4vOdlEfGXPafMuWGBpw">PublierOffre_TaskNameInputX</bpmn2:to>
         </bpmn2:assignment>
       </bpmn2:dataInputAssociation>
-      <bpmn2:dataInputAssociation id="_IiKSkedlEfGXPafMuWGBpw">
+      <bpmn2:dataInputAssociation id="_Osd4vedlEfGXPafMuWGBpw">
         <bpmn2:sourceRef>intitulePoste</bpmn2:sourceRef>
         <bpmn2:targetRef>PublierOffre_intitulePosteInputX</bpmn2:targetRef>
       </bpmn2:dataInputAssociation>
-      <bpmn2:dataInputAssociation id="_IiKSkudlEfGXPafMuWGBpw">
+      <bpmn2:dataInputAssociation id="_Osd4vudlEfGXPafMuWGBpw">
         <bpmn2:sourceRef>missionsPoste</bpmn2:sourceRef>
         <bpmn2:targetRef>PublierOffre_missionsPosteInputX</bpmn2:targetRef>
       </bpmn2:dataInputAssociation>
-      <bpmn2:dataInputAssociation id="_IiKSk-dlEfGXPafMuWGBpw">
+      <bpmn2:dataInputAssociation id="_Osd4v-dlEfGXPafMuWGBpw">
         <bpmn2:sourceRef>competencesRequises</bpmn2:sourceRef>
         <bpmn2:targetRef>PublierOffre_competencesRequisesInputX</bpmn2:targetRef>
       </bpmn2:dataInputAssociation>
-      <bpmn2:dataInputAssociation id="_IiKSlOdlEfGXPafMuWGBpw">
+      <bpmn2:dataInputAssociation id="_Osd4wOdlEfGXPafMuWGBpw">
         <bpmn2:sourceRef>experienceRequise</bpmn2:sourceRef>
         <bpmn2:targetRef>PublierOffre_experienceRequiseInputX</bpmn2:targetRef>
       </bpmn2:dataInputAssociation>
-      <bpmn2:dataInputAssociation id="_IiKSledlEfGXPafMuWGBpw">
+      <bpmn2:dataInputAssociation id="_Osd4wedlEfGXPafMuWGBpw">
         <bpmn2:sourceRef>descriptionOffre</bpmn2:sourceRef>
         <bpmn2:targetRef>PublierOffre_descriptionOffreInputX</bpmn2:targetRef>
       </bpmn2:dataInputAssociation>
-      <bpmn2:dataInputAssociation id="_IiKSludlEfGXPafMuWGBpw">
+      <bpmn2:dataInputAssociation id="_Osd4wudlEfGXPafMuWGBpw">
         <bpmn2:sourceRef>profilRecherche</bpmn2:sourceRef>
         <bpmn2:targetRef>PublierOffre_profilRechercheInputX</bpmn2:targetRef>
       </bpmn2:dataInputAssociation>
-      <bpmn2:dataInputAssociation id="_IiKSl-dlEfGXPafMuWGBpw">
+      <bpmn2:dataInputAssociation id="_Osd4w-dlEfGXPafMuWGBpw">
         <bpmn2:sourceRef>avantagesPoste</bpmn2:sourceRef>
         <bpmn2:targetRef>PublierOffre_avantagesPosteInputX</bpmn2:targetRef>
       </bpmn2:dataInputAssociation>
-      <bpmn2:dataInputAssociation id="_IiKSmOdlEfGXPafMuWGBpw">
-        <bpmn2:sourceRef>plateformesPublication</bpmn2:sourceRef>
-        <bpmn2:targetRef>PublierOffre_plateformesPublicationInputX</bpmn2:targetRef>
-      </bpmn2:dataInputAssociation>
-      <bpmn2:dataInputAssociation id="_IiKSmedlEfGXPafMuWGBpw">
-        <bpmn2:sourceRef>lienPublication</bpmn2:sourceRef>
-        <bpmn2:targetRef>PublierOffre_lienPublicationInputX</bpmn2:targetRef>
-      </bpmn2:dataInputAssociation>
-      <bpmn2:dataInputAssociation id="_IiKSmudlEfGXPafMuWGBpw">
-        <bpmn2:sourceRef>commentairePublication</bpmn2:sourceRef>
-        <bpmn2:targetRef>PublierOffre_commentairePublicationInputX</bpmn2:targetRef>
-      </bpmn2:dataInputAssociation>
-      <bpmn2:dataInputAssociation id="_IiKSm-dlEfGXPafMuWGBpw">
+      <bpmn2:dataInputAssociation id="_Osd4xOdlEfGXPafMuWGBpw">
         <bpmn2:targetRef>PublierOffre_SkippableInputX</bpmn2:targetRef>
-        <bpmn2:assignment id="_IiKSnOdlEfGXPafMuWGBpw">
-          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_IiKSnedlEfGXPafMuWGBpw"><![CDATA[false]]></bpmn2:from>
-          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_IiKSnudlEfGXPafMuWGBpw">PublierOffre_SkippableInputX</bpmn2:to>
+        <bpmn2:assignment id="_Osd4xedlEfGXPafMuWGBpw">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_Osd4xudlEfGXPafMuWGBpw"><![CDATA[false]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_Osd4x-dlEfGXPafMuWGBpw">PublierOffre_SkippableInputX</bpmn2:to>
         </bpmn2:assignment>
       </bpmn2:dataInputAssociation>
-      <bpmn2:dataInputAssociation id="_IiKSn-dlEfGXPafMuWGBpw">
+      <bpmn2:dataInputAssociation id="_Osd4yOdlEfGXPafMuWGBpw">
         <bpmn2:targetRef>PublierOffre_GroupIdInputX</bpmn2:targetRef>
-        <bpmn2:assignment id="_IiKSoOdlEfGXPafMuWGBpw">
-          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_IiKSoedlEfGXPafMuWGBpw"><![CDATA[RH]]></bpmn2:from>
-          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_IiKSoudlEfGXPafMuWGBpw">PublierOffre_GroupIdInputX</bpmn2:to>
+        <bpmn2:assignment id="_Osd4yedlEfGXPafMuWGBpw">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_Osd4yudlEfGXPafMuWGBpw"><![CDATA[RH]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_Osd4y-dlEfGXPafMuWGBpw">PublierOffre_GroupIdInputX</bpmn2:to>
         </bpmn2:assignment>
       </bpmn2:dataInputAssociation>
-      <bpmn2:dataInputAssociation id="_IiKSo-dlEfGXPafMuWGBpw">
+      <bpmn2:dataInputAssociation id="_Osd4zOdlEfGXPafMuWGBpw">
         <bpmn2:targetRef>PublierOffre_CommentInputX</bpmn2:targetRef>
-        <bpmn2:assignment id="_IiKSpOdlEfGXPafMuWGBpw">
-          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_IiKSpedlEfGXPafMuWGBpw"><![CDATA[Publier l'offre d'emploi]]></bpmn2:from>
-          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_IiKSpudlEfGXPafMuWGBpw">PublierOffre_CommentInputX</bpmn2:to>
+        <bpmn2:assignment id="_Osd4zedlEfGXPafMuWGBpw">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_Osd4zudlEfGXPafMuWGBpw"><![CDATA[Publier l'offre d'emploi]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_Osd4z-dlEfGXPafMuWGBpw">PublierOffre_CommentInputX</bpmn2:to>
         </bpmn2:assignment>
       </bpmn2:dataInputAssociation>
-      <bpmn2:dataInputAssociation id="_IiKSp-dlEfGXPafMuWGBpw">
+      <bpmn2:dataInputAssociation id="_Osd40OdlEfGXPafMuWGBpw">
         <bpmn2:targetRef>PublierOffre_DescriptionInputX</bpmn2:targetRef>
-        <bpmn2:assignment id="_IiKSqOdlEfGXPafMuWGBpw">
-          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_IiKSqedlEfGXPafMuWGBpw"><![CDATA[Le service RH publie l’offre d’emploi sur les canaux de recrutement retenus.]]></bpmn2:from>
-          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_IiKSqudlEfGXPafMuWGBpw">PublierOffre_DescriptionInputX</bpmn2:to>
+        <bpmn2:assignment id="_Osd40edlEfGXPafMuWGBpw">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_Osd40udlEfGXPafMuWGBpw"><![CDATA[Le service RH publie l’offre d’emploi sur les canaux de recrutement retenus.]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_Osd40-dlEfGXPafMuWGBpw">PublierOffre_DescriptionInputX</bpmn2:to>
         </bpmn2:assignment>
       </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_Osd41OdlEfGXPafMuWGBpw">
+        <bpmn2:sourceRef>PublierOffre_plateformesPublicationOutputX</bpmn2:sourceRef>
+        <bpmn2:targetRef>plateformesPublication</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:dataOutputAssociation id="_Osd41edlEfGXPafMuWGBpw">
+        <bpmn2:sourceRef>PublierOffre_lienPublicationOutputX</bpmn2:sourceRef>
+        <bpmn2:targetRef>lienPublication</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:dataOutputAssociation id="_Osd41udlEfGXPafMuWGBpw">
+        <bpmn2:sourceRef>PublierOffre_commentairePublicationOutputX</bpmn2:sourceRef>
+        <bpmn2:targetRef>commentairePublication</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
     </bpmn2:userTask>
     <bpmn2:userTask id="ExaminerDemande" name="Examiner le besoin de recrutement">
       <bpmn2:extensionElements>
@@ -1386,7 +1387,7 @@
       </bpmn2:extensionElements>
       <bpmn2:incoming>Flow_02</bpmn2:incoming>
       <bpmn2:outgoing>Flow_04</bpmn2:outgoing>
-      <bpmn2:ioSpecification id="_IiKSq-dlEfGXPafMuWGBpw">
+      <bpmn2:ioSpecification id="_Osd41-dlEfGXPafMuWGBpw">
         <bpmn2:dataInput id="ExaminerDemande_TaskNameInputX" drools:dtype="Object" itemSubjectRef="_ExaminerDemande_TaskNameInputXItem" name="TaskName"/>
         <bpmn2:dataInput id="ExaminerDemande_motifRecrutementInputX" drools:dtype="String" itemSubjectRef="_ExaminerDemande_motifRecrutementInputXItem" name="motifRecrutement"/>
         <bpmn2:dataInput id="ExaminerDemande_justificationBesoinInputX" drools:dtype="String" itemSubjectRef="_ExaminerDemande_justificationBesoinInputXItem" name="justificationBesoin"/>
@@ -1396,7 +1397,7 @@
         <bpmn2:dataInput id="ExaminerDemande_DescriptionInputX" drools:dtype="Object" itemSubjectRef="_ExaminerDemande_DescriptionInputXItem" name="Description"/>
         <bpmn2:dataOutput id="ExaminerDemande_besoinAccepteOutputX" drools:dtype="Boolean" itemSubjectRef="_ExaminerDemande_besoinAccepteOutputXItem" name="besoinAccepte"/>
         <bpmn2:dataOutput id="ExaminerDemande_commentaireDecisionBesoinOutputX" drools:dtype="String" itemSubjectRef="_ExaminerDemande_commentaireDecisionBesoinOutputXItem" name="commentaireDecisionBesoin"/>
-        <bpmn2:inputSet id="_IiKSrOdlEfGXPafMuWGBpw">
+        <bpmn2:inputSet id="_Osd42OdlEfGXPafMuWGBpw">
           <bpmn2:dataInputRefs>ExaminerDemande_TaskNameInputX</bpmn2:dataInputRefs>
           <bpmn2:dataInputRefs>ExaminerDemande_motifRecrutementInputX</bpmn2:dataInputRefs>
           <bpmn2:dataInputRefs>ExaminerDemande_justificationBesoinInputX</bpmn2:dataInputRefs>
@@ -1405,59 +1406,59 @@
           <bpmn2:dataInputRefs>ExaminerDemande_CommentInputX</bpmn2:dataInputRefs>
           <bpmn2:dataInputRefs>ExaminerDemande_DescriptionInputX</bpmn2:dataInputRefs>
         </bpmn2:inputSet>
-        <bpmn2:outputSet id="_IiKSredlEfGXPafMuWGBpw">
+        <bpmn2:outputSet id="_Osd42edlEfGXPafMuWGBpw">
           <bpmn2:dataOutputRefs>ExaminerDemande_besoinAccepteOutputX</bpmn2:dataOutputRefs>
           <bpmn2:dataOutputRefs>ExaminerDemande_commentaireDecisionBesoinOutputX</bpmn2:dataOutputRefs>
         </bpmn2:outputSet>
       </bpmn2:ioSpecification>
-      <bpmn2:dataInputAssociation id="_IiKSrudlEfGXPafMuWGBpw">
+      <bpmn2:dataInputAssociation id="_Osd42udlEfGXPafMuWGBpw">
         <bpmn2:targetRef>ExaminerDemande_TaskNameInputX</bpmn2:targetRef>
-        <bpmn2:assignment id="_IiKSr-dlEfGXPafMuWGBpw">
-          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_IiKSsOdlEfGXPafMuWGBpw"><![CDATA[ExaminerDemande]]></bpmn2:from>
-          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_IiKSsedlEfGXPafMuWGBpw">ExaminerDemande_TaskNameInputX</bpmn2:to>
+        <bpmn2:assignment id="_Osd42-dlEfGXPafMuWGBpw">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_Osd43OdlEfGXPafMuWGBpw"><![CDATA[ExaminerDemande]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_Osd43edlEfGXPafMuWGBpw">ExaminerDemande_TaskNameInputX</bpmn2:to>
         </bpmn2:assignment>
       </bpmn2:dataInputAssociation>
-      <bpmn2:dataInputAssociation id="_IiKSsudlEfGXPafMuWGBpw">
+      <bpmn2:dataInputAssociation id="_Osd43udlEfGXPafMuWGBpw">
         <bpmn2:sourceRef>motifRecrutement</bpmn2:sourceRef>
         <bpmn2:targetRef>ExaminerDemande_motifRecrutementInputX</bpmn2:targetRef>
       </bpmn2:dataInputAssociation>
-      <bpmn2:dataInputAssociation id="_IiKSs-dlEfGXPafMuWGBpw">
+      <bpmn2:dataInputAssociation id="_Osd43-dlEfGXPafMuWGBpw">
         <bpmn2:sourceRef>justificationBesoin</bpmn2:sourceRef>
         <bpmn2:targetRef>ExaminerDemande_justificationBesoinInputX</bpmn2:targetRef>
       </bpmn2:dataInputAssociation>
-      <bpmn2:dataInputAssociation id="_IiKStOdlEfGXPafMuWGBpw">
+      <bpmn2:dataInputAssociation id="_Osd44OdlEfGXPafMuWGBpw">
         <bpmn2:targetRef>ExaminerDemande_SkippableInputX</bpmn2:targetRef>
-        <bpmn2:assignment id="_IiKStedlEfGXPafMuWGBpw">
-          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_IiKStudlEfGXPafMuWGBpw"><![CDATA[false]]></bpmn2:from>
-          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_IiKSt-dlEfGXPafMuWGBpw">ExaminerDemande_SkippableInputX</bpmn2:to>
+        <bpmn2:assignment id="_Osd44edlEfGXPafMuWGBpw">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_Osd44udlEfGXPafMuWGBpw"><![CDATA[false]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_Osd44-dlEfGXPafMuWGBpw">ExaminerDemande_SkippableInputX</bpmn2:to>
         </bpmn2:assignment>
       </bpmn2:dataInputAssociation>
-      <bpmn2:dataInputAssociation id="_IiKSuOdlEfGXPafMuWGBpw">
+      <bpmn2:dataInputAssociation id="_Osd45OdlEfGXPafMuWGBpw">
         <bpmn2:targetRef>ExaminerDemande_GroupIdInputX</bpmn2:targetRef>
-        <bpmn2:assignment id="_IiKSuedlEfGXPafMuWGBpw">
-          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_IiKSuudlEfGXPafMuWGBpw"><![CDATA[Directeur]]></bpmn2:from>
-          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_IiKSu-dlEfGXPafMuWGBpw">ExaminerDemande_GroupIdInputX</bpmn2:to>
+        <bpmn2:assignment id="_Osd45edlEfGXPafMuWGBpw">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_Osd45udlEfGXPafMuWGBpw"><![CDATA[Directeur]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_Osd45-dlEfGXPafMuWGBpw">ExaminerDemande_GroupIdInputX</bpmn2:to>
         </bpmn2:assignment>
       </bpmn2:dataInputAssociation>
-      <bpmn2:dataInputAssociation id="_IiKSvOdlEfGXPafMuWGBpw">
+      <bpmn2:dataInputAssociation id="_Osd46OdlEfGXPafMuWGBpw">
         <bpmn2:targetRef>ExaminerDemande_CommentInputX</bpmn2:targetRef>
-        <bpmn2:assignment id="_IiKSvedlEfGXPafMuWGBpw">
-          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_IiKSvudlEfGXPafMuWGBpw"><![CDATA[Examiner le besoin de recrutement]]></bpmn2:from>
-          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_IiKSv-dlEfGXPafMuWGBpw">ExaminerDemande_CommentInputX</bpmn2:to>
+        <bpmn2:assignment id="_Osd46edlEfGXPafMuWGBpw">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_Osd46udlEfGXPafMuWGBpw"><![CDATA[Examiner le besoin de recrutement]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_Osd46-dlEfGXPafMuWGBpw">ExaminerDemande_CommentInputX</bpmn2:to>
         </bpmn2:assignment>
       </bpmn2:dataInputAssociation>
-      <bpmn2:dataInputAssociation id="_IiKSwOdlEfGXPafMuWGBpw">
+      <bpmn2:dataInputAssociation id="_Osd47OdlEfGXPafMuWGBpw">
         <bpmn2:targetRef>ExaminerDemande_DescriptionInputX</bpmn2:targetRef>
-        <bpmn2:assignment id="_IiKSwedlEfGXPafMuWGBpw">
-          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_IiKSwudlEfGXPafMuWGBpw"><![CDATA[Le Directeur examine la demande et décide si le besoin de recrutement est accepté.]]></bpmn2:from>
-          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_IiKSw-dlEfGXPafMuWGBpw">ExaminerDemande_DescriptionInputX</bpmn2:to>
+        <bpmn2:assignment id="_Osd47edlEfGXPafMuWGBpw">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_Osd47udlEfGXPafMuWGBpw"><![CDATA[Le Directeur examine la demande et décide si le besoin de recrutement est accepté.]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_Osd47-dlEfGXPafMuWGBpw">ExaminerDemande_DescriptionInputX</bpmn2:to>
         </bpmn2:assignment>
       </bpmn2:dataInputAssociation>
-      <bpmn2:dataOutputAssociation id="_IiKSxOdlEfGXPafMuWGBpw">
+      <bpmn2:dataOutputAssociation id="_Osd48OdlEfGXPafMuWGBpw">
         <bpmn2:sourceRef>ExaminerDemande_besoinAccepteOutputX</bpmn2:sourceRef>
         <bpmn2:targetRef>besoinAccepte</bpmn2:targetRef>
       </bpmn2:dataOutputAssociation>
-      <bpmn2:dataOutputAssociation id="_IiKSxedlEfGXPafMuWGBpw">
+      <bpmn2:dataOutputAssociation id="_Osd48edlEfGXPafMuWGBpw">
         <bpmn2:sourceRef>ExaminerDemande_commentaireDecisionBesoinOutputX</bpmn2:sourceRef>
         <bpmn2:targetRef>commentaireDecisionBesoin</bpmn2:targetRef>
       </bpmn2:dataOutputAssociation>
@@ -1486,54 +1487,54 @@
       </bpmn2:extensionElements>
       <bpmn2:incoming>Flow_10_OUI</bpmn2:incoming>
       <bpmn2:outgoing>Flow_11</bpmn2:outgoing>
-      <bpmn2:ioSpecification id="_IiKSxudlEfGXPafMuWGBpw">
+      <bpmn2:ioSpecification id="_Osd48udlEfGXPafMuWGBpw">
         <bpmn2:dataInput id="PlanifierEntretienRH_TaskNameInputX" drools:dtype="Object" itemSubjectRef="_PlanifierEntretienRH_TaskNameInputXItem" name="TaskName"/>
         <bpmn2:dataInput id="PlanifierEntretienRH_SkippableInputX" drools:dtype="Object" itemSubjectRef="_PlanifierEntretienRH_SkippableInputXItem" name="Skippable"/>
         <bpmn2:dataInput id="PlanifierEntretienRH_GroupIdInputX" drools:dtype="Object" itemSubjectRef="_PlanifierEntretienRH_GroupIdInputXItem" name="GroupId"/>
         <bpmn2:dataInput id="PlanifierEntretienRH_CommentInputX" drools:dtype="Object" itemSubjectRef="_PlanifierEntretienRH_CommentInputXItem" name="Comment"/>
         <bpmn2:dataInput id="PlanifierEntretienRH_DescriptionInputX" drools:dtype="Object" itemSubjectRef="_PlanifierEntretienRH_DescriptionInputXItem" name="Description"/>
-        <bpmn2:inputSet id="_IiKSx-dlEfGXPafMuWGBpw">
+        <bpmn2:inputSet id="_Osd48-dlEfGXPafMuWGBpw">
           <bpmn2:dataInputRefs>PlanifierEntretienRH_TaskNameInputX</bpmn2:dataInputRefs>
           <bpmn2:dataInputRefs>PlanifierEntretienRH_SkippableInputX</bpmn2:dataInputRefs>
           <bpmn2:dataInputRefs>PlanifierEntretienRH_GroupIdInputX</bpmn2:dataInputRefs>
           <bpmn2:dataInputRefs>PlanifierEntretienRH_CommentInputX</bpmn2:dataInputRefs>
           <bpmn2:dataInputRefs>PlanifierEntretienRH_DescriptionInputX</bpmn2:dataInputRefs>
         </bpmn2:inputSet>
-        <bpmn2:outputSet id="_IiKSyOdlEfGXPafMuWGBpw"/>
+        <bpmn2:outputSet id="_Osd49OdlEfGXPafMuWGBpw"/>
       </bpmn2:ioSpecification>
-      <bpmn2:dataInputAssociation id="_IiKSyedlEfGXPafMuWGBpw">
+      <bpmn2:dataInputAssociation id="_Osd49edlEfGXPafMuWGBpw">
         <bpmn2:targetRef>PlanifierEntretienRH_TaskNameInputX</bpmn2:targetRef>
-        <bpmn2:assignment id="_IiKSyudlEfGXPafMuWGBpw">
-          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_IiKSy-dlEfGXPafMuWGBpw"><![CDATA[PlanifierEntretienRH]]></bpmn2:from>
-          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_IiKSzOdlEfGXPafMuWGBpw">PlanifierEntretienRH_TaskNameInputX</bpmn2:to>
+        <bpmn2:assignment id="_Osd49udlEfGXPafMuWGBpw">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_Osd49-dlEfGXPafMuWGBpw"><![CDATA[PlanifierEntretienRH]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_Osd4-OdlEfGXPafMuWGBpw">PlanifierEntretienRH_TaskNameInputX</bpmn2:to>
         </bpmn2:assignment>
       </bpmn2:dataInputAssociation>
-      <bpmn2:dataInputAssociation id="_IiKSzedlEfGXPafMuWGBpw">
+      <bpmn2:dataInputAssociation id="_Osd4-edlEfGXPafMuWGBpw">
         <bpmn2:targetRef>PlanifierEntretienRH_SkippableInputX</bpmn2:targetRef>
-        <bpmn2:assignment id="_IiKSzudlEfGXPafMuWGBpw">
-          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_IiKSz-dlEfGXPafMuWGBpw"><![CDATA[false]]></bpmn2:from>
-          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_IiKS0OdlEfGXPafMuWGBpw">PlanifierEntretienRH_SkippableInputX</bpmn2:to>
+        <bpmn2:assignment id="_Osd4-udlEfGXPafMuWGBpw">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_Osd4--dlEfGXPafMuWGBpw"><![CDATA[false]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_Osd4_OdlEfGXPafMuWGBpw">PlanifierEntretienRH_SkippableInputX</bpmn2:to>
         </bpmn2:assignment>
       </bpmn2:dataInputAssociation>
-      <bpmn2:dataInputAssociation id="_IiKS0edlEfGXPafMuWGBpw">
+      <bpmn2:dataInputAssociation id="_Osd4_edlEfGXPafMuWGBpw">
         <bpmn2:targetRef>PlanifierEntretienRH_GroupIdInputX</bpmn2:targetRef>
-        <bpmn2:assignment id="_IiKS0udlEfGXPafMuWGBpw">
-          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_IiKS0-dlEfGXPafMuWGBpw"><![CDATA[RH]]></bpmn2:from>
-          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_IiKS1OdlEfGXPafMuWGBpw">PlanifierEntretienRH_GroupIdInputX</bpmn2:to>
+        <bpmn2:assignment id="_Osd4_udlEfGXPafMuWGBpw">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_Osd4_-dlEfGXPafMuWGBpw"><![CDATA[RH]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_Osd5AOdlEfGXPafMuWGBpw">PlanifierEntretienRH_GroupIdInputX</bpmn2:to>
         </bpmn2:assignment>
       </bpmn2:dataInputAssociation>
-      <bpmn2:dataInputAssociation id="_IiKS1edlEfGXPafMuWGBpw">
+      <bpmn2:dataInputAssociation id="_Osd5AedlEfGXPafMuWGBpw">
         <bpmn2:targetRef>PlanifierEntretienRH_CommentInputX</bpmn2:targetRef>
-        <bpmn2:assignment id="_IiKS1udlEfGXPafMuWGBpw">
-          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_IiKS1-dlEfGXPafMuWGBpw"><![CDATA[Planifier l'entretien téléphonique]]></bpmn2:from>
-          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_IiKS2OdlEfGXPafMuWGBpw">PlanifierEntretienRH_CommentInputX</bpmn2:to>
+        <bpmn2:assignment id="_Osd5AudlEfGXPafMuWGBpw">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_Osd5A-dlEfGXPafMuWGBpw"><![CDATA[Planifier l'entretien téléphonique]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_Osd5BOdlEfGXPafMuWGBpw">PlanifierEntretienRH_CommentInputX</bpmn2:to>
         </bpmn2:assignment>
       </bpmn2:dataInputAssociation>
-      <bpmn2:dataInputAssociation id="_IiKS2edlEfGXPafMuWGBpw">
+      <bpmn2:dataInputAssociation id="_Osd5BedlEfGXPafMuWGBpw">
         <bpmn2:targetRef>PlanifierEntretienRH_DescriptionInputX</bpmn2:targetRef>
-        <bpmn2:assignment id="_IiKS2udlEfGXPafMuWGBpw">
-          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_IiKS2-dlEfGXPafMuWGBpw"><![CDATA[Le service RH organise l’entretien téléphonique avec le candidat retenu.]]></bpmn2:from>
-          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_IiKS3OdlEfGXPafMuWGBpw">PlanifierEntretienRH_DescriptionInputX</bpmn2:to>
+        <bpmn2:assignment id="_Osd5BudlEfGXPafMuWGBpw">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_Osd5B-dlEfGXPafMuWGBpw"><![CDATA[Le service RH organise l’entretien téléphonique avec le candidat retenu.]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_Osd5COdlEfGXPafMuWGBpw">PlanifierEntretienRH_DescriptionInputX</bpmn2:to>
         </bpmn2:assignment>
       </bpmn2:dataInputAssociation>
     </bpmn2:userTask>
@@ -1545,54 +1546,54 @@
       </bpmn2:extensionElements>
       <bpmn2:incoming>Flow_18</bpmn2:incoming>
       <bpmn2:outgoing>Flow_19</bpmn2:outgoing>
-      <bpmn2:ioSpecification id="_IiKS3edlEfGXPafMuWGBpw">
+      <bpmn2:ioSpecification id="_Osd5CedlEfGXPafMuWGBpw">
         <bpmn2:dataInput id="PreparerArrivee_TaskNameInputX" drools:dtype="Object" itemSubjectRef="_PreparerArrivee_TaskNameInputXItem" name="TaskName"/>
         <bpmn2:dataInput id="PreparerArrivee_SkippableInputX" drools:dtype="Object" itemSubjectRef="_PreparerArrivee_SkippableInputXItem" name="Skippable"/>
         <bpmn2:dataInput id="PreparerArrivee_GroupIdInputX" drools:dtype="Object" itemSubjectRef="_PreparerArrivee_GroupIdInputXItem" name="GroupId"/>
         <bpmn2:dataInput id="PreparerArrivee_CommentInputX" drools:dtype="Object" itemSubjectRef="_PreparerArrivee_CommentInputXItem" name="Comment"/>
         <bpmn2:dataInput id="PreparerArrivee_DescriptionInputX" drools:dtype="Object" itemSubjectRef="_PreparerArrivee_DescriptionInputXItem" name="Description"/>
-        <bpmn2:inputSet id="_IiKS3udlEfGXPafMuWGBpw">
+        <bpmn2:inputSet id="_Osd5CudlEfGXPafMuWGBpw">
           <bpmn2:dataInputRefs>PreparerArrivee_TaskNameInputX</bpmn2:dataInputRefs>
           <bpmn2:dataInputRefs>PreparerArrivee_SkippableInputX</bpmn2:dataInputRefs>
           <bpmn2:dataInputRefs>PreparerArrivee_GroupIdInputX</bpmn2:dataInputRefs>
           <bpmn2:dataInputRefs>PreparerArrivee_CommentInputX</bpmn2:dataInputRefs>
           <bpmn2:dataInputRefs>PreparerArrivee_DescriptionInputX</bpmn2:dataInputRefs>
         </bpmn2:inputSet>
-        <bpmn2:outputSet id="_IiKS3-dlEfGXPafMuWGBpw"/>
+        <bpmn2:outputSet id="_Osd5C-dlEfGXPafMuWGBpw"/>
       </bpmn2:ioSpecification>
-      <bpmn2:dataInputAssociation id="_IiKS4OdlEfGXPafMuWGBpw">
+      <bpmn2:dataInputAssociation id="_Osd5DOdlEfGXPafMuWGBpw">
         <bpmn2:targetRef>PreparerArrivee_TaskNameInputX</bpmn2:targetRef>
-        <bpmn2:assignment id="_IiKS4edlEfGXPafMuWGBpw">
-          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_IiKS4udlEfGXPafMuWGBpw"><![CDATA[PreparerArrivee]]></bpmn2:from>
-          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_IiKS4-dlEfGXPafMuWGBpw">PreparerArrivee_TaskNameInputX</bpmn2:to>
+        <bpmn2:assignment id="_Osd5DedlEfGXPafMuWGBpw">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_Osd5DudlEfGXPafMuWGBpw"><![CDATA[PreparerArrivee]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_Osd5D-dlEfGXPafMuWGBpw">PreparerArrivee_TaskNameInputX</bpmn2:to>
         </bpmn2:assignment>
       </bpmn2:dataInputAssociation>
-      <bpmn2:dataInputAssociation id="_IiKS5OdlEfGXPafMuWGBpw">
+      <bpmn2:dataInputAssociation id="_Osd5EOdlEfGXPafMuWGBpw">
         <bpmn2:targetRef>PreparerArrivee_SkippableInputX</bpmn2:targetRef>
-        <bpmn2:assignment id="_IiKS5edlEfGXPafMuWGBpw">
-          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_IiKS5udlEfGXPafMuWGBpw"><![CDATA[false]]></bpmn2:from>
-          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_IiKS5-dlEfGXPafMuWGBpw">PreparerArrivee_SkippableInputX</bpmn2:to>
+        <bpmn2:assignment id="_Osd5EedlEfGXPafMuWGBpw">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_Osd5EudlEfGXPafMuWGBpw"><![CDATA[false]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_Osd5E-dlEfGXPafMuWGBpw">PreparerArrivee_SkippableInputX</bpmn2:to>
         </bpmn2:assignment>
       </bpmn2:dataInputAssociation>
-      <bpmn2:dataInputAssociation id="_IiKS6OdlEfGXPafMuWGBpw">
+      <bpmn2:dataInputAssociation id="_Osd5FOdlEfGXPafMuWGBpw">
         <bpmn2:targetRef>PreparerArrivee_GroupIdInputX</bpmn2:targetRef>
-        <bpmn2:assignment id="_IiKS6edlEfGXPafMuWGBpw">
-          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_IiKS6udlEfGXPafMuWGBpw"><![CDATA[RH]]></bpmn2:from>
-          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_IiKS6-dlEfGXPafMuWGBpw">PreparerArrivee_GroupIdInputX</bpmn2:to>
+        <bpmn2:assignment id="_Osd5FedlEfGXPafMuWGBpw">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_OseesOdlEfGXPafMuWGBpw"><![CDATA[RH]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_OseesedlEfGXPafMuWGBpw">PreparerArrivee_GroupIdInputX</bpmn2:to>
         </bpmn2:assignment>
       </bpmn2:dataInputAssociation>
-      <bpmn2:dataInputAssociation id="_IiKS7OdlEfGXPafMuWGBpw">
+      <bpmn2:dataInputAssociation id="_OseesudlEfGXPafMuWGBpw">
         <bpmn2:targetRef>PreparerArrivee_CommentInputX</bpmn2:targetRef>
-        <bpmn2:assignment id="_IiKS7edlEfGXPafMuWGBpw">
-          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_IiKS7udlEfGXPafMuWGBpw"><![CDATA[Préparer le dossier d'arrivée, le livret et le planning]]></bpmn2:from>
-          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_IiKS7-dlEfGXPafMuWGBpw">PreparerArrivee_CommentInputX</bpmn2:to>
+        <bpmn2:assignment id="_Osees-dlEfGXPafMuWGBpw">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_OseetOdlEfGXPafMuWGBpw"><![CDATA[Préparer le dossier d'arrivée, le livret et le planning]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_OseetedlEfGXPafMuWGBpw">PreparerArrivee_CommentInputX</bpmn2:to>
         </bpmn2:assignment>
       </bpmn2:dataInputAssociation>
-      <bpmn2:dataInputAssociation id="_IiKS8OdlEfGXPafMuWGBpw">
+      <bpmn2:dataInputAssociation id="_OseetudlEfGXPafMuWGBpw">
         <bpmn2:targetRef>PreparerArrivee_DescriptionInputX</bpmn2:targetRef>
-        <bpmn2:assignment id="_IiKS8edlEfGXPafMuWGBpw">
-          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_IiKS8udlEfGXPafMuWGBpw"><![CDATA[Le service RH prépare le dossier d’arrivée, le livret d’accueil et le planning.]]></bpmn2:from>
-          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_IiKS8-dlEfGXPafMuWGBpw">PreparerArrivee_DescriptionInputX</bpmn2:to>
+        <bpmn2:assignment id="_Oseet-dlEfGXPafMuWGBpw">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_OseeuOdlEfGXPafMuWGBpw"><![CDATA[Le service RH prépare le dossier d’arrivée, le livret d’accueil et le planning.]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_OseeuedlEfGXPafMuWGBpw">PreparerArrivee_DescriptionInputX</bpmn2:to>
         </bpmn2:assignment>
       </bpmn2:dataInputAssociation>
     </bpmn2:userTask>
@@ -1622,54 +1623,54 @@
       </bpmn2:extensionElements>
       <bpmn2:incoming>Flow_08</bpmn2:incoming>
       <bpmn2:outgoing>Flow_09</bpmn2:outgoing>
-      <bpmn2:ioSpecification id="_IiKS9OdlEfGXPafMuWGBpw">
+      <bpmn2:ioSpecification id="_OseeuudlEfGXPafMuWGBpw">
         <bpmn2:dataInput id="SoumettreCandidature_TaskNameInputX" drools:dtype="Object" itemSubjectRef="_SoumettreCandidature_TaskNameInputXItem" name="TaskName"/>
         <bpmn2:dataInput id="SoumettreCandidature_SkippableInputX" drools:dtype="Object" itemSubjectRef="_SoumettreCandidature_SkippableInputXItem" name="Skippable"/>
         <bpmn2:dataInput id="SoumettreCandidature_GroupIdInputX" drools:dtype="Object" itemSubjectRef="_SoumettreCandidature_GroupIdInputXItem" name="GroupId"/>
         <bpmn2:dataInput id="SoumettreCandidature_CommentInputX" drools:dtype="Object" itemSubjectRef="_SoumettreCandidature_CommentInputXItem" name="Comment"/>
         <bpmn2:dataInput id="SoumettreCandidature_DescriptionInputX" drools:dtype="Object" itemSubjectRef="_SoumettreCandidature_DescriptionInputXItem" name="Description"/>
-        <bpmn2:inputSet id="_IiKS9edlEfGXPafMuWGBpw">
+        <bpmn2:inputSet id="_Oseeu-dlEfGXPafMuWGBpw">
           <bpmn2:dataInputRefs>SoumettreCandidature_TaskNameInputX</bpmn2:dataInputRefs>
           <bpmn2:dataInputRefs>SoumettreCandidature_SkippableInputX</bpmn2:dataInputRefs>
           <bpmn2:dataInputRefs>SoumettreCandidature_GroupIdInputX</bpmn2:dataInputRefs>
           <bpmn2:dataInputRefs>SoumettreCandidature_CommentInputX</bpmn2:dataInputRefs>
           <bpmn2:dataInputRefs>SoumettreCandidature_DescriptionInputX</bpmn2:dataInputRefs>
         </bpmn2:inputSet>
-        <bpmn2:outputSet id="_IiKS9udlEfGXPafMuWGBpw"/>
+        <bpmn2:outputSet id="_OseevOdlEfGXPafMuWGBpw"/>
       </bpmn2:ioSpecification>
-      <bpmn2:dataInputAssociation id="_IiKS9-dlEfGXPafMuWGBpw">
+      <bpmn2:dataInputAssociation id="_OseevedlEfGXPafMuWGBpw">
         <bpmn2:targetRef>SoumettreCandidature_TaskNameInputX</bpmn2:targetRef>
-        <bpmn2:assignment id="_IiKS-OdlEfGXPafMuWGBpw">
-          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_IiKS-edlEfGXPafMuWGBpw"><![CDATA[SoumettreCandidature]]></bpmn2:from>
-          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_IiKS-udlEfGXPafMuWGBpw">SoumettreCandidature_TaskNameInputX</bpmn2:to>
+        <bpmn2:assignment id="_OseevudlEfGXPafMuWGBpw">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_Oseev-dlEfGXPafMuWGBpw"><![CDATA[SoumettreCandidature]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_OseewOdlEfGXPafMuWGBpw">SoumettreCandidature_TaskNameInputX</bpmn2:to>
         </bpmn2:assignment>
       </bpmn2:dataInputAssociation>
-      <bpmn2:dataInputAssociation id="_IiKS--dlEfGXPafMuWGBpw">
+      <bpmn2:dataInputAssociation id="_OseewedlEfGXPafMuWGBpw">
         <bpmn2:targetRef>SoumettreCandidature_SkippableInputX</bpmn2:targetRef>
-        <bpmn2:assignment id="_IiKS_OdlEfGXPafMuWGBpw">
-          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_IiKS_edlEfGXPafMuWGBpw"><![CDATA[false]]></bpmn2:from>
-          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_IiKS_udlEfGXPafMuWGBpw">SoumettreCandidature_SkippableInputX</bpmn2:to>
+        <bpmn2:assignment id="_OseewudlEfGXPafMuWGBpw">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_Oseew-dlEfGXPafMuWGBpw"><![CDATA[false]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_OseexOdlEfGXPafMuWGBpw">SoumettreCandidature_SkippableInputX</bpmn2:to>
         </bpmn2:assignment>
       </bpmn2:dataInputAssociation>
-      <bpmn2:dataInputAssociation id="_IiKS_-dlEfGXPafMuWGBpw">
+      <bpmn2:dataInputAssociation id="_OseexedlEfGXPafMuWGBpw">
         <bpmn2:targetRef>SoumettreCandidature_GroupIdInputX</bpmn2:targetRef>
-        <bpmn2:assignment id="_IiKTAOdlEfGXPafMuWGBpw">
-          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_IiKTAedlEfGXPafMuWGBpw"><![CDATA[Candidat]]></bpmn2:from>
-          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_IiKTAudlEfGXPafMuWGBpw">SoumettreCandidature_GroupIdInputX</bpmn2:to>
+        <bpmn2:assignment id="_OseexudlEfGXPafMuWGBpw">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_Oseex-dlEfGXPafMuWGBpw"><![CDATA[Candidat]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_OseeyOdlEfGXPafMuWGBpw">SoumettreCandidature_GroupIdInputX</bpmn2:to>
         </bpmn2:assignment>
       </bpmn2:dataInputAssociation>
-      <bpmn2:dataInputAssociation id="_IiKTA-dlEfGXPafMuWGBpw">
+      <bpmn2:dataInputAssociation id="_OseeyedlEfGXPafMuWGBpw">
         <bpmn2:targetRef>SoumettreCandidature_CommentInputX</bpmn2:targetRef>
-        <bpmn2:assignment id="_IiKTBOdlEfGXPafMuWGBpw">
-          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_IiKTBedlEfGXPafMuWGBpw"><![CDATA[Soumettre la candidature et le CV]]></bpmn2:from>
-          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_IiKTBudlEfGXPafMuWGBpw">SoumettreCandidature_CommentInputX</bpmn2:to>
+        <bpmn2:assignment id="_OseeyudlEfGXPafMuWGBpw">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_Oseey-dlEfGXPafMuWGBpw"><![CDATA[Soumettre la candidature et le CV]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_OseezOdlEfGXPafMuWGBpw">SoumettreCandidature_CommentInputX</bpmn2:to>
         </bpmn2:assignment>
       </bpmn2:dataInputAssociation>
-      <bpmn2:dataInputAssociation id="_IiKTB-dlEfGXPafMuWGBpw">
+      <bpmn2:dataInputAssociation id="_OseezedlEfGXPafMuWGBpw">
         <bpmn2:targetRef>SoumettreCandidature_DescriptionInputX</bpmn2:targetRef>
-        <bpmn2:assignment id="_IiKTCOdlEfGXPafMuWGBpw">
-          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_IiKTCedlEfGXPafMuWGBpw"><![CDATA[Le candidat transmet sa candidature et son CV pour l’offre choisie.]]></bpmn2:from>
-          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_IiKTCudlEfGXPafMuWGBpw">SoumettreCandidature_DescriptionInputX</bpmn2:to>
+        <bpmn2:assignment id="_OseezudlEfGXPafMuWGBpw">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_Oseez-dlEfGXPafMuWGBpw"><![CDATA[Le candidat transmet sa candidature et son CV pour l’offre choisie.]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_Osee0OdlEfGXPafMuWGBpw">SoumettreCandidature_DescriptionInputX</bpmn2:to>
         </bpmn2:assignment>
       </bpmn2:dataInputAssociation>
     </bpmn2:userTask>
@@ -1707,54 +1708,54 @@
       </bpmn2:extensionElements>
       <bpmn2:incoming>Flow_17</bpmn2:incoming>
       <bpmn2:outgoing>Flow_18</bpmn2:outgoing>
-      <bpmn2:ioSpecification id="_IiKTC-dlEfGXPafMuWGBpw">
+      <bpmn2:ioSpecification id="_Osee0edlEfGXPafMuWGBpw">
         <bpmn2:dataInput id="FormalitesEmbauche_TaskNameInputX" drools:dtype="Object" itemSubjectRef="_FormalitesEmbauche_TaskNameInputXItem" name="TaskName"/>
         <bpmn2:dataInput id="FormalitesEmbauche_SkippableInputX" drools:dtype="Object" itemSubjectRef="_FormalitesEmbauche_SkippableInputXItem" name="Skippable"/>
         <bpmn2:dataInput id="FormalitesEmbauche_GroupIdInputX" drools:dtype="Object" itemSubjectRef="_FormalitesEmbauche_GroupIdInputXItem" name="GroupId"/>
         <bpmn2:dataInput id="FormalitesEmbauche_CommentInputX" drools:dtype="Object" itemSubjectRef="_FormalitesEmbauche_CommentInputXItem" name="Comment"/>
         <bpmn2:dataInput id="FormalitesEmbauche_DescriptionInputX" drools:dtype="Object" itemSubjectRef="_FormalitesEmbauche_DescriptionInputXItem" name="Description"/>
-        <bpmn2:inputSet id="_IiKTDOdlEfGXPafMuWGBpw">
+        <bpmn2:inputSet id="_Osee0udlEfGXPafMuWGBpw">
           <bpmn2:dataInputRefs>FormalitesEmbauche_TaskNameInputX</bpmn2:dataInputRefs>
           <bpmn2:dataInputRefs>FormalitesEmbauche_SkippableInputX</bpmn2:dataInputRefs>
           <bpmn2:dataInputRefs>FormalitesEmbauche_GroupIdInputX</bpmn2:dataInputRefs>
           <bpmn2:dataInputRefs>FormalitesEmbauche_CommentInputX</bpmn2:dataInputRefs>
           <bpmn2:dataInputRefs>FormalitesEmbauche_DescriptionInputX</bpmn2:dataInputRefs>
         </bpmn2:inputSet>
-        <bpmn2:outputSet id="_IiKTDedlEfGXPafMuWGBpw"/>
+        <bpmn2:outputSet id="_Osee0-dlEfGXPafMuWGBpw"/>
       </bpmn2:ioSpecification>
-      <bpmn2:dataInputAssociation id="_IiKTDudlEfGXPafMuWGBpw">
+      <bpmn2:dataInputAssociation id="_Osee1OdlEfGXPafMuWGBpw">
         <bpmn2:targetRef>FormalitesEmbauche_TaskNameInputX</bpmn2:targetRef>
-        <bpmn2:assignment id="_IiKTD-dlEfGXPafMuWGBpw">
-          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_IiKTEOdlEfGXPafMuWGBpw"><![CDATA[FormalitesEmbauche]]></bpmn2:from>
-          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_IiKTEedlEfGXPafMuWGBpw">FormalitesEmbauche_TaskNameInputX</bpmn2:to>
+        <bpmn2:assignment id="_Osee1edlEfGXPafMuWGBpw">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_Osee1udlEfGXPafMuWGBpw"><![CDATA[FormalitesEmbauche]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_Osee1-dlEfGXPafMuWGBpw">FormalitesEmbauche_TaskNameInputX</bpmn2:to>
         </bpmn2:assignment>
       </bpmn2:dataInputAssociation>
-      <bpmn2:dataInputAssociation id="_IiKTEudlEfGXPafMuWGBpw">
+      <bpmn2:dataInputAssociation id="_Osee2OdlEfGXPafMuWGBpw">
         <bpmn2:targetRef>FormalitesEmbauche_SkippableInputX</bpmn2:targetRef>
-        <bpmn2:assignment id="_IiKTE-dlEfGXPafMuWGBpw">
-          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_IiKTFOdlEfGXPafMuWGBpw"><![CDATA[false]]></bpmn2:from>
-          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_IiKTFedlEfGXPafMuWGBpw">FormalitesEmbauche_SkippableInputX</bpmn2:to>
+        <bpmn2:assignment id="_Osee2edlEfGXPafMuWGBpw">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_Osee2udlEfGXPafMuWGBpw"><![CDATA[false]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_Osee2-dlEfGXPafMuWGBpw">FormalitesEmbauche_SkippableInputX</bpmn2:to>
         </bpmn2:assignment>
       </bpmn2:dataInputAssociation>
-      <bpmn2:dataInputAssociation id="_IiKTFudlEfGXPafMuWGBpw">
+      <bpmn2:dataInputAssociation id="_Osee3OdlEfGXPafMuWGBpw">
         <bpmn2:targetRef>FormalitesEmbauche_GroupIdInputX</bpmn2:targetRef>
-        <bpmn2:assignment id="_IiKTF-dlEfGXPafMuWGBpw">
-          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_IiKTGOdlEfGXPafMuWGBpw"><![CDATA[RH]]></bpmn2:from>
-          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_IiKTGedlEfGXPafMuWGBpw">FormalitesEmbauche_GroupIdInputX</bpmn2:to>
+        <bpmn2:assignment id="_Osee3edlEfGXPafMuWGBpw">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_Osee3udlEfGXPafMuWGBpw"><![CDATA[RH]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_Osee3-dlEfGXPafMuWGBpw">FormalitesEmbauche_GroupIdInputX</bpmn2:to>
         </bpmn2:assignment>
       </bpmn2:dataInputAssociation>
-      <bpmn2:dataInputAssociation id="_IiKTGudlEfGXPafMuWGBpw">
+      <bpmn2:dataInputAssociation id="_Osee4OdlEfGXPafMuWGBpw">
         <bpmn2:targetRef>FormalitesEmbauche_CommentInputX</bpmn2:targetRef>
-        <bpmn2:assignment id="_IiKTG-dlEfGXPafMuWGBpw">
-          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_IiKTHOdlEfGXPafMuWGBpw"><![CDATA[Préparer le contrat, le registre du personnel, la visite médicale et la CNSS]]></bpmn2:from>
-          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_IiKTHedlEfGXPafMuWGBpw">FormalitesEmbauche_CommentInputX</bpmn2:to>
+        <bpmn2:assignment id="_Osee4edlEfGXPafMuWGBpw">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_Osee4udlEfGXPafMuWGBpw"><![CDATA[Préparer le contrat, le registre du personnel, la visite médicale et la CNSS]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_Osee4-dlEfGXPafMuWGBpw">FormalitesEmbauche_CommentInputX</bpmn2:to>
         </bpmn2:assignment>
       </bpmn2:dataInputAssociation>
-      <bpmn2:dataInputAssociation id="_IiKTHudlEfGXPafMuWGBpw">
+      <bpmn2:dataInputAssociation id="_Osee5OdlEfGXPafMuWGBpw">
         <bpmn2:targetRef>FormalitesEmbauche_DescriptionInputX</bpmn2:targetRef>
-        <bpmn2:assignment id="_IiKTH-dlEfGXPafMuWGBpw">
-          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_IiKTIOdlEfGXPafMuWGBpw"><![CDATA[Le service RH prépare les formalités administratives liées à l’embauche.]]></bpmn2:from>
-          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_IiKTIedlEfGXPafMuWGBpw">FormalitesEmbauche_DescriptionInputX</bpmn2:to>
+        <bpmn2:assignment id="_Osee5edlEfGXPafMuWGBpw">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_Osee5udlEfGXPafMuWGBpw"><![CDATA[Le service RH prépare les formalités administratives liées à l’embauche.]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_Osee5-dlEfGXPafMuWGBpw">FormalitesEmbauche_DescriptionInputX</bpmn2:to>
         </bpmn2:assignment>
       </bpmn2:dataInputAssociation>
     </bpmn2:userTask>
@@ -1766,54 +1767,54 @@
       </bpmn2:extensionElements>
       <bpmn2:incoming>Flow_19</bpmn2:incoming>
       <bpmn2:outgoing>Flow_20</bpmn2:outgoing>
-      <bpmn2:ioSpecification id="_IiKTIudlEfGXPafMuWGBpw">
+      <bpmn2:ioSpecification id="_Osee6OdlEfGXPafMuWGBpw">
         <bpmn2:dataInput id="DemanderAccesIT_TaskNameInputX" drools:dtype="Object" itemSubjectRef="_DemanderAccesIT_TaskNameInputXItem" name="TaskName"/>
         <bpmn2:dataInput id="DemanderAccesIT_SkippableInputX" drools:dtype="Object" itemSubjectRef="_DemanderAccesIT_SkippableInputXItem" name="Skippable"/>
         <bpmn2:dataInput id="DemanderAccesIT_GroupIdInputX" drools:dtype="Object" itemSubjectRef="_DemanderAccesIT_GroupIdInputXItem" name="GroupId"/>
         <bpmn2:dataInput id="DemanderAccesIT_CommentInputX" drools:dtype="Object" itemSubjectRef="_DemanderAccesIT_CommentInputXItem" name="Comment"/>
         <bpmn2:dataInput id="DemanderAccesIT_DescriptionInputX" drools:dtype="Object" itemSubjectRef="_DemanderAccesIT_DescriptionInputXItem" name="Description"/>
-        <bpmn2:inputSet id="_IiKTI-dlEfGXPafMuWGBpw">
+        <bpmn2:inputSet id="_Osee6edlEfGXPafMuWGBpw">
           <bpmn2:dataInputRefs>DemanderAccesIT_TaskNameInputX</bpmn2:dataInputRefs>
           <bpmn2:dataInputRefs>DemanderAccesIT_SkippableInputX</bpmn2:dataInputRefs>
           <bpmn2:dataInputRefs>DemanderAccesIT_GroupIdInputX</bpmn2:dataInputRefs>
           <bpmn2:dataInputRefs>DemanderAccesIT_CommentInputX</bpmn2:dataInputRefs>
           <bpmn2:dataInputRefs>DemanderAccesIT_DescriptionInputX</bpmn2:dataInputRefs>
         </bpmn2:inputSet>
-        <bpmn2:outputSet id="_IiKTJOdlEfGXPafMuWGBpw"/>
+        <bpmn2:outputSet id="_Osee6udlEfGXPafMuWGBpw"/>
       </bpmn2:ioSpecification>
-      <bpmn2:dataInputAssociation id="_IiKTJedlEfGXPafMuWGBpw">
+      <bpmn2:dataInputAssociation id="_Osee6-dlEfGXPafMuWGBpw">
         <bpmn2:targetRef>DemanderAccesIT_TaskNameInputX</bpmn2:targetRef>
-        <bpmn2:assignment id="_IiKTJudlEfGXPafMuWGBpw">
-          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_IiKTJ-dlEfGXPafMuWGBpw"><![CDATA[DemanderAccesIT]]></bpmn2:from>
-          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_IiKTKOdlEfGXPafMuWGBpw">DemanderAccesIT_TaskNameInputX</bpmn2:to>
+        <bpmn2:assignment id="_Osee7OdlEfGXPafMuWGBpw">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_Osee7edlEfGXPafMuWGBpw"><![CDATA[DemanderAccesIT]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_Osee7udlEfGXPafMuWGBpw">DemanderAccesIT_TaskNameInputX</bpmn2:to>
         </bpmn2:assignment>
       </bpmn2:dataInputAssociation>
-      <bpmn2:dataInputAssociation id="_IiKTKedlEfGXPafMuWGBpw">
+      <bpmn2:dataInputAssociation id="_Osee7-dlEfGXPafMuWGBpw">
         <bpmn2:targetRef>DemanderAccesIT_SkippableInputX</bpmn2:targetRef>
-        <bpmn2:assignment id="_IiKTKudlEfGXPafMuWGBpw">
-          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_IiKTK-dlEfGXPafMuWGBpw"><![CDATA[false]]></bpmn2:from>
-          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_IiKTLOdlEfGXPafMuWGBpw">DemanderAccesIT_SkippableInputX</bpmn2:to>
+        <bpmn2:assignment id="_Osee8OdlEfGXPafMuWGBpw">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_Osee8edlEfGXPafMuWGBpw"><![CDATA[false]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_Osee8udlEfGXPafMuWGBpw">DemanderAccesIT_SkippableInputX</bpmn2:to>
         </bpmn2:assignment>
       </bpmn2:dataInputAssociation>
-      <bpmn2:dataInputAssociation id="_IiKTLedlEfGXPafMuWGBpw">
+      <bpmn2:dataInputAssociation id="_Osee8-dlEfGXPafMuWGBpw">
         <bpmn2:targetRef>DemanderAccesIT_GroupIdInputX</bpmn2:targetRef>
-        <bpmn2:assignment id="_IiKTLudlEfGXPafMuWGBpw">
-          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_IiKTL-dlEfGXPafMuWGBpw"><![CDATA[RH]]></bpmn2:from>
-          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_IiKTMOdlEfGXPafMuWGBpw">DemanderAccesIT_GroupIdInputX</bpmn2:to>
+        <bpmn2:assignment id="_Osee9OdlEfGXPafMuWGBpw">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_Osee9edlEfGXPafMuWGBpw"><![CDATA[RH]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_Osee9udlEfGXPafMuWGBpw">DemanderAccesIT_GroupIdInputX</bpmn2:to>
         </bpmn2:assignment>
       </bpmn2:dataInputAssociation>
-      <bpmn2:dataInputAssociation id="_IiKTMedlEfGXPafMuWGBpw">
+      <bpmn2:dataInputAssociation id="_Osee9-dlEfGXPafMuWGBpw">
         <bpmn2:targetRef>DemanderAccesIT_CommentInputX</bpmn2:targetRef>
-        <bpmn2:assignment id="_IiKTMudlEfGXPafMuWGBpw">
-          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_IiKTM-dlEfGXPafMuWGBpw"><![CDATA[Demander les accès et le matériel à l'IT]]></bpmn2:from>
-          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_IiKTNOdlEfGXPafMuWGBpw">DemanderAccesIT_CommentInputX</bpmn2:to>
+        <bpmn2:assignment id="_Osee-OdlEfGXPafMuWGBpw">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_Osee-edlEfGXPafMuWGBpw"><![CDATA[Demander les accès et le matériel à l'IT]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_Osee-udlEfGXPafMuWGBpw">DemanderAccesIT_CommentInputX</bpmn2:to>
         </bpmn2:assignment>
       </bpmn2:dataInputAssociation>
-      <bpmn2:dataInputAssociation id="_IiKTNedlEfGXPafMuWGBpw">
+      <bpmn2:dataInputAssociation id="_Osee--dlEfGXPafMuWGBpw">
         <bpmn2:targetRef>DemanderAccesIT_DescriptionInputX</bpmn2:targetRef>
-        <bpmn2:assignment id="_IiKTNudlEfGXPafMuWGBpw">
-          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_IiKTN-dlEfGXPafMuWGBpw"><![CDATA[Le service RH transmet à l’IT la demande de création des accès et de préparation du matériel.]]></bpmn2:from>
-          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_IiKTOOdlEfGXPafMuWGBpw">DemanderAccesIT_DescriptionInputX</bpmn2:to>
+        <bpmn2:assignment id="_Osee_OdlEfGXPafMuWGBpw">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_Osee_edlEfGXPafMuWGBpw"><![CDATA[Le service RH transmet à l’IT la demande de création des accès et de préparation du matériel.]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_Osee_udlEfGXPafMuWGBpw">DemanderAccesIT_DescriptionInputX</bpmn2:to>
         </bpmn2:assignment>
       </bpmn2:dataInputAssociation>
     </bpmn2:userTask>
@@ -1835,54 +1836,54 @@
       </bpmn2:extensionElements>
       <bpmn2:incoming>Flow_07</bpmn2:incoming>
       <bpmn2:outgoing>Flow_08</bpmn2:outgoing>
-      <bpmn2:ioSpecification id="_IiKTOedlEfGXPafMuWGBpw">
+      <bpmn2:ioSpecification id="_Osee_-dlEfGXPafMuWGBpw">
         <bpmn2:dataInput id="ConsulterOffres_TaskNameInputX" drools:dtype="Object" itemSubjectRef="_ConsulterOffres_TaskNameInputXItem" name="TaskName"/>
         <bpmn2:dataInput id="ConsulterOffres_SkippableInputX" drools:dtype="Object" itemSubjectRef="_ConsulterOffres_SkippableInputXItem" name="Skippable"/>
         <bpmn2:dataInput id="ConsulterOffres_GroupIdInputX" drools:dtype="Object" itemSubjectRef="_ConsulterOffres_GroupIdInputXItem" name="GroupId"/>
         <bpmn2:dataInput id="ConsulterOffres_CommentInputX" drools:dtype="Object" itemSubjectRef="_ConsulterOffres_CommentInputXItem" name="Comment"/>
         <bpmn2:dataInput id="ConsulterOffres_DescriptionInputX" drools:dtype="Object" itemSubjectRef="_ConsulterOffres_DescriptionInputXItem" name="Description"/>
-        <bpmn2:inputSet id="_IiKTOudlEfGXPafMuWGBpw">
+        <bpmn2:inputSet id="_OsefAOdlEfGXPafMuWGBpw">
           <bpmn2:dataInputRefs>ConsulterOffres_TaskNameInputX</bpmn2:dataInputRefs>
           <bpmn2:dataInputRefs>ConsulterOffres_SkippableInputX</bpmn2:dataInputRefs>
           <bpmn2:dataInputRefs>ConsulterOffres_GroupIdInputX</bpmn2:dataInputRefs>
           <bpmn2:dataInputRefs>ConsulterOffres_CommentInputX</bpmn2:dataInputRefs>
           <bpmn2:dataInputRefs>ConsulterOffres_DescriptionInputX</bpmn2:dataInputRefs>
         </bpmn2:inputSet>
-        <bpmn2:outputSet id="_IiKTO-dlEfGXPafMuWGBpw"/>
+        <bpmn2:outputSet id="_OsefAedlEfGXPafMuWGBpw"/>
       </bpmn2:ioSpecification>
-      <bpmn2:dataInputAssociation id="_IiKTPOdlEfGXPafMuWGBpw">
+      <bpmn2:dataInputAssociation id="_OsefAudlEfGXPafMuWGBpw">
         <bpmn2:targetRef>ConsulterOffres_TaskNameInputX</bpmn2:targetRef>
-        <bpmn2:assignment id="_IiKTPedlEfGXPafMuWGBpw">
-          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_IiKTPudlEfGXPafMuWGBpw"><![CDATA[ConsulterOffres]]></bpmn2:from>
-          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_IiKTP-dlEfGXPafMuWGBpw">ConsulterOffres_TaskNameInputX</bpmn2:to>
+        <bpmn2:assignment id="_OsefA-dlEfGXPafMuWGBpw">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_OsefBOdlEfGXPafMuWGBpw"><![CDATA[ConsulterOffres]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_OsefBedlEfGXPafMuWGBpw">ConsulterOffres_TaskNameInputX</bpmn2:to>
         </bpmn2:assignment>
       </bpmn2:dataInputAssociation>
-      <bpmn2:dataInputAssociation id="_IiKTQOdlEfGXPafMuWGBpw">
+      <bpmn2:dataInputAssociation id="_OsefBudlEfGXPafMuWGBpw">
         <bpmn2:targetRef>ConsulterOffres_SkippableInputX</bpmn2:targetRef>
-        <bpmn2:assignment id="_IiKTQedlEfGXPafMuWGBpw">
-          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_IiKTQudlEfGXPafMuWGBpw"><![CDATA[false]]></bpmn2:from>
-          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_IiKTQ-dlEfGXPafMuWGBpw">ConsulterOffres_SkippableInputX</bpmn2:to>
+        <bpmn2:assignment id="_OsefB-dlEfGXPafMuWGBpw">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_OsefCOdlEfGXPafMuWGBpw"><![CDATA[false]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_OsefCedlEfGXPafMuWGBpw">ConsulterOffres_SkippableInputX</bpmn2:to>
         </bpmn2:assignment>
       </bpmn2:dataInputAssociation>
-      <bpmn2:dataInputAssociation id="_IiKTROdlEfGXPafMuWGBpw">
+      <bpmn2:dataInputAssociation id="_OsefCudlEfGXPafMuWGBpw">
         <bpmn2:targetRef>ConsulterOffres_GroupIdInputX</bpmn2:targetRef>
-        <bpmn2:assignment id="_IiKTRedlEfGXPafMuWGBpw">
-          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_IiKTRudlEfGXPafMuWGBpw"><![CDATA[Candidat]]></bpmn2:from>
-          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_IiKTR-dlEfGXPafMuWGBpw">ConsulterOffres_GroupIdInputX</bpmn2:to>
+        <bpmn2:assignment id="_OsefC-dlEfGXPafMuWGBpw">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_OsefDOdlEfGXPafMuWGBpw"><![CDATA[Candidat]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_OsefDedlEfGXPafMuWGBpw">ConsulterOffres_GroupIdInputX</bpmn2:to>
         </bpmn2:assignment>
       </bpmn2:dataInputAssociation>
-      <bpmn2:dataInputAssociation id="_IiKTSOdlEfGXPafMuWGBpw">
+      <bpmn2:dataInputAssociation id="_OsefDudlEfGXPafMuWGBpw">
         <bpmn2:targetRef>ConsulterOffres_CommentInputX</bpmn2:targetRef>
-        <bpmn2:assignment id="_IiKTSedlEfGXPafMuWGBpw">
-          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_IiKTSudlEfGXPafMuWGBpw"><![CDATA[Consulter les offres publiées]]></bpmn2:from>
-          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_IiKTS-dlEfGXPafMuWGBpw">ConsulterOffres_CommentInputX</bpmn2:to>
+        <bpmn2:assignment id="_OsefD-dlEfGXPafMuWGBpw">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_OsefEOdlEfGXPafMuWGBpw"><![CDATA[Consulter les offres publiées]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_OsefEedlEfGXPafMuWGBpw">ConsulterOffres_CommentInputX</bpmn2:to>
         </bpmn2:assignment>
       </bpmn2:dataInputAssociation>
-      <bpmn2:dataInputAssociation id="_IiKTTOdlEfGXPafMuWGBpw">
+      <bpmn2:dataInputAssociation id="_OsefEudlEfGXPafMuWGBpw">
         <bpmn2:targetRef>ConsulterOffres_DescriptionInputX</bpmn2:targetRef>
-        <bpmn2:assignment id="_IiKTTedlEfGXPafMuWGBpw">
-          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_IiKTTudlEfGXPafMuWGBpw"><![CDATA[Le candidat consulte les offres d’emploi publiées.]]></bpmn2:from>
-          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_IiKTT-dlEfGXPafMuWGBpw">ConsulterOffres_DescriptionInputX</bpmn2:to>
+        <bpmn2:assignment id="_OsefE-dlEfGXPafMuWGBpw">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_OsefFOdlEfGXPafMuWGBpw"><![CDATA[Le candidat consulte les offres d’emploi publiées.]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_OsefFedlEfGXPafMuWGBpw">ConsulterOffres_DescriptionInputX</bpmn2:to>
         </bpmn2:assignment>
       </bpmn2:dataInputAssociation>
     </bpmn2:userTask>
@@ -1894,54 +1895,54 @@
       </bpmn2:extensionElements>
       <bpmn2:incoming>Flow_22</bpmn2:incoming>
       <bpmn2:outgoing>Flow_23</bpmn2:outgoing>
-      <bpmn2:ioSpecification id="_IiKTUOdlEfGXPafMuWGBpw">
+      <bpmn2:ioSpecification id="_OsefFudlEfGXPafMuWGBpw">
         <bpmn2:dataInput id="SuiviUnMois_TaskNameInputX" drools:dtype="Object" itemSubjectRef="_SuiviUnMois_TaskNameInputXItem" name="TaskName"/>
         <bpmn2:dataInput id="SuiviUnMois_SkippableInputX" drools:dtype="Object" itemSubjectRef="_SuiviUnMois_SkippableInputXItem" name="Skippable"/>
         <bpmn2:dataInput id="SuiviUnMois_GroupIdInputX" drools:dtype="Object" itemSubjectRef="_SuiviUnMois_GroupIdInputXItem" name="GroupId"/>
         <bpmn2:dataInput id="SuiviUnMois_CommentInputX" drools:dtype="Object" itemSubjectRef="_SuiviUnMois_CommentInputXItem" name="Comment"/>
         <bpmn2:dataInput id="SuiviUnMois_DescriptionInputX" drools:dtype="Object" itemSubjectRef="_SuiviUnMois_DescriptionInputXItem" name="Description"/>
-        <bpmn2:inputSet id="_IiKTUedlEfGXPafMuWGBpw">
+        <bpmn2:inputSet id="_OsefF-dlEfGXPafMuWGBpw">
           <bpmn2:dataInputRefs>SuiviUnMois_TaskNameInputX</bpmn2:dataInputRefs>
           <bpmn2:dataInputRefs>SuiviUnMois_SkippableInputX</bpmn2:dataInputRefs>
           <bpmn2:dataInputRefs>SuiviUnMois_GroupIdInputX</bpmn2:dataInputRefs>
           <bpmn2:dataInputRefs>SuiviUnMois_CommentInputX</bpmn2:dataInputRefs>
           <bpmn2:dataInputRefs>SuiviUnMois_DescriptionInputX</bpmn2:dataInputRefs>
         </bpmn2:inputSet>
-        <bpmn2:outputSet id="_IiKTUudlEfGXPafMuWGBpw"/>
+        <bpmn2:outputSet id="_OsefGOdlEfGXPafMuWGBpw"/>
       </bpmn2:ioSpecification>
-      <bpmn2:dataInputAssociation id="_IiKTU-dlEfGXPafMuWGBpw">
+      <bpmn2:dataInputAssociation id="_OsefGedlEfGXPafMuWGBpw">
         <bpmn2:targetRef>SuiviUnMois_TaskNameInputX</bpmn2:targetRef>
-        <bpmn2:assignment id="_IiKTVOdlEfGXPafMuWGBpw">
-          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_IiKTVedlEfGXPafMuWGBpw"><![CDATA[SuiviUnMois]]></bpmn2:from>
-          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_IiKTVudlEfGXPafMuWGBpw">SuiviUnMois_TaskNameInputX</bpmn2:to>
+        <bpmn2:assignment id="_OsefGudlEfGXPafMuWGBpw">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_OsefG-dlEfGXPafMuWGBpw"><![CDATA[SuiviUnMois]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_OsefHOdlEfGXPafMuWGBpw">SuiviUnMois_TaskNameInputX</bpmn2:to>
         </bpmn2:assignment>
       </bpmn2:dataInputAssociation>
-      <bpmn2:dataInputAssociation id="_IiKTV-dlEfGXPafMuWGBpw">
+      <bpmn2:dataInputAssociation id="_OsefHedlEfGXPafMuWGBpw">
         <bpmn2:targetRef>SuiviUnMois_SkippableInputX</bpmn2:targetRef>
-        <bpmn2:assignment id="_IiKTWOdlEfGXPafMuWGBpw">
-          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_IiKTWedlEfGXPafMuWGBpw"><![CDATA[false]]></bpmn2:from>
-          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_IiKTWudlEfGXPafMuWGBpw">SuiviUnMois_SkippableInputX</bpmn2:to>
+        <bpmn2:assignment id="_OsefHudlEfGXPafMuWGBpw">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_OsefH-dlEfGXPafMuWGBpw"><![CDATA[false]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_OsefIOdlEfGXPafMuWGBpw">SuiviUnMois_SkippableInputX</bpmn2:to>
         </bpmn2:assignment>
       </bpmn2:dataInputAssociation>
-      <bpmn2:dataInputAssociation id="_IiKTW-dlEfGXPafMuWGBpw">
+      <bpmn2:dataInputAssociation id="_OsefIedlEfGXPafMuWGBpw">
         <bpmn2:targetRef>SuiviUnMois_GroupIdInputX</bpmn2:targetRef>
-        <bpmn2:assignment id="_IiKTXOdlEfGXPafMuWGBpw">
-          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_IiKTXedlEfGXPafMuWGBpw"><![CDATA[RH]]></bpmn2:from>
-          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_IiKTXudlEfGXPafMuWGBpw">SuiviUnMois_GroupIdInputX</bpmn2:to>
+        <bpmn2:assignment id="_OsefIudlEfGXPafMuWGBpw">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_OsefI-dlEfGXPafMuWGBpw"><![CDATA[RH]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_OsefJOdlEfGXPafMuWGBpw">SuiviUnMois_GroupIdInputX</bpmn2:to>
         </bpmn2:assignment>
       </bpmn2:dataInputAssociation>
-      <bpmn2:dataInputAssociation id="_IiKTX-dlEfGXPafMuWGBpw">
+      <bpmn2:dataInputAssociation id="_OsefJedlEfGXPafMuWGBpw">
         <bpmn2:targetRef>SuiviUnMois_CommentInputX</bpmn2:targetRef>
-        <bpmn2:assignment id="_IiKTYOdlEfGXPafMuWGBpw">
-          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_IiKTYedlEfGXPafMuWGBpw"><![CDATA[Organiser le suivi d'intégration à un mois]]></bpmn2:from>
-          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_IiKTYudlEfGXPafMuWGBpw">SuiviUnMois_CommentInputX</bpmn2:to>
+        <bpmn2:assignment id="_OsefJudlEfGXPafMuWGBpw">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_OsefJ-dlEfGXPafMuWGBpw"><![CDATA[Organiser le suivi d'intégration à un mois]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_OsefKOdlEfGXPafMuWGBpw">SuiviUnMois_CommentInputX</bpmn2:to>
         </bpmn2:assignment>
       </bpmn2:dataInputAssociation>
-      <bpmn2:dataInputAssociation id="_IiKTY-dlEfGXPafMuWGBpw">
+      <bpmn2:dataInputAssociation id="_OsefKedlEfGXPafMuWGBpw">
         <bpmn2:targetRef>SuiviUnMois_DescriptionInputX</bpmn2:targetRef>
-        <bpmn2:assignment id="_IiKTZOdlEfGXPafMuWGBpw">
-          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_IiKTZedlEfGXPafMuWGBpw"><![CDATA[Le service RH organise le suivi d’intégration du collaborateur après un mois.]]></bpmn2:from>
-          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_IiKTZudlEfGXPafMuWGBpw">SuiviUnMois_DescriptionInputX</bpmn2:to>
+        <bpmn2:assignment id="_OsefKudlEfGXPafMuWGBpw">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_OsefK-dlEfGXPafMuWGBpw"><![CDATA[Le service RH organise le suivi d’intégration du collaborateur après un mois.]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_OsefLOdlEfGXPafMuWGBpw">SuiviUnMois_DescriptionInputX</bpmn2:to>
         </bpmn2:assignment>
       </bpmn2:dataInputAssociation>
     </bpmn2:userTask>
@@ -1953,7 +1954,7 @@
       </bpmn2:extensionElements>
       <bpmn2:incoming>Flow_04_OUI</bpmn2:incoming>
       <bpmn2:outgoing>Flow_05</bpmn2:outgoing>
-      <bpmn2:ioSpecification id="_IiKTZ-dlEfGXPafMuWGBpw">
+      <bpmn2:ioSpecification id="_OsefLedlEfGXPafMuWGBpw">
         <bpmn2:dataInput id="DefinirPoste_TaskNameInputX" drools:dtype="Object" itemSubjectRef="_DefinirPoste_TaskNameInputXItem" name="TaskName"/>
         <bpmn2:dataInput id="DefinirPoste_motifRecrutementInputX" drools:dtype="String" itemSubjectRef="_DefinirPoste_motifRecrutementInputXItem" name="motifRecrutement"/>
         <bpmn2:dataInput id="DefinirPoste_justificationBesoinInputX" drools:dtype="String" itemSubjectRef="_DefinirPoste_justificationBesoinInputXItem" name="justificationBesoin"/>
@@ -1965,7 +1966,7 @@
         <bpmn2:dataOutput id="DefinirPoste_missionsPosteOutputX" drools:dtype="String" itemSubjectRef="_DefinirPoste_missionsPosteOutputXItem" name="missionsPoste"/>
         <bpmn2:dataOutput id="DefinirPoste_competencesRequisesOutputX" drools:dtype="String" itemSubjectRef="_DefinirPoste_competencesRequisesOutputXItem" name="competencesRequises"/>
         <bpmn2:dataOutput id="DefinirPoste_experienceRequiseOutputX" drools:dtype="String" itemSubjectRef="_DefinirPoste_experienceRequiseOutputXItem" name="experienceRequise"/>
-        <bpmn2:inputSet id="_IiKTaOdlEfGXPafMuWGBpw">
+        <bpmn2:inputSet id="_OsefLudlEfGXPafMuWGBpw">
           <bpmn2:dataInputRefs>DefinirPoste_TaskNameInputX</bpmn2:dataInputRefs>
           <bpmn2:dataInputRefs>DefinirPoste_motifRecrutementInputX</bpmn2:dataInputRefs>
           <bpmn2:dataInputRefs>DefinirPoste_justificationBesoinInputX</bpmn2:dataInputRefs>
@@ -1974,76 +1975,76 @@
           <bpmn2:dataInputRefs>DefinirPoste_CommentInputX</bpmn2:dataInputRefs>
           <bpmn2:dataInputRefs>DefinirPoste_DescriptionInputX</bpmn2:dataInputRefs>
         </bpmn2:inputSet>
-        <bpmn2:outputSet id="_IiKTaedlEfGXPafMuWGBpw">
+        <bpmn2:outputSet id="_OsefL-dlEfGXPafMuWGBpw">
           <bpmn2:dataOutputRefs>DefinirPoste_intitulePosteOutputX</bpmn2:dataOutputRefs>
           <bpmn2:dataOutputRefs>DefinirPoste_missionsPosteOutputX</bpmn2:dataOutputRefs>
           <bpmn2:dataOutputRefs>DefinirPoste_competencesRequisesOutputX</bpmn2:dataOutputRefs>
           <bpmn2:dataOutputRefs>DefinirPoste_experienceRequiseOutputX</bpmn2:dataOutputRefs>
         </bpmn2:outputSet>
       </bpmn2:ioSpecification>
-      <bpmn2:dataInputAssociation id="_IiKTaudlEfGXPafMuWGBpw">
+      <bpmn2:dataInputAssociation id="_OsefMOdlEfGXPafMuWGBpw">
         <bpmn2:targetRef>DefinirPoste_TaskNameInputX</bpmn2:targetRef>
-        <bpmn2:assignment id="_IiKTa-dlEfGXPafMuWGBpw">
-          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_IiKTbOdlEfGXPafMuWGBpw"><![CDATA[DefinirPoste]]></bpmn2:from>
-          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_IiKTbedlEfGXPafMuWGBpw">DefinirPoste_TaskNameInputX</bpmn2:to>
+        <bpmn2:assignment id="_OsefMedlEfGXPafMuWGBpw">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_OsefMudlEfGXPafMuWGBpw"><![CDATA[DefinirPoste]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_OsefM-dlEfGXPafMuWGBpw">DefinirPoste_TaskNameInputX</bpmn2:to>
         </bpmn2:assignment>
       </bpmn2:dataInputAssociation>
-      <bpmn2:dataInputAssociation id="_IiKTbudlEfGXPafMuWGBpw">
+      <bpmn2:dataInputAssociation id="_OsefNOdlEfGXPafMuWGBpw">
         <bpmn2:sourceRef>motifRecrutement</bpmn2:sourceRef>
         <bpmn2:targetRef>DefinirPoste_motifRecrutementInputX</bpmn2:targetRef>
       </bpmn2:dataInputAssociation>
-      <bpmn2:dataInputAssociation id="_IiKTb-dlEfGXPafMuWGBpw">
+      <bpmn2:dataInputAssociation id="_OsefNedlEfGXPafMuWGBpw">
         <bpmn2:sourceRef>justificationBesoin</bpmn2:sourceRef>
         <bpmn2:targetRef>DefinirPoste_justificationBesoinInputX</bpmn2:targetRef>
       </bpmn2:dataInputAssociation>
-      <bpmn2:dataInputAssociation id="_IiKTcOdlEfGXPafMuWGBpw">
+      <bpmn2:dataInputAssociation id="_OsefNudlEfGXPafMuWGBpw">
         <bpmn2:targetRef>DefinirPoste_SkippableInputX</bpmn2:targetRef>
-        <bpmn2:assignment id="_IiKTcedlEfGXPafMuWGBpw">
-          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_IiKTcudlEfGXPafMuWGBpw"><![CDATA[false]]></bpmn2:from>
-          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_IiKTc-dlEfGXPafMuWGBpw">DefinirPoste_SkippableInputX</bpmn2:to>
+        <bpmn2:assignment id="_OsefN-dlEfGXPafMuWGBpw">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_OsefOOdlEfGXPafMuWGBpw"><![CDATA[false]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_OsefOedlEfGXPafMuWGBpw">DefinirPoste_SkippableInputX</bpmn2:to>
         </bpmn2:assignment>
       </bpmn2:dataInputAssociation>
-      <bpmn2:dataInputAssociation id="_IiKTdOdlEfGXPafMuWGBpw">
+      <bpmn2:dataInputAssociation id="_OsefOudlEfGXPafMuWGBpw">
         <bpmn2:targetRef>DefinirPoste_GroupIdInputX</bpmn2:targetRef>
-        <bpmn2:assignment id="_IiKTdedlEfGXPafMuWGBpw">
-          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_IiKTdudlEfGXPafMuWGBpw"><![CDATA[Manager]]></bpmn2:from>
-          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_IiKTd-dlEfGXPafMuWGBpw">DefinirPoste_GroupIdInputX</bpmn2:to>
+        <bpmn2:assignment id="_OsefO-dlEfGXPafMuWGBpw">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_OsefPOdlEfGXPafMuWGBpw"><![CDATA[Manager]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_OsefPedlEfGXPafMuWGBpw">DefinirPoste_GroupIdInputX</bpmn2:to>
         </bpmn2:assignment>
       </bpmn2:dataInputAssociation>
-      <bpmn2:dataInputAssociation id="_IiKTeOdlEfGXPafMuWGBpw">
+      <bpmn2:dataInputAssociation id="_OsefPudlEfGXPafMuWGBpw">
         <bpmn2:targetRef>DefinirPoste_CommentInputX</bpmn2:targetRef>
-        <bpmn2:assignment id="_IiKTeedlEfGXPafMuWGBpw">
-          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_IiKTeudlEfGXPafMuWGBpw"><![CDATA[Définir la fiche poste]]></bpmn2:from>
-          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_IiKTe-dlEfGXPafMuWGBpw">DefinirPoste_CommentInputX</bpmn2:to>
+        <bpmn2:assignment id="_OsefP-dlEfGXPafMuWGBpw">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_OsefQOdlEfGXPafMuWGBpw"><![CDATA[Définir la fiche poste]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_OsefQedlEfGXPafMuWGBpw">DefinirPoste_CommentInputX</bpmn2:to>
         </bpmn2:assignment>
       </bpmn2:dataInputAssociation>
-      <bpmn2:dataInputAssociation id="_IiKTfOdlEfGXPafMuWGBpw">
+      <bpmn2:dataInputAssociation id="_OsefQudlEfGXPafMuWGBpw">
         <bpmn2:targetRef>DefinirPoste_DescriptionInputX</bpmn2:targetRef>
-        <bpmn2:assignment id="_IiKTfedlEfGXPafMuWGBpw">
-          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_IiKTfudlEfGXPafMuWGBpw"><![CDATA[Le Manager définit les missions, les compétences et l’expérience attendues pour le poste.]]></bpmn2:from>
-          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_IiKTf-dlEfGXPafMuWGBpw">DefinirPoste_DescriptionInputX</bpmn2:to>
+        <bpmn2:assignment id="_OsefQ-dlEfGXPafMuWGBpw">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_OsefROdlEfGXPafMuWGBpw"><![CDATA[Le Manager définit les missions, les compétences et l’expérience attendues pour le poste.]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_OsefRedlEfGXPafMuWGBpw">DefinirPoste_DescriptionInputX</bpmn2:to>
         </bpmn2:assignment>
       </bpmn2:dataInputAssociation>
-      <bpmn2:dataOutputAssociation id="_IiKTgOdlEfGXPafMuWGBpw">
+      <bpmn2:dataOutputAssociation id="_OsefRudlEfGXPafMuWGBpw">
         <bpmn2:sourceRef>DefinirPoste_intitulePosteOutputX</bpmn2:sourceRef>
         <bpmn2:targetRef>intitulePoste</bpmn2:targetRef>
       </bpmn2:dataOutputAssociation>
-      <bpmn2:dataOutputAssociation id="_IiKTgedlEfGXPafMuWGBpw">
+      <bpmn2:dataOutputAssociation id="_OsefR-dlEfGXPafMuWGBpw">
         <bpmn2:sourceRef>DefinirPoste_missionsPosteOutputX</bpmn2:sourceRef>
         <bpmn2:targetRef>missionsPoste</bpmn2:targetRef>
       </bpmn2:dataOutputAssociation>
-      <bpmn2:dataOutputAssociation id="_IiKTgudlEfGXPafMuWGBpw">
+      <bpmn2:dataOutputAssociation id="_OsefSOdlEfGXPafMuWGBpw">
         <bpmn2:sourceRef>DefinirPoste_competencesRequisesOutputX</bpmn2:sourceRef>
         <bpmn2:targetRef>competencesRequises</bpmn2:targetRef>
       </bpmn2:dataOutputAssociation>
-      <bpmn2:dataOutputAssociation id="_IiKTg-dlEfGXPafMuWGBpw">
+      <bpmn2:dataOutputAssociation id="_OsefSedlEfGXPafMuWGBpw">
         <bpmn2:sourceRef>DefinirPoste_experienceRequiseOutputX</bpmn2:sourceRef>
         <bpmn2:targetRef>experienceRequise</bpmn2:targetRef>
       </bpmn2:dataOutputAssociation>
     </bpmn2:userTask>
   </bpmn2:process>
-  <bpmndi:BPMNDiagram id="_IiKThOdlEfGXPafMuWGBpw">
-    <bpmndi:BPMNPlane id="_IiKThedlEfGXPafMuWGBpw" bpmnElement="Process_Recrutement">
+  <bpmndi:BPMNDiagram id="_OsefSudlEfGXPafMuWGBpw">
+    <bpmndi:BPMNPlane id="_OsefS-dlEfGXPafMuWGBpw" bpmnElement="Process_Recrutement">
       <bpmndi:BPMNShape id="shape_DefinirPoste" bpmnElement="DefinirPoste">
         <dc:Bounds height="70.0" width="170.0" x="1130.0" y="80.0"/>
       </bpmndi:BPMNShape>
@@ -2316,12 +2317,12 @@
       </bpmndi:BPMNEdge>
     </bpmndi:BPMNPlane>
   </bpmndi:BPMNDiagram>
-  <bpmn2:relationship id="_IiKThudlEfGXPafMuWGBpw" type="BPSimData">
+  <bpmn2:relationship id="_OsefTOdlEfGXPafMuWGBpw" type="BPSimData">
     <bpmn2:extensionElements>
       <bpsim:BPSimData>
         <bpsim:Scenario xsi:type="bpsim:Scenario" id="default" name="Simulationscenario">
           <bpsim:ScenarioParameters xsi:type="bpsim:ScenarioParameters"/>
-          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="DefinirPoste" id="_IiKTh-dlEfGXPafMuWGBpw">
+          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="DefinirPoste" id="_OsefTedlEfGXPafMuWGBpw">
             <bpsim:TimeParameters xsi:type="bpsim:TimeParameters">
               <bpsim:ProcessingTime xsi:type="bpsim:Parameter">
                 <bpsim:NormalDistribution mean="0.0" standardDeviation="0.0"/>
@@ -2341,7 +2342,7 @@
               </bpsim:UnitCost>
             </bpsim:CostParameters>
           </bpsim:ElementParameters>
-          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="SuiviUnMois" id="_IiKTiOdlEfGXPafMuWGBpw">
+          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="SuiviUnMois" id="_OsefTudlEfGXPafMuWGBpw">
             <bpsim:TimeParameters xsi:type="bpsim:TimeParameters">
               <bpsim:ProcessingTime xsi:type="bpsim:Parameter">
                 <bpsim:NormalDistribution mean="0.0" standardDeviation="0.0"/>
@@ -2361,7 +2362,7 @@
               </bpsim:UnitCost>
             </bpsim:CostParameters>
           </bpsim:ElementParameters>
-          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="ConsulterOffres" id="_IiKTiedlEfGXPafMuWGBpw">
+          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="ConsulterOffres" id="_OsefT-dlEfGXPafMuWGBpw">
             <bpsim:TimeParameters xsi:type="bpsim:TimeParameters">
               <bpsim:ProcessingTime xsi:type="bpsim:Parameter">
                 <bpsim:NormalDistribution mean="0.0" standardDeviation="0.0"/>
@@ -2381,7 +2382,7 @@
               </bpsim:UnitCost>
             </bpsim:CostParameters>
           </bpsim:ElementParameters>
-          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="DemanderAccesIT" id="_IiKTiudlEfGXPafMuWGBpw">
+          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="DemanderAccesIT" id="_OsefUOdlEfGXPafMuWGBpw">
             <bpsim:TimeParameters xsi:type="bpsim:TimeParameters">
               <bpsim:ProcessingTime xsi:type="bpsim:Parameter">
                 <bpsim:NormalDistribution mean="0.0" standardDeviation="0.0"/>
@@ -2401,7 +2402,7 @@
               </bpsim:UnitCost>
             </bpsim:CostParameters>
           </bpsim:ElementParameters>
-          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="FormalitesEmbauche" id="_IiKTi-dlEfGXPafMuWGBpw">
+          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="FormalitesEmbauche" id="_OsefUedlEfGXPafMuWGBpw">
             <bpsim:TimeParameters xsi:type="bpsim:TimeParameters">
               <bpsim:ProcessingTime xsi:type="bpsim:Parameter">
                 <bpsim:NormalDistribution mean="0.0" standardDeviation="0.0"/>
@@ -2421,7 +2422,7 @@
               </bpsim:UnitCost>
             </bpsim:CostParameters>
           </bpsim:ElementParameters>
-          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="SoumettreCandidature" id="_IiKTjOdlEfGXPafMuWGBpw">
+          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="SoumettreCandidature" id="_OsefUudlEfGXPafMuWGBpw">
             <bpsim:TimeParameters xsi:type="bpsim:TimeParameters">
               <bpsim:ProcessingTime xsi:type="bpsim:Parameter">
                 <bpsim:NormalDistribution mean="0.0" standardDeviation="0.0"/>
@@ -2441,7 +2442,7 @@
               </bpsim:UnitCost>
             </bpsim:CostParameters>
           </bpsim:ElementParameters>
-          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="PreparerArrivee" id="_IiKTjedlEfGXPafMuWGBpw">
+          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="PreparerArrivee" id="_OsefU-dlEfGXPafMuWGBpw">
             <bpsim:TimeParameters xsi:type="bpsim:TimeParameters">
               <bpsim:ProcessingTime xsi:type="bpsim:Parameter">
                 <bpsim:NormalDistribution mean="0.0" standardDeviation="0.0"/>
@@ -2461,7 +2462,7 @@
               </bpsim:UnitCost>
             </bpsim:CostParameters>
           </bpsim:ElementParameters>
-          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="PlanifierEntretienRH" id="_IiKTjudlEfGXPafMuWGBpw">
+          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="PlanifierEntretienRH" id="_OsefVOdlEfGXPafMuWGBpw">
             <bpsim:TimeParameters xsi:type="bpsim:TimeParameters">
               <bpsim:ProcessingTime xsi:type="bpsim:Parameter">
                 <bpsim:NormalDistribution mean="0.0" standardDeviation="0.0"/>
@@ -2481,34 +2482,14 @@
               </bpsim:UnitCost>
             </bpsim:CostParameters>
           </bpsim:ElementParameters>
-          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="StartEvent" id="_IiKTj-dlEfGXPafMuWGBpw">
+          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="StartEvent" id="_OsefVedlEfGXPafMuWGBpw">
             <bpsim:TimeParameters xsi:type="bpsim:TimeParameters">
               <bpsim:ProcessingTime xsi:type="bpsim:Parameter">
                 <bpsim:NormalDistribution mean="0.0" standardDeviation="0.0"/>
               </bpsim:ProcessingTime>
             </bpsim:TimeParameters>
           </bpsim:ElementParameters>
-          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="ExaminerDemande" id="_IiKTkOdlEfGXPafMuWGBpw">
-            <bpsim:TimeParameters xsi:type="bpsim:TimeParameters">
-              <bpsim:ProcessingTime xsi:type="bpsim:Parameter">
-                <bpsim:NormalDistribution mean="0.0" standardDeviation="0.0"/>
-              </bpsim:ProcessingTime>
-            </bpsim:TimeParameters>
-            <bpsim:ResourceParameters xsi:type="bpsim:ResourceParameters">
-              <bpsim:Availability xsi:type="bpsim:Parameter">
-                <bpsim:FloatingParameter value="0.0"/>
-              </bpsim:Availability>
-              <bpsim:Quantity xsi:type="bpsim:Parameter">
-                <bpsim:FloatingParameter value="0.0"/>
-              </bpsim:Quantity>
-            </bpsim:ResourceParameters>
-            <bpsim:CostParameters xsi:type="bpsim:CostParameters">
-              <bpsim:UnitCost xsi:type="bpsim:Parameter">
-                <bpsim:FloatingParameter value="0.0"/>
-              </bpsim:UnitCost>
-            </bpsim:CostParameters>
-          </bpsim:ElementParameters>
-          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="PublierOffre" id="_IiKTkedlEfGXPafMuWGBpw">
+          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="ExaminerDemande" id="_OsefVudlEfGXPafMuWGBpw">
             <bpsim:TimeParameters xsi:type="bpsim:TimeParameters">
               <bpsim:ProcessingTime xsi:type="bpsim:Parameter">
                 <bpsim:NormalDistribution mean="0.0" standardDeviation="0.0"/>
@@ -2528,7 +2509,7 @@
               </bpsim:UnitCost>
             </bpsim:CostParameters>
           </bpsim:ElementParameters>
-          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="RedigerOffre" id="_IiKTkudlEfGXPafMuWGBpw">
+          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="PublierOffre" id="_OsefV-dlEfGXPafMuWGBpw">
             <bpsim:TimeParameters xsi:type="bpsim:TimeParameters">
               <bpsim:ProcessingTime xsi:type="bpsim:Parameter">
                 <bpsim:NormalDistribution mean="0.0" standardDeviation="0.0"/>
@@ -2548,7 +2529,7 @@
               </bpsim:UnitCost>
             </bpsim:CostParameters>
           </bpsim:ElementParameters>
-          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="ExaminerCV" id="_IiKTk-dlEfGXPafMuWGBpw">
+          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="RedigerOffre" id="_OsefWOdlEfGXPafMuWGBpw">
             <bpsim:TimeParameters xsi:type="bpsim:TimeParameters">
               <bpsim:ProcessingTime xsi:type="bpsim:Parameter">
                 <bpsim:NormalDistribution mean="0.0" standardDeviation="0.0"/>
@@ -2568,7 +2549,7 @@
               </bpsim:UnitCost>
             </bpsim:CostParameters>
           </bpsim:ElementParameters>
-          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="EnvoyerProposition" id="_IiKTlOdlEfGXPafMuWGBpw">
+          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="ExaminerCV" id="_OsefWedlEfGXPafMuWGBpw">
             <bpsim:TimeParameters xsi:type="bpsim:TimeParameters">
               <bpsim:ProcessingTime xsi:type="bpsim:Parameter">
                 <bpsim:NormalDistribution mean="0.0" standardDeviation="0.0"/>
@@ -2588,7 +2569,7 @@
               </bpsim:UnitCost>
             </bpsim:CostParameters>
           </bpsim:ElementParameters>
-          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="CreerAccesIT" id="_IiKTledlEfGXPafMuWGBpw">
+          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="EnvoyerProposition" id="_OsefWudlEfGXPafMuWGBpw">
             <bpsim:TimeParameters xsi:type="bpsim:TimeParameters">
               <bpsim:ProcessingTime xsi:type="bpsim:Parameter">
                 <bpsim:NormalDistribution mean="0.0" standardDeviation="0.0"/>
@@ -2608,7 +2589,7 @@
               </bpsim:UnitCost>
             </bpsim:CostParameters>
           </bpsim:ElementParameters>
-          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="EntretienRH" id="_IiKTludlEfGXPafMuWGBpw">
+          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="CreerAccesIT" id="_OsefW-dlEfGXPafMuWGBpw">
             <bpsim:TimeParameters xsi:type="bpsim:TimeParameters">
               <bpsim:ProcessingTime xsi:type="bpsim:Parameter">
                 <bpsim:NormalDistribution mean="0.0" standardDeviation="0.0"/>
@@ -2628,7 +2609,7 @@
               </bpsim:UnitCost>
             </bpsim:CostParameters>
           </bpsim:ElementParameters>
-          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="ConsoliderEvaluations" id="_IiKTl-dlEfGXPafMuWGBpw">
+          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="EntretienRH" id="_OsefXOdlEfGXPafMuWGBpw">
             <bpsim:TimeParameters xsi:type="bpsim:TimeParameters">
               <bpsim:ProcessingTime xsi:type="bpsim:Parameter">
                 <bpsim:NormalDistribution mean="0.0" standardDeviation="0.0"/>
@@ -2648,7 +2629,7 @@
               </bpsim:UnitCost>
             </bpsim:CostParameters>
           </bpsim:ElementParameters>
-          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="ValiderCandidat" id="_IiKTmOdlEfGXPafMuWGBpw">
+          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="ConsoliderEvaluations" id="_OsefXedlEfGXPafMuWGBpw">
             <bpsim:TimeParameters xsi:type="bpsim:TimeParameters">
               <bpsim:ProcessingTime xsi:type="bpsim:Parameter">
                 <bpsim:NormalDistribution mean="0.0" standardDeviation="0.0"/>
@@ -2668,7 +2649,7 @@
               </bpsim:UnitCost>
             </bpsim:CostParameters>
           </bpsim:ElementParameters>
-          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="JustifierBesoin" id="_IiKTmedlEfGXPafMuWGBpw">
+          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="ValiderCandidat" id="_OsefXudlEfGXPafMuWGBpw">
             <bpsim:TimeParameters xsi:type="bpsim:TimeParameters">
               <bpsim:ProcessingTime xsi:type="bpsim:Parameter">
                 <bpsim:NormalDistribution mean="0.0" standardDeviation="0.0"/>
@@ -2688,7 +2669,7 @@
               </bpsim:UnitCost>
             </bpsim:CostParameters>
           </bpsim:ElementParameters>
-          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="PlanifierEntretienManager" id="_IiKTmudlEfGXPafMuWGBpw">
+          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="JustifierBesoin" id="_OsefX-dlEfGXPafMuWGBpw">
             <bpsim:TimeParameters xsi:type="bpsim:TimeParameters">
               <bpsim:ProcessingTime xsi:type="bpsim:Parameter">
                 <bpsim:NormalDistribution mean="0.0" standardDeviation="0.0"/>
@@ -2708,7 +2689,7 @@
               </bpsim:UnitCost>
             </bpsim:CostParameters>
           </bpsim:ElementParameters>
-          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="EntretienTechnique" id="_IiKTm-dlEfGXPafMuWGBpw">
+          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="PlanifierEntretienManager" id="_OsefYOdlEfGXPafMuWGBpw">
             <bpsim:TimeParameters xsi:type="bpsim:TimeParameters">
               <bpsim:ProcessingTime xsi:type="bpsim:Parameter">
                 <bpsim:NormalDistribution mean="0.0" standardDeviation="0.0"/>
@@ -2728,7 +2709,27 @@
               </bpsim:UnitCost>
             </bpsim:CostParameters>
           </bpsim:ElementParameters>
-          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="AccueilCollaborateur" id="_IiKTnOdlEfGXPafMuWGBpw">
+          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="EntretienTechnique" id="_OsefYedlEfGXPafMuWGBpw">
+            <bpsim:TimeParameters xsi:type="bpsim:TimeParameters">
+              <bpsim:ProcessingTime xsi:type="bpsim:Parameter">
+                <bpsim:NormalDistribution mean="0.0" standardDeviation="0.0"/>
+              </bpsim:ProcessingTime>
+            </bpsim:TimeParameters>
+            <bpsim:ResourceParameters xsi:type="bpsim:ResourceParameters">
+              <bpsim:Availability xsi:type="bpsim:Parameter">
+                <bpsim:FloatingParameter value="0.0"/>
+              </bpsim:Availability>
+              <bpsim:Quantity xsi:type="bpsim:Parameter">
+                <bpsim:FloatingParameter value="0.0"/>
+              </bpsim:Quantity>
+            </bpsim:ResourceParameters>
+            <bpsim:CostParameters xsi:type="bpsim:CostParameters">
+              <bpsim:UnitCost xsi:type="bpsim:Parameter">
+                <bpsim:FloatingParameter value="0.0"/>
+              </bpsim:UnitCost>
+            </bpsim:CostParameters>
+          </bpsim:ElementParameters>
+          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="AccueilCollaborateur" id="_OsefYudlEfGXPafMuWGBpw">
             <bpsim:TimeParameters xsi:type="bpsim:TimeParameters">
               <bpsim:ProcessingTime xsi:type="bpsim:Parameter">
                 <bpsim:NormalDistribution mean="0.0" standardDeviation="0.0"/>
@@ -2751,7 +2752,7 @@
         </bpsim:Scenario>
       </bpsim:BPSimData>
     </bpmn2:extensionElements>
-    <bpmn2:source>_IiJqcOdlEfGXPafMuWGBpw</bpmn2:source>
-    <bpmn2:target>_IiJqcOdlEfGXPafMuWGBpw</bpmn2:target>
+    <bpmn2:source>_Osd3oOdlEfGXPafMuWGBpw</bpmn2:source>
+    <bpmn2:target>_Osd3oOdlEfGXPafMuWGBpw</bpmn2:target>
   </bpmn2:relationship>
 </bpmn2:definitions>
