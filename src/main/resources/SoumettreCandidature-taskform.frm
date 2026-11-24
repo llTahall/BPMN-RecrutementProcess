@@ -1,1 +1,0 @@
-{"id":"7072e02f-257c-4184-87d6-4038ab1fc7e8","name":"SoumettreCandidature-taskform.frm","model":{"taskName":"SoumettreCandidature","processId":"Process_Recrutement","properties":[],"formModelType":"org.kie.workbench.common.forms.jbpm.model.authoring.task.TaskFormModel"},"fields":[],"layoutTemplate":{"version":3,"style":"FLUID","layoutProperties":{},"rows":[]}}
